@@ -1,0 +1,31 @@
+Author: Oleg SHALAEV (CHALAEV) http://chalaev.com/
+Note: this program requires [[https://github.com/chalaev/cl-libconfig][cl-libconfig]] (lisp interface to the standard libconfig library).
+
+* Motivation
+Though I use free cloud file storages ([[https://disk.yandex.com/][yandex-disk]] and [[https://cloud.mail.ru/][mail.ru-cloud]] have official linux
+clients), I do not trust them. I am afraid that files there are easily accessible to FSB (former
+KGB) or NSA officers, and may end up in hands of criminals. I do not want anyone even to know the
+names of my files and directories. This is why my cloud-stored files are collected in archives
+and encrypted.
+
+However, encryption is inconvenient if I want to share (with a daily syncronization) folders
+between different computers. For example, I use three computers: office workstation, laptop, and
+home server. It is very unprobable that all of them will be broken at the same time, so
+my files are secure if syncronized among all three.
+
+Only important files are syncronized. The importance can be encoded in the
+(libconfig-compatible) conf-file (see the file example.conf by name, group, and size of a
+file. Group names are preserved despite they may have different IDs on different
+hosts. Permissions are preserved as well. If a file (or a directory) is renamed/moved/erased
+on one host, the same will hapen on the other ones.  (I use backup2l + gpg + yandex-disk to
+protect important data from accidental removal.)
+
+* Quick start
+1. Copy all files from the [[https://github.com/chalaev/esy][githup archive]] to some directory, say ~/esy-source/
+2. mkdir ~/.esy ; cp example.conf ~/.esy/`hostname`.conf
+3. Edit ~/.esy/`hostname`.conf, see comments in the file. There you specify what directories
+   and files are important for you (according to name pattern, group, size, age, etc).
+4. Run sbcl --load main.lisp
+5. You can send messages to the program as follows:
+   echo "quit" > ~/.esy/message.ctl ; mkdir ~/.esy/do-read.ctl
+6. If interested, tail -f ~/.esy/log.txt
