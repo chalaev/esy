@@ -44,10 +44,10 @@ mkdir ~/esy-test/mail/a
 echo "uuu" > ~/esy-test/mail/a/u.txt
 ~/local/bin/sbcl --load main.lisp
 #+END_SRC
-where ~/local/bin/sbcl is the (common) lisp command.\\
+where ~/local/bin/sbcl is the (common) lisp command.\
 The default configuration file ~/.esy/`hostname`.conf tells esy to
-(recursively) monitor changes in the directories ~/esy-test/{mail,2,3,4,5}.\\
-The program will refuse to monitor inexisting ~/esy-test/5\\
+(recursively) monitor changes in the directories ~/esy-test/{mail,2,3,4,5}.\
+The program will refuse to monitor inexisting ~/esy-test/5\
 It is instructive to monitor the log file:
 #+BEGIN_SRC sh
 tail -f ~/.esy/log.txt
