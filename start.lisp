@@ -1,4 +1,4 @@
-;; common.lisp Time-stamp: <2016-07-19 21:58 EDT by Oleg SHALAEV http://chalaev.com >
+;; common.lisp Time-stamp: <2016-08-04 17:58 EDT by Oleg SHALAEV http://chalaev.com >
 ;; used by main.lisp
 
 ;; Some integer parametrs may have (string) vaulues like "10m" which require parsing:
@@ -26,13 +26,23 @@
 (defparameter *junkFiles* (WCorHashToRegEx junkFiles0))
 (pushnew (dirname (namestring *log-file*)) *doNotWatchDirs*); log-file is always changed, so we avoid monitoring its directory
 
-(unless (member hostname
-		(mapcar #'(lambda (x) (gethash 'hostname x)) hosts)
-		:test 'equal)
-  (errExit  "/config file: seems that this .conf file is not designed for this host"))
+(let ((thisHostEntry (find hostname hosts :test #'(lambda (x y) (string= x (gethash 'hostname y))))))
+  (if
+   (and thisHostEntry (nth-value 1 (gethash 'root thisHostEntry)))
+   (defparameter rootDir (nth-value 0 (gethash 'root thisHostEntry)))
+   (errExit  "/config file: seems that this .conf file is not designed for this host")))
 
-;; (defvar watchedDirs 'nil); also subdirectories of them are watched
+;; directories that start with slash are understood as absolute paths
+;; the other ones are relative, with respect to the root dir
 (unless (typep *rootdirs* 'cons) (errExit (format 'nil "in config file: *rootdirs* must be CONS, not ~a!" (type-of *rootdirs*))))
+(defun absPath (relDir) (if (string= "/" (subseq relDir 0 1)) relDir (concatenate 'string rootDir relDir)))
+(setf *rootdirs* (mapcar
+ #'(lambda (aRootDir)
+     (etypecase aRootDir
+       (string (absPath aRootDir))
+       (hash-table (setf (gethash 'name aRootDir) (absPath (gethash 'name aRootDir)))
+		   aRootDir))) *rootdirs*))
+
 (defun filesEqualS (x y) (equal (f-name x) (f-name y))); not to use with allFiles: what if a file was erased and then a directory with the same name created?
 (defun filesEqual (x y) (and (filesEqualS x y) (equal (type-of x) (type-of y))))
 
@@ -54,6 +64,7 @@
        (typecase aRootDir
 	 (string (if (osicat:directory-exists-P aRootDir)
 		     (pushnew (make-instance 'catalog
+					     ;; :name (if (string= "/" (subseq aRootDir 0 1)) aRootDir (concatenate 'string rootDir aRootDir))
 					     :name aRootDir
 					     :maxDirRecursion *maxDirRecursion*
 					     :maxFileSize *maxFileSize*

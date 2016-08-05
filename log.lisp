@@ -46,34 +46,21 @@
 
 ;; the least informative *logLevel* is 4 (no log messages), and the most informative one is 0 (everything is logged).
 ;; debug messages are the least important, and errors are the most important ones.
-
-(defun log-debug (message &key (level 0))
-  (when (>= level *logLevel*)
-    (bt:with-lock-held (*log-queue-lock*)
-      (push (cons :debug message) *log-queue*)
-      (if (> (- (get-universal-time) *log-queue-time*) 0)
-	  (bt:condition-notify *log-queue-cond*)))))
-
-(defun log-info (message &key (level 1))
-  (when (>= level *logLevel*)
-    (bt:with-lock-held (*log-queue-lock*)
-      (push (cons :info message) *log-queue*)
-      (if (> (- (get-universal-time) *log-queue-time*) 0)
-	  (bt:condition-notify *log-queue-cond*)))))
-
-(defun log-warning (message &key (level 2))
-  (when (>= level *logLevel*)
-    (bt:with-lock-held (*log-queue-lock*)
-      (push (cons :warning message) *log-queue*)
-      (if (> (- (get-universal-time) *log-queue-time*) 0)
-	  (bt:condition-notify *log-queue-cond*)))))
-
-(defun log-error (message &key (level 3))
-  (when (>= level *logLevel*)
-    (bt:with-lock-held (*log-queue-lock*)
-      (push (cons :error message) *log-queue*)
-      (if (> (- (get-universal-time) *log-queue-time*) 0)
-	  (bt:condition-notify *log-queue-cond*)))))
+(defun tlog (type fmessage &rest vars)
+  (let ((level (case type
+		 (#.:debug 0)
+		 (#.:info 1)
+		 (#.:warning 2)
+		 (#.:error 3) ; level=3 for errors
+		 (otherwise 3))))
+    (when (>= level *logLevel*)
+      (bt:with-lock-held (*log-queue-lock*)
+	(push (cons type
+		    (apply #'format 'nil fmessage vars))
+	      *log-queue*)
+	(if (> (- (get-universal-time) *log-queue-time*) 0)
+	    (bt:condition-notify *log-queue-cond*))))))
+;; test: (tlog :warning "aaa ~d ggg" *logLevel*)
 
 (setf (cl-log:log-manager) (make-instance 'cl-log:log-manager :message-class 'cl-log:formatted-message))
 (unless (boundp '*log-file*) (defparameter *log-file* "/tmp/undefined.log"))
@@ -85,12 +72,12 @@
 ;; (defun flush-log ()
 ;;   "ensure that log thread started or flush it before quit"
 ;;   (bt:with-lock-held (*log-reset-lock*); waiting for a message from high-level log-* functions defined below
-;;     (log-debug "waiting for the log-flush")
+;;     (tlog :debug "waiting for the log-flush")
 ;;     (bt:condition-wait *log-reset-cond* *log-reset-lock*)
-;;     (log-debug "log flushed")))
+;;     (tlog :debug "log flushed")))
 
 ;; (defun flush-log ()
 ;;   (sleep 1)); temporary delay, to be removed 
 
 ;; (flush-log); wait (about 1 second) until the thread starts
-;; (log-info "log starts")
+;; (tlog :info "log starts")

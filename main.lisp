@@ -1,4 +1,4 @@
-;; Time-stamp: <2016-07-23 14:46 EDT by Oleg SHALAEV http://chalaev.com >
+;; Time-stamp: <2016-08-04 21:34 EDT by Oleg SHALAEV http://chalaev.com >
 ;; Next (major) release candidate with significant changes.
 ;; M-x slime-pwd     Print the current directory of the Lisp process. 
 ;; M-x slime-cd     Set the current directory of the Lisp process.
@@ -15,9 +15,10 @@
 (defconstant localScript (merge-pathnames "local.sh" mainConfDir))
 (defconstant remoteScript (merge-pathnames (concatenate 'string "from-" hostname ".sh") mainConfDir))
 (defparameter *logLevel* 0); 0 is the most informative log level
+;; (mapcar #'(lambda (x) (load x :verbose t)) '("log.lisp" "system.lisp" "common.lisp"))
 (mapcar #'(lambda (x) (load x :verbose t)) '("log.lisp" "system.lisp" "common.lisp"  "start.lisp" "inotify.lisp"))
-(tlog :info "log started");  15:02:41.564 INFO log started
-(format t "~a Events/warnings/errors are logged into the file ~s~%" (strTime) (namestring *log-file*)); 15:02:37
+(tlog :info "log started")
+(format t "~a Events/warnings/errors are logged into the file ~s~%" (strTime) (namestring *log-file*))
 
 ;; следующая команда не пройдёт в случае, если имеются ошибочные ссылки (удаляются командой symlinks -rdv ~)
 ;; или неверно (с точки зрения используемой мною utf8 кодировки) закодированные имена файлов:
@@ -116,4 +117,5 @@ Note: Two consecutive spaces will be seen as if there were an empty string betwe
 (sleep 1) ;(flush-log)
 (mapcar 'bt:destroy-thread (list *inotifyThread* *logThread*))
 (format t "~d threads remained~%" (length (bt:all-threads)))
+(sync)
 (exit)

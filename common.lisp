@@ -2,6 +2,7 @@
 ;; used by main.lisp
 ;; C-h m for keybindings
 
+
 (defun flatten (lst &optional backtrack acc); copied from ← general.lisp ← https://gist.github.com/westerp/cbc1b0434cc2b52e9b10
   (cond ((consp lst) (flatten (car lst) (cons (cdr lst) backtrack) acc))
 	(lst (flatten (car backtrack) (cdr backtrack) (cons lst acc)))
@@ -194,34 +195,52 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 ;; 4. при изменении разрешений или даты
 ;; (неясно) При переименовании или перемещении каталога или файла
 
+
+(defun stripAbsDir (x) (subseq x (length rootDir) (length x)))
+
+;; (defun stripAbsDir (x)
+;;   (if (<  (length rootDir) (length x))
+;;       (subseq x (length rootDir) (length x))
+;;       (progn
+;; 	(tlog :debug "strange file ~s" x)
+;; 	x)))
+
 (defun sync ()
   (with-open-file (save localScript :direction :output :if-exists :supersede); ~/.esy/local.sh
     ;; (tlog :debug "writing shell scripts in ~~/.esy")
-    (format save "~%# generated ~a by esy on ~s~%echo \"`date '+%Y-%m-%d\ %H:%M:%S'` @ `hostname` = `hostname -I`\" > ~~/.esy/host-id.dat~%timeout 5 emacsclient -e \"(save-some-buffers t)\"~%fetchmail --quit~%tar jcfv ~~/.esy/$(hostname).tbz ~~/.esy/host-id.dat ~~/.esy/remote.sh " (strDate) hostname)
-    (mapcar #'(lambda (x) (format save " ~s" (f-name x))) ; these files will be saved into the tar archive
+    (format save "#!/bin/sh -e~%# generated ~a by esy on ~s~%echo \"`date '+%Y-%m-%d\ %H:%M:%S'` @ `hostname` = `hostname -I`\" > ~~/.esy/host-id.dat~%timeout 5 emacsclient -e \"(save-some-buffers t)\"~%fetchmail --quit~%cd ~s~%tar jcfv ~~/.esy/$(hostname).tbz ~~/.esy/host-id.dat ~s" (strDate) hostname rootDir (namestring remoteScript))
+    (mapcar #'(lambda (x) (format save " ~s" (stripAbsDir (f-name x)))) ; these files will be saved into the tar archive
 	    (remove-if-not #'(lambda (y) (and (f-modified y) (not (f-erased y)))) (selectFiles *allFiles*)))
-    (format save "~%rm ~~/.esy/host-id.dat~%# end~%"))
+    (format save "~%rm ~~/.esy/host-id.dat~%# end~%")
+    (format save "cd -~%"))
   (with-open-file (script remoteScript :direction :output :if-exists :supersede)
-    (format script "~%# generated ~a by esy on ~s~%# To be excecuted on remote host~%" (strDate) hostname)
-    (format script "# tar xjfv --restrict --show-transformed --strip-components=3 ~~/.esy/~a.tbz -C ~~ ~%if [[ $(hostname) == ~s ]] ; then exit ; fi~%" hostname hostname)
+    (format script "#!/bin/sh -e~%# generated ~a by esy on ~s~%# To be excecuted on remote host~%" (strDate) hostname)
+    (format script "~%case  `hostname`  in")
+    (dolist (allowedHost hosts)
+      (unless (string= hostname (gethash 'hostname allowedHost))
+	(format script "~%~s)~%rootDir=~s~%;;" (gethash 'hostname allowedHost)  (gethash 'root allowedHost))))
+    (format script "~%*)~%echo \"this host was not allowed in ~a:.esy/~a.conf, I refuse to change files here, stopping\"~%exit~%;;" hostname hostname)
+    (format script "~%esac~%")
+    (format script "tar xjfv ~~/.esy/~a.tbz -C $rootDir~%" (basename (namestring remoteScript)) hostname)
     (format script "# moving directories:~%")
-    (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (f-prevName x) (f-name x)))
+    (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-prevName x)) (selectDirs *allFiles*)))
     (format script "# moving files:~%")
-    (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (f-prevName x) (f-name x)))
+    (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-prevName x)) (selectFiles *allFiles*)))
     (format script "# deleting files an directories:~%")
-    (mapcar #'(lambda (x) (format script "rm -ri ~s~%" (f-name x)))
+    (mapcar #'(lambda (x) (format script "rm -ri ~s~%" (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-erased x)) *allFiles*))
     (format script "# adjusting ownership (GIDs might be different on different hosts):~%")
-    (mapcar #'(lambda (x) (format script "chgrp ~a ~s~%" (f-group x) (f-name x)))
+    (mapcar #'(lambda (x) (format script "chgrp ~a ~s~%" (f-group x) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-group x)) *allFiles*))
     (format script "# adjusting dates:~%")
-    (mapcar #'(lambda (x) (format script "touch -d ~s ~s~%" (f-date x) (f-name x)))
+    (mapcar #'(lambda (x) (format script "touch -d ~s ~s~%" (f-date x) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-date x)) *allFiles*))
     (format script "# adjusting permissions:~%")
-    (mapcar #'(lambda (x) (format script "chmod ~a ~s~%" (f-perms x) (f-name x)))
-	    (remove-if-not #'(lambda (x) (f-perms x)) *allFiles*))))
+    (mapcar #'(lambda (x) (format script "chmod ~a ~s~%" (f-perms x) (stripAbsDir (f-name x))))
+	    (remove-if-not #'(lambda (x) (f-perms x)) *allFiles*))
+    (format script "cd -~%")))
 
 (defun modAsteriscs (str) "transforms * into .*"
   (concatenate 'string
