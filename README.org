@@ -25,10 +25,10 @@ file. Group names are preserved so it is ok if they have different IDs on differ
 hosts. Permissions are preserved as well. If a file (or a directory) is renamed/moved/erased/chmod-ed
 on one host, the same will hapen on the other ones.
 Note however that an independent backup is necessary
-(I use ~backup2l~ + ~gpg~ + ~yandex-disk~ to protect important data from accidental removal.)
+(I use backup2l + gpg + yandex-disk to protect important data from accidental removal.)
 
 * Quick start
-Copy all files from the [[https://github.com/chalaev/esy][github archive]] to some directory, say ~~/esy-source/~:
+Copy all files from the [[https://github.com/chalaev/esy][github archive]] to some directory, say ~/esy-source/:
 #+BEGIN_SRC sh
 mkdir ~/esy-source ~/.esy
 cd ~/esy-source
@@ -44,10 +44,10 @@ mkdir ~/esy-test/mail/a
 echo "uuu" > ~/esy-test/mail/a/u.txt
 ~/local/bin/sbcl --load main.lisp
 #+END_SRC
-where ~~/local/bin/sbcl~ is the (common) lisp command.\\
-The default configuration file ~~/.esy/`hostname`.conf~ tells esy to
-(recursively) monitor changes in the directories ~~/esy-test/{mail,2,3,4,5}~.\\
-The program will refuse to monitor inexisting ~~/esy-test/5~\\
+where ~/local/bin/sbcl is the (common) lisp command.\\
+The default configuration file ~/.esy/`hostname`.conf tells esy to
+(recursively) monitor changes in the directories ~/esy-test/{mail,2,3,4,5}.\\
+The program will refuse to monitor inexisting ~/esy-test/5\\
 It is instructive to monitor the log file:
 #+BEGIN_SRC sh
 tail -f ~/.esy/log.txt
@@ -62,16 +62,16 @@ echo "eee" >> ~/esy-test/3/e.txt
 mv ~/esy-test/3/e.txt ~/esy-test/4/
 rm -r ~/esy-test/mail/a
 #+END_SRC
-File-manipulation events are logged into ~~/.esy/log.txt~
-   For now the (most informative) ~logLevel=0~ in ~example.conf~ is set, but if you think that
-   ~~/.esy/log.txt~ is growing too fast, set ~logLevel=2~ or even ~logLevel=4~.
+File-manipulation events are logged into ~/.esy/log.txt
+   For now the (most informative) logLevel=0 in example.conf is set, but if you think that
+   ~/.esy/log.txt is growing too fast, set logLevel=2 or even logLevel=4.
 Now stop the program:
 #+BEGIN_SRC sh
 echo "quit" > ~/.esy/message.ctl
 mkdir ~/.esy/do-read.ctl
 #+END_SRC
 * Resulting files
-Let us consider simple live example of playing in the ~~/esy-test/~ directory on host named "theorie13":
+Let us consider simple live example of playing in the ~/esy-test/ directory on host named "theorie13":
 #+BEGIN_SRC sh
 cd ~/esy-test/1
 echo aa >> nd/22.txt 
@@ -82,7 +82,7 @@ mv ff.txt ttt/
 echo "quit" > ~/.esy/message.ctl
 mkdir ~/.esy/do-read.ctl
 #+END_SRC
-The resulting ~~/.esy/local.sh~ is
+The resulting ~/.esy/local.sh is
 #+BEGIN_SRC sh
 #!/bin/sh -e
 # generated 2016-08-04 17:47:25 GMT-4 by esy on "theorie13"
@@ -95,7 +95,7 @@ rm ~/.esy/host-id.dat
 # end
 cd -
 #+END_SRC
-The resulting ~~/.esy/from-theorie13.sh~ is
+The resulting ~/.esy/from-theorie13.sh is
 #+BEGIN_SRC sh
 #!/bin/sh -e
 # generated 2016-08-04 17:47:25 GMT-4 by esy on "theorie13"
@@ -128,8 +128,8 @@ cd -
 The simplest way to use these files is off-line one.
 I work on theorie13 in my office with esy monitoring all files I change.
 At the end of the day, I 
-run ~~/.esy/local.sh~ and
-copy ~~/.esy/from-theorie13.sh~ and ~~/.esy/theorie13.tbz~ to a usb drive.
+run ~/.esy/local.sh and
+copy ~/.esy/from-theorie13.sh and ~/.esy/theorie13.tbz to a usb drive.
 At home I 
 #+BEGIN_SRC sh
 mv from-theorie13.sh theorie13.tbz ~/.esy
@@ -140,4 +140,4 @@ chmod +x from-theorie13.sh
 and then launch esy in order to save any home file-edits on my work computer.
 
 In reality I use email to copy files between hosts (I have special gmail accounts for that):
-the file ~~/.procmailrc~ can be instructed to automatically save attachments from emails arriving from a certain address to ~~/.esy/~ …
+the file ~/.procmailrc can be instructed to automatically save attachments from emails arriving from a certain address to ~/.esy/ …
