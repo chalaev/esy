@@ -1,4 +1,5 @@
-;; common.lisp Time-stamp: <2016-07-25 17:41 EDT by Oleg SHALAEV http://chalaev.com >
+;;  -*-coding: utf-8;-*-
+;; common.lisp Time-stamp: <2016-08-06 15:12 EDT by Oleg SHALAEV http://chalaev.com >
 ;; used by main.lisp
 ;; C-h m for keybindings
 
@@ -17,24 +18,27 @@
 				 (list #\\ x)
 				 x))))); ← test: (escapeString "a*bc ,d")
 
+(defun dTildas (fmessage) "double tildas in the string"
+  (nth-value 0 (cl-ppcre:regex-replace-all "~" fmessage "~~" :preserve-case t)))
+
 ;; Note: junkFiles and ImportantFiles can be smth like
 ;; ("*.txt","*.org","*.tex","*.lisp","*.c","*.sed", {group="literature"},{name="*.pdf", maxFileSize="20k"}, {pattern="*[^\.]*" type="f"});
 ;; ← inside one element, logical "and" is applied
 ;; ← logical "or" is applied between the elements
-(defun matchP (fname ifs) ; ← also to be used in importantP
+(defun matchP (fname ifs &key (erased 'nil)) ; ← also to be used in importantP
   (not (loop for IFpat in ifs never
 	    (etypecase IFpat
 	      (string (cl-ppcre:scan IFpat fName))
 	      (hash-table ; enumerate all possible hash-table entries
-	       (let ((namePat (gethash 'name IFpat))
-		     (type (gethash 'type IFpat)); :directory or :regular-file
-		     (maxSize (gethash 'maxFileSize IFpat)); size in bytes
-		     (group (gethash 'group IFpat)))
+	       (let ((namePat (nth-value 0 (gethash 'name IFpat)))
+		     (type (nth-value 0 (gethash 'type IFpat))); :directory or :regular-file
+		     (maxSize (nth-value 0 (gethash 'maxFileSize IFpat))); size in bytes
+		     (group (nth-value 0 (gethash 'group IFpat))))
 		 (and
 		  (or (not group) (equal group (fileGroup fName)))
-		  (or (not type) (equal type (osicat:file-kind fName)))
+		  (or (not type) erased (equal type (osicat:file-kind fName)))
 		  (cl-ppcre:scan namePat fName)
-		  (or (< maxSize 0) (< (fileSize fName) maxSize)))))))))
+		  (or (not (integerp maxSize)) (< (fileSize fName) maxSize)))))))))
 
 (defun dirname (fn) "extracts parent directory from the full name" ; see also embedded directory-namestring function
   (subseq fn 0 (1+ (first (cl-ppcre:all-matches "/[^/]*.$" fn)))))
@@ -47,16 +51,16 @@
       (read-property (f-parent object) field)))
 
 (defun junkP (fName) "name-based check if a file or a directory must NOT be saved"
-       (let ((pc (DBentry (dirname fName) :type 'catalog)))
+       (let ((pc (DBentry (dirname fName) :type 'catalog))); parent catalog
 	 (if pc
 	     (matchP fName (read-property pc 'junkFiles))
 	     (matchP fName *junkFiles*))))
 
-(defun importantP (fName) "name-based check if a file or a directory must be saved"
-       (let ((pc (DBentry (dirname fName) :type 'catalog)))
+(defun importantP (fName &key (erased 'nil)) "name-based check if a file or a directory must be saved"
+       (let ((pc (DBentry (dirname fName) :type 'catalog))); parent catalog
 	 (if pc
-	     (matchP fName (read-property pc 'goodFiles))
-	     (matchP fName *goodFiles*))))
+	     (matchP fName (read-property pc 'goodFiles) :erased erased)
+	     (matchP fName *goodFiles* :erased erased))))
 
 (defvar *allFiles* 'nil); main database; список файловых объектов, за которыми происходит слежка
 (defvar newDirsToWatch 'nil)
@@ -113,6 +117,7 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 	     (find fName (selectType *allFiles* type) :test #'ft)
 	     (find fName             *allFiles*       :test #'ft))))
 
+
 ;; ПРОБЛЕМА: каталог продолжает наблюдаться под старым именем; соответственно, события вроде "изменение/создание файла" в новом каталоге
 ;; будет сопровождаться событием со старым именем каталога!
 
@@ -146,36 +151,65 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 
 (defmethod mv ((obj file) (newName string) &key (movedFromElseWhere 'nil) (type 'file)); called also for catalogs
   (let* ((p (f-parent obj)) (nd (dirname newName)) (np (DBentry nd :type 'catalog)))
-    (tlog :debug "mv2 ~s ~s" (f-name obj) newName)
+    (tlog :debug "mv2 ~s ~s" (dTildas (f-name obj)) (dTildas newName))
     (tlog :debug "mv2: chmod= ~s" (f-perms obj))
     (unless (f-prevName obj)
-      (tlog :debug "setting previous name to ~s" (f-name obj))
+      (tlog :debug "setting previous name to ~s" (dTildas (f-name obj)))
       (setf (f-prevName obj) (f-name obj))); if moved for the first time
     (unless (equal nd (f-name p)); if moved to another directory
       (setf (c-children p) (remove obj (c-children p) :count 1)); first divorse with  ex-parent directory
-      (tlog :debug "parent name is ~s and has a DB-name ~s" nd (f-name np))
+      (tlog :debug "parent name is ~s and has a DB-name ~s" (dTildas nd) (dTildas (f-name np)))
       (pushnew obj (c-children np)) ; then marry the new one
-      (tlog :debug "changing parent name to ~s" (f-name np))
+      (tlog :debug "changing parent name to ~s" (dTildas (f-name np)))
       (setf (f-parent obj) np)
       (correctName obj))))
 
 
+(defun modAsteriscs (str) "transforms * into .*"
+  (concatenate 'string
+	       (flatten (loop for x across str collect
+			     (if (equal x #\*)
+				 (list #\. x)
+				 x)))))
+(defun shellToRegEx (shellPattern) "transforms shell patterns into regex for the cl-ppcre package"
+       (when shellPattern
+	 (let ((pat (if (typep shellPattern 'string) (list shellPattern) shellPattern)))
+	 (modAsteriscs
+	  (escapeString
+	   (subseq
+	    (apply 'concatenate
+		   (cons 'string
+			 (mapcar #'(lambda (x) (concatenate  'string "|" x "$")) pat)))
+	    1) :escapeSymbols '(#\.))))))
+;; test: (shellToRegEx '("*.tex"))
+
+
+(defun matchNameOrPattern (fullName mh); mh is a hash containing name or pattern keys
+  (let ((pat (if (nth-value 1 (gethash 'pattern mh))
+		 (nth-value 0 (gethash 'pattern mh))
+		 (shellToRegEx (list (nth-value 0 (gethash 'name mh)))))))
+    (when  (cl-ppcre:scan pat fullName)
+      (tlog :debug "matchNameOrPattern: matched ~s" (dTildas fullName)) t)))
+
 ;; note that it is possible that once upon a time a file existed, then it was erased,
 ;; and a then directory with the same name appeared
 ;; Warning: watch should not be applied to root dirs
+
 (defun watch (objType fullName &key (erased 'nil) (modified 'nil) (doNotChmod 'nil))
   "(if it deserves,) add a file or a directory to the *allFiles* database"
   (let ((inDB (DBentry fullName :type objType)) (emm (or erased modified doNotChmod)))
-    (tlog :debug "watch function received ~s" fullName)
-    (tlog :debug "EMM=~b" emm)
+    (tlog :debug "watch function received ~s" (dTildas fullName))
+    (tlog :debug  "rm=~a, mod=~a, !chmod=~a" erased modified doNotChmod)
     (if inDB
 	(progn
+	  (tlog :debug "~s is already in the database" (dTildas fullName))
 	  (when erased   (setf (f-erased   inDB) t))
 	  (when modified (setf (f-modified inDB) t)))
 	(when ; if this is a newbie: check if it deserves our royal attention
 	    (ecase objType
-	      (file (importantP fullName))
+	      (file (importantP fullName :erased erased))
 	      (catalog (not (junkP fullName))))
+	  (tlog :debug "~s is not in the database" (dTildas fullName))
 	  (let* ((parent (DBentry (dirname fullName) :type 'catalog))
 		 (newDBelement (make-instance objType
 					      :name fullName
@@ -184,9 +218,20 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 					      :date  (unless emm (fileDate fullName))
 					      :perms (unless emm (fileMod fullName))
 					      :modified modified)))
+	    ;; 2016-08-06 begin
+	    (when (equal objType 'catalog)
+	      ;; (tlog :debug "checking special properties for the directory ~s" (dTildas fullName))
+ 	      (dolist (hts specialDirectoryOptions) ; they are all hashes
+		(when (matchNameOrPattern fullName hts)
+		  ;; (tlog :debug "setting special properties for the directory ~s" (dTildas fullName))
+		  (setf (c-maxDirRecursion newDBelement) (nth-value 0 (gethash 'maxDirRecursion hts)))
+		  (setf (slot-value newDBelement 'goodFiles) (WCorHashToRegEx (nth-value 0 (gethash 'importantFiles  hts))))
+		  (setf (slot-value newDBelement 'junkFiles) (WCorHashToRegEx (nth-value 0 (gethash 'junkFiles       hts))))
+		  (setf (c-maxFilesPerDir newDBelement) (nth-value 0 (gethash 'maxFilesPerDir hts))))))
+	    ;; 2016-08-06 end
 	    (pushnew newDBelement *allFiles* :test 'filesEqual)
 	    (pushnew newDBelement (c-children parent) :test 'filesEqual)
-	    (tlog :info "added file or directory ~s to the database" fullName)
+	    (tlog :info "added file or directory ~s to the database" (dTildas fullName))
 	    (find newDBelement *allFiles* :test 'filesEqual))))))
 ;; ситуации вызова watch:
 ;; 1. при инициации добавляем каталоги из inotify-списка
@@ -208,7 +253,7 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 (defun sync ()
   (with-open-file (save localScript :direction :output :if-exists :supersede); ~/.esy/local.sh
     ;; (tlog :debug "writing shell scripts in ~~/.esy")
-    (format save "#!/bin/sh -e~%# generated ~a by esy on ~s~%echo \"`date '+%Y-%m-%d\ %H:%M:%S'` @ `hostname` = `hostname -I`\" > ~~/.esy/host-id.dat~%timeout 5 emacsclient -e \"(save-some-buffers t)\"~%fetchmail --quit~%cd ~s~%tar jcfv ~~/.esy/$(hostname).tbz ~~/.esy/host-id.dat ~s" (strDate) hostname rootDir (namestring remoteScript))
+    (format save "#!/bin/sh -e~%# generated ~a by esy on ~s~%echo \"`date '+%Y-%m-%d\ %H:%M:%S'` @ `hostname` = `hostname -I`\" > ~~/.esy/host-id.dat~%timeout 5 emacsclient -e \"(save-some-buffers t)\"~%fetchmail --quit~%cd ~s~%tar jcfv ~~/.esy/from-$(hostname).tbz ~~/.esy/host-id.dat ~s" (strDate) hostname rootDir (namestring remoteScript))
     (mapcar #'(lambda (x) (format save " ~s" (stripAbsDir (f-name x)))) ; these files will be saved into the tar archive
 	    (remove-if-not #'(lambda (y) (and (f-modified y) (not (f-erased y)))) (selectFiles *allFiles*)))
     (format save "~%rm ~~/.esy/host-id.dat~%# end~%")
@@ -217,11 +262,11 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
     (format script "#!/bin/sh -e~%# generated ~a by esy on ~s~%# To be excecuted on remote host~%" (strDate) hostname)
     (format script "~%case  `hostname`  in")
     (dolist (allowedHost hosts)
-      (unless (string= hostname (gethash 'hostname allowedHost))
-	(format script "~%~s)~%rootDir=~s~%;;" (gethash 'hostname allowedHost)  (gethash 'root allowedHost))))
+      (unless (string= hostname (nth-value 0 (gethash 'hostname allowedHost)))
+	(format script "~%~s)~%rootDir=~s~%;;" (nth-value 0 (gethash 'hostname allowedHost))  (nth-value 0 (gethash 'root allowedHost)))))
     (format script "~%*)~%echo \"this host was not allowed in ~a:.esy/~a.conf, I refuse to change files here, stopping\"~%exit~%;;" hostname hostname)
     (format script "~%esac~%")
-    (format script "tar xjfv ~~/.esy/~a.tbz -C $rootDir~%" (basename (namestring remoteScript)) hostname)
+    (format script "tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript)) hostname)
     (format script "# moving directories:~%")
     (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-prevName x)) (selectDirs *allFiles*)))
@@ -231,7 +276,7 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
     (format script "# deleting files an directories:~%")
     (mapcar #'(lambda (x) (format script "rm -ri ~s~%" (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-erased x)) *allFiles*))
-    (format script "# adjusting ownership (GIDs might be different on different hosts):~%")
+    (format script "# adjusting ownership (UIDs and GIDs might be different on different hosts):~%")
     (mapcar #'(lambda (x) (format script "chgrp ~a ~s~%" (f-group x) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (f-group x)) *allFiles*))
     (format script "# adjusting dates:~%")
@@ -242,41 +287,34 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 	    (remove-if-not #'(lambda (x) (f-perms x)) *allFiles*))
     (format script "cd -~%")))
 
-(defun modAsteriscs (str) "transforms * into .*"
-  (concatenate 'string
-	       (flatten (loop for x across str collect
-			     (if (equal x #\*)
-				 (list #\. x)
-				 x)))))
-(defun shellToRegEx (shellPattern) "transforms shell patterns into regex for the cl-ppcre package"
-       (when shellPattern
-	 (let ((pat (if (typep shellPattern 'string) (list shellPattern) shellPattern)))
-	 (modAsteriscs
-	  (escapeString
-	   (subseq
-	    (apply 'concatenate
-		   (cons 'string
-			 (mapcar #'(lambda (x) (concatenate  'string "|" x "$")) pat)))
-	    1) :escapeSymbols '(#\.))))))
-;; test: (shellToRegEx '("*.tex"))
+(defun copy-hash-table (hash-table); http://stackoverflow.com/questions/26045442/copy-hash-table-in-lisp
+  (let ((ht (make-hash-table 
+             :test (hash-table-test hash-table)
+             :rehash-size (hash-table-rehash-size hash-table)
+             :rehash-threshold (hash-table-rehash-threshold hash-table)
+             :size (hash-table-size hash-table))))
+    (loop for key being each hash-key of hash-table
+       using (hash-value value)
+       do (setf (gethash key ht) value)
+       finally (return ht))))
 
 (defun WCorHashToRegEx (mixedList); mixedList is a mixture of strings and hashes
   "translates wildcards and name-hash-entries into patterns"
-  (cons
-   (shellToRegEx (remove-if-not #'(lambda (x) (typep x 'string)) mixedList))
-   (mapcar #'(lambda (hts)
-	       (if (nth-value 1 (gethash 'pattern hts))
-		   (progn ; if "pattern" field exists, "name" is ignored
-		     (setf (gethash 'name hts) (gethash 'pattern hts))
-		     (remhash 'pattern hts))
-		   (progn
-		     (maphash #'(lambda (key val); otherwise we transform wildcard to pattern
-				  (when (equal key 'name)
-				    (setf (gethash key hts) (shellToRegEx val))))
-			      hts)
-		     hts)))
-	   (remove-if-not #'(lambda (x) (typep x 'hash-table)) mixedList))))
-;; test 1: (WCorHashToRegEx '("*.txt" "*.org" "*.tex" "*.lisp" "*.c" "*.sed"))
+  (let ((wildcards (remove-if-not #'(lambda (x) (typep x 'string    )) mixedList))
+	(hashes (mapcar 'copy-hash-table  (remove-if-not #'(lambda (x) (typep x 'hash-table)) mixedList))))
+    (delete 'nil (cons
+		  (shellToRegEx wildcards)
+(loop for hts in hashes collect
+     (if (nth-value 1 (gethash 'pattern hts))
+	 (progn ; if "pattern" field exists, "name" is ignored
+	   (setf (gethash 'name hts) (nth-value 0 (gethash 'pattern hts)))
+	   (remhash 'pattern hts) hts)
+	 (progn
+	   (maphash #'(lambda (key val); otherwise we transform wildcard to pattern
+			(when (equal key 'name)
+			  (setf (gethash key hts) (shellToRegEx val))))
+		    hts)
+	   hts))))))); I would like to rewrite this ugly function...
 
 (defun parseNumberTimesUnit (str &key
 	(modifiers '(("min" 60) ("hours?" 3600) ("days?" 86400) ("weeks?" 604800) ("months?" 18144000) ("years?" 6622560000) ("k" 1024) ("m" 1048576)))

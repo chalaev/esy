@@ -18,7 +18,9 @@
       (defparameter junkFiles0
 	(recursive-subst '(("f" :regular-file) ("d" :directory))
 			 (libconfig:read-setting "junkFiles" :default  '("tmp*" "*.tmp" "*.lock" "*.log" "*.aux"))))
-      (defparameter *doNotWatchDirs*  (libconfig:read-setting "doNotWatchDirs" :default 'nil)))
+      (defparameter *doNotWatchDirs*  (libconfig:read-setting "doNotWatchDirs" :default 'nil))
+      (defparameter specialDirectoryOptions 	(recursive-subst '(("f" :regular-file) ("d" :directory))
+								 (libconfig:read-setting "specialDirectoryOptions" :default 'nil))))
   (libconfig:conf-file-read-error () (errExit "could not read config file"))
   (libconfig:config-parse-error () (errExit "config file (libconfig-) syntax error")))
 

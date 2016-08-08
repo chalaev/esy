@@ -15,13 +15,13 @@
 (defun fileGroup (fullName)
   (handler-case (unprotected-fileGroup fullName)
     (sb-posix:syscall-error ()
-      (tlog :error "failed to reveal (inexistent?) file (~s) group" fullName))))
+      (tlog :debug "failed to reveal (inexistent?) file (~s) group" (dTildas fullName)))))
 (defun GroupID (name) (sb-posix:group-gid (sb-posix:getgrnam name)))
 
 (defun fileSize (fullName)
   (handler-case (ql-util:file-size fullName)
     (sb-int:simple-file-error ()
-      (tlog :error "failed to reveal (inexistent?) file (~s) size" fullName)))); must return zero (or nil?) in case of an error
+      (tlog :debug "failed to reveal (inexistent?) file (~s) size" (dTildas fullName))))); must return zero (or nil?) in case of an error
 
 (defun fixDir (dirPathName) "adding separator at the end of the directory name if necessary"
    (if (equal "/" (subseq dirPathName (- (length dirPathName) 1))) dirPathName (concatenate 'string  dirPathName "/")))
@@ -44,7 +44,7 @@
 (defun fileDate (fullName) "gets human-readable date of a file compatible with touch command"
   (handler-case (unprotected-fileDate fullName)
     (SB-INT:SIMPLE-FILE-ERROR ()
-      (tlog :error "failed to reveal (inexistent?) file (~s) date" fullName))))
+      (tlog :debug "failed to reveal (inexistent?) file (~s) date" (dTildas fullName)))))
 
 (defun fileMod (fileName) "returns file permissions in the form suitable for the chmod command"
   (let ((tm (osicat:file-permissions  fileName)))
@@ -59,14 +59,12 @@
 			    ( :other-read 004)
 			    (:other-write 002)
 			    ( :other-exec 001))) tm))))
-;; ← to do exception handling      (tlog :error "failed to reveal (inexistent?) file (~s) permissions" fullName))))
+;; ← to do exception handling      (tlog :debug "failed to reveal (inexistent?) file (~s) permissions" (dTildas fullName)))))
 
 (defun file-exists-p (fullName)
   (handler-case (osicat:regular-file-exists-p fullName)
     (sb-int:simple-file-error ()
-      (tlog :error "(ignored) file ~s possibly erased during the test" fullName))
-    (simple-error () 
-      (tlog :error "file-exists-p: some STRANGE error with the file file ~s" fullName))))
+      (tlog :error "file-exists-p: some STRANGE error with the file file ~s" (dTildas fullName)))))
 
 (defun eraseFileOrDir (name &rest others)
   "checks if file(s) or directory(ies) exist(s), and then erases it/them"
@@ -75,7 +73,7 @@
 		(when (file-exists-p fn) (delete-file fn))
 		(when (osicat:directory-exists-p fn) (delete-directory fn :recursive T)))
 		(sb-int:simple-file-error ()
-		  (tlog :error "failed to delete inexistent file ~s~%" (namestring fn)))))
+		  (tlog :debug "failed to delete inexistent file ~s~%" (namestring fn)))))
 	  (cons name others)))
 
 (defmacro timing (&body forms) ;http://cl-cookbook.sourceforge.net/dates_and_times.html

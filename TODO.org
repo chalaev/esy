@@ -1,8 +1,5 @@
-1. example.conf: provide age restriction in hashes, e.g. importantFiles:("*.txt", ... , {group="keepTwoYears", maxage="2y"});
+1. example.conf: provide age restriction in hashes, e.g. importantFiles:("*.txt", ... , {group="keepTwoYears", maxAge="2y"});
 2. test if the program can handle dangling links (removed BTW with symlinks -rdv ~)
-3. Move events handling into separate thread?
-4. The program must print an extended log similarly to how yandex-disk does it.
-   Perhaps low speed (2 files per second, same as for yandex-disk) would be the appropriate.
+3. Link creation whic is not monitored for now.
 5. Provide mechanism to stop monitoring directory where too many changes are made.
-6. Create separate archives: important-files.tbz and not-junk-files.tbz
 7. Upgrade to parse (and act on) novel config. parameters, e.g.,  archiveName + hosts, see example.conf

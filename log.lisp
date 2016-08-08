@@ -56,7 +56,9 @@
     (when (>= level *logLevel*)
       (bt:with-lock-held (*log-queue-lock*)
 	(push (cons type
-		    (apply #'format 'nil fmessage vars))
+		    (apply #'format 'nil
+			   fmessage
+			   vars))
 	      *log-queue*)
 	(if (> (- (get-universal-time) *log-queue-time*) 0)
 	    (bt:condition-notify *log-queue-cond*))))))

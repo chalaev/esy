@@ -25,7 +25,7 @@ file. Group names are preserved so it is ok if they have different IDs on differ
 hosts. Permissions are preserved as well. If a file (or a directory) is renamed/moved/erased/chmod-ed
 on one host, the same will hapen on the other ones.
 Note however that an independent backup is necessary
-(I use backup2l + gpg + yandex-disk to protect important data from accidental removal.)
+(I use backup2l + gpg + [[https://disk.yandex.com/][yandex-disk]] to protect important data from accidental removal.)
 
 * Quick start
 Copy all files from the [[https://github.com/chalaev/esy][github archive]] to some directory, say ~/esy-source/:
@@ -44,10 +44,10 @@ mkdir ~/esy-test/mail/a
 echo "uuu" > ~/esy-test/mail/a/u.txt
 ~/local/bin/sbcl --load main.lisp
 #+END_SRC
-where ~/local/bin/sbcl is the (common) lisp command.\
+where ~/local/bin/sbcl is the (common) lisp command.
 The default configuration file ~/.esy/`hostname`.conf tells esy to
-(recursively) monitor changes in the directories ~/esy-test/{mail,2,3,4,5}.\
-The program will refuse to monitor inexisting ~/esy-test/5\
+(recursively) monitor changes in the directories ~/esy-test/{mail,2,3,4,5}.
+The program will refuse to monitor inexisting ~/esy-test/5.
 It is instructive to monitor the log file:
 #+BEGIN_SRC sh
 tail -f ~/.esy/log.txt

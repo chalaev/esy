@@ -2,7 +2,6 @@
 ;; Next (major) release candidate with significant changes.
 ;; M-x slime-pwd     Print the current directory of the Lisp process. 
 ;; M-x slime-cd     Set the current directory of the Lisp process.
-;; ~/PROGRAMMISMO/esy/lisp/
 (ql:quickload '(:sb-posix :cl-ppcre :osicat :libconfig :inotify :cl-log :local-time :bordeaux-threads))
 (defvar movedFrom 'nil) (defvar newDirsToWatch 'nil) (defvar movedFrom 'nil) (defvar thisMovedFrom 'nil)
 
@@ -27,6 +26,7 @@
 	    (osicat:walk-directory ; unfortunately it walks over subdirs RANDOMLY
 	     rootDir
 	     #'(lambda (x) (let ((fn (namestring (osicat:absolute-pathname x))))
+			;; (tlog :debug "encountered ~s during the walk" fn)
 			(when (and (isDir fn) (not (string= fn rootDir))) (push fn allSubDirs))))
 	     :directories t ; this option ALLOWS recursive sub-directories scanning, otherwise will walk only through files
 	     :if-does-not-exist :ignore))
@@ -52,7 +52,7 @@
 		 (setf movedFrom (remove-if #'(lambda (x) (> ct (+ moveDelay (third x)))) movedFrom))))
 	     (when newDirsToWatch ; later this should also be treated in a separate thread
 	       (mapcar #'(lambda (newDir) (progn
-		       (tlog :debug "start monitoring the newly created directory ~s" newDir)
+		       (tlog :debug "start monitoring newly created directory ~s" newDir)
 		       (handler-case (inotify:add-watch myWatch (pathname newDir) monitoredEvents)
 			 (iolib.syscalls:enoent () (tlog :error "(ignored) failed to start watching inexistent directory ~s~%" newDir)))
 		       (osicat:walk-directory
