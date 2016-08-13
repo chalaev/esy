@@ -14,7 +14,6 @@
 (defconstant localScript (merge-pathnames "local.sh" mainConfDir))
 (defconstant remoteScript (merge-pathnames (concatenate 'string "from-" hostname ".sh") mainConfDir))
 (defparameter *logLevel* 0); 0 is the most informative log level
-;; (mapcar #'(lambda (x) (load x :verbose t)) '("log.lisp" "system.lisp" "common.lisp"))
 (mapcar #'(lambda (x) (load x :verbose t)) '("log.lisp" "system.lisp" "common.lisp"  "start.lisp" "inotify.lisp"))
 (tlog :info "log started")
 (format t "~a Events/warnings/errors are logged into the file ~s~%" (strTime) (namestring *log-file*))
@@ -23,7 +22,7 @@
 ;; или неверно (с точки зрения используемой мною utf8 кодировки) закодированные имена файлов:
 (defvar allSubDirs 'nil)
 (mapcar #'(lambda (rootDir); rootDir is a catalog object
-	    (osicat:walk-directory ; unfortunately it walks over subdirs RANDOMLY
+	    (osicat:walk-directory ; unfortunately it climbs up the subdir tree; not descends
 	     rootDir
 	     #'(lambda (x) (let ((fn (namestring (osicat:absolute-pathname x))))
 			;; (tlog :debug "encountered ~s during the walk" fn)

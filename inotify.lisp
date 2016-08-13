@@ -16,25 +16,18 @@
       (setf movedFrom (delete thisMovedFrom movedFrom))
       (case whatsUp
 	(#.inotify:in-delete-self (tlog :debug "(ignored) deleted observed  dir ~s" printName))
-	(#.rmdir  (progn
-		    (tlog :debug "deleted dir ~s" printName)
-		    (rm (DBentry fullName :type 'catalog))))
+	(#.rmdir (rm (DBentry fullName :type 'catalog)))
 	(#.inotify:in-create
 	 (case (osicat:file-kind fullName); for now links are not controlled
 	   (#.:directory    (watch 'catalog fullName))
 	   (#.:regular-file (watch 'file    fullName))))
 	(#.inotify:in-modify (watch 'file fullName :modified t))
-	((#.inotify:in-moved-from #.mvDirFrom) (push (list fullName moveCookie (get-internal-real-time))
-						     movedFrom) (tlog :debug "moved ~s to ..." printName))
+	((#.inotify:in-moved-from #.mvDirFrom) (push (list fullName moveCookie (get-internal-real-time)) movedFrom))
 	(#.inotify:in-moved-to (mv (watch 'file (first thisMovedFrom) :doNotChmod t) fullName))
 	(#.mvDirTo
 	 (if (DBentry (dirName (first thisMovedFrom)) :type 'catalog) ; if moved from a monitored directory
-	     (progn ; debug to be removed
-	       (tlog :debug "homedir=~s is observed" (dirName (first thisMovedFrom)))
-	       (mv (DBentry (first thisMovedFrom) :type 'catalog) fullName :type 'catalog :movedFromElseWhere 'nil))
-	     (progn ; debug to be removed
-	       (tlog :debug "homedir=~s is NOT observed" (dirName (first thisMovedFrom)))
-	       (mv (DBentry (first thisMovedFrom) :type 'catalog) fullName :type 'catalog :movedFromElseWhere 't))))
+	     (mv (DBentry (first thisMovedFrom) :type 'catalog) fullName :type 'catalog :movedFromElseWhere 'nil)
+	     (mv (DBentry (first thisMovedFrom) :type 'catalog) fullName :type 'catalog :movedFromElseWhere 't)))
 	;; (#.inotify:in-move-self (tlog :info "an observed directory is moved")) ; decided not to monitor this event
 	(#.inotify:in-delete (rm (watch 'file fullName :erased t)))
 	(#.mkdir (let ((fullName (fixDir fullName)))
@@ -43,7 +36,7 @@
 	(#.inotify:in-attrib ; chgrp or touch or chmod on file
 	 (tlog :debug "chgrp or chmod file ~s" printName)
 	 (update-attrs (watch 'file fullName)))
-	((logior inotify:in-ATTRIB inotify:in-isDIR); chgrp or chmod on dir
+	(#.chmodDir ; chgrp or chmod on dir
 	 (tlog :debug "chgrp or chmod dir ~s" printName)
 	 (update-attrs (watch 'catalog fullName)))
 	(#.inotify:in-ignored (tlog :warning "(presumably due to it removal) stopped monitoring directory ~s" printName))

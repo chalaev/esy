@@ -11,7 +11,8 @@
 
 ;; https://www.common-lisp.net/project/local-time/manual.html
 (defparameter logTimeFormat
-  '((:YEAR 4) #\-  (:MONTH 2) #\- (:DAY 2) #\  (:HOUR 2) #\: (:MIN 2)  #\: (:SEC 2) #\. :msec ))
+  '((:YEAR 4) #\-  (:MONTH 2) #\- (:DAY 2) #\  (:HOUR 2) #\: (:MIN 2)  #\: (:SEC 2) #\. (:msec 3)))
+  ;; '((:YEAR 4) #\-  (:MONTH 2) #\- (:DAY 2) #\  (:HOUR 2) #\: (:MIN 2)  #\: (:SEC 2) #\. :msec ))
 ;; test: (local-time:format-timestring 'nil (local-time:now) :format logTimeFormat)
 
 (defmethod cl-log:format-message ((self cl-log:formatted-message))

@@ -10,17 +10,17 @@ Note: this program requires [[https://github.com/chalaev/cl-libconfig][cl-libcon
 * Motivation
 Though I use free cloud file storages ([[https://disk.yandex.com/][yandex-disk]] and [[https://cloud.mail.ru/][mail.ru-cloud]] have official linux
 clients), I do not trust them. I am afraid that files there are easily accessible to FSB (former
-KGB) or NSA officers, and may end up in hands of criminals. I do not want anyone even to know the
-names of my files and directories. This is why my cloud-stored files are collected in archives
-and encrypted.
+KGB) or NSA officers, and may end up in hands of criminals. I do not want anyone to know even
+names of my files and directories. This is why my [[http://www.chalaev.com/pub/etc/backup2l.conf][cloud-stored (daily) backups]] are encrypted.
 
 However, encryption is inconvenient if I want to share (with a daily syncronization) folders
 between different computers. For example, I use three computers: office workstation, laptop, and
 home server. It is very unprobable that all of them will be broken simultaneously, so
 my files are secure if syncronized among all three.
+(I use [[https://github.com/chalaev/wifi-switcher][wifi-switcher]] to move files between mobile devices and linux laptops.)
 
 Only important files are syncronized. The importance can be encoded in the
-(libconfig-compatible) configuration file (see example.conf) according to name, group, and size of a
+(libconfig-compatible) configuration file (see examples/*/*.conf) according to name, group, age, and size of a
 file. Group names are preserved so it is ok if they have different IDs on different
 hosts. Permissions are preserved as well. If a file (or a directory) is renamed/moved/erased/chmod-ed
 on one host, the same will hapen on the other ones.
@@ -124,7 +124,7 @@ touch -d "2016-08-04 17:47:10 GMT-4" "3/ttt/"
 chmod 770 "3/ttt/"
 cd -
 #+END_SRC
-* Usage
+* Saving local changes to perform them on another host
 The simplest way to use these files is off-line one.
 I work on theorie13 in my office with esy monitoring all files I change.
 At the end of the day, I 

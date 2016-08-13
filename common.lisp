@@ -1,16 +1,14 @@
 ;;  -*-coding: utf-8;-*-
-;; common.lisp Time-stamp: <2016-08-06 15:12 EDT by Oleg SHALAEV http://chalaev.com >
+;; common.lisp Time-stamp: <2016-08-13 14:24 EDT by Oleg SHALAEV http://chalaev.com >
 ;; used by main.lisp
-;; C-h m for keybindings
 
-
-(defun flatten (lst &optional backtrack acc); copied from ← general.lisp ← https://gist.github.com/westerp/cbc1b0434cc2b52e9b10
+(defun flatten (lst &optional backtrack acc); ← https://gist.github.com/westerp/cbc1b0434cc2b52e9b10
   (cond ((consp lst) (flatten (car lst) (cons (cdr lst) backtrack) acc))
 	(lst (flatten (car backtrack) (cdr backtrack) (cons lst acc)))
 	(backtrack (flatten (car backtrack) (cdr backtrack) acc))
-	(t (nreverse acc)))); ← copied from general.lisp
+	(t (nreverse acc))))
 
-(defun escapeString (str &key (escapeSymbols '(#\Space  #\, #\* #\: #\] #\[))); ← copied from general.lisp
+(defun escapeString (str &key (escapeSymbols '(#\Space  #\, #\* #\: #\] #\[)))
   "escapes certain symbols in a given string"
   (concatenate 'string
 	       (flatten (loop for x across str collect
@@ -26,7 +24,7 @@
 ;; ← inside one element, logical "and" is applied
 ;; ← logical "or" is applied between the elements
 (defun matchP (fname ifs &key (erased 'nil)) ; ← also to be used in importantP
-  (not (loop for IFpat in ifs never
+  (not (loop for IFpat in ifs never ; code here is similar to importantDBE
 	    (etypecase IFpat
 	      (string (cl-ppcre:scan IFpat fName))
 	      (hash-table ; enumerate all possible hash-table entries
@@ -35,26 +33,40 @@
 		     (maxSize (nth-value 0 (gethash 'maxFileSize IFpat))); size in bytes
 		     (group (nth-value 0 (gethash 'group IFpat))))
 		 (and
-		  (or (not group) (equal group (fileGroup fName)))
-		  (or (not type) erased (equal type (osicat:file-kind fName)))
-		  (cl-ppcre:scan namePat fName)
-		  (or (not (integerp maxSize)) (< (fileSize fName) maxSize)))))))))
+		  (or (not group) (string= group (fileGroup fName)))
+		  (or (not type) erased
+		      (handler-case (equal type (osicat:file-kind fName))
+			(TYPE-ERROR () 
+			  (tlog :error (format 'nil "the file ~s was (re)moved immediately after creation" fname))
+			  t)))
+		  (or (not namePat) (cl-ppcre:scan namePat fName))
+		  (or (not (integerp maxSize)) (<= (fileSize fName) maxSize)))))))))
 
 (defun dirname (fn) "extracts parent directory from the full name" ; see also embedded directory-namestring function
-  (subseq fn 0 (1+ (first (cl-ppcre:all-matches "/[^/]*.$" fn)))))
-(defun basename (fn) "extracts base name from the full name" ; see also embedded file-namestring function
-       (subseq fn (1+ (first (cl-ppcre:all-matches "/[^/]*.$" fn))) (length fn)))
+       (subseq fn 0 (1+ (car (cl-ppcre:all-matches "/[^/]*.$" fn)))))
+
+(defun basename (fn &key tail) "extracts base name from the full name"
+       (let ((m (cl-ppcre:all-matches
+	       (concatenate 'string "/[^/]*." (if tail (escapeString tail :escapeSymbols '(#\.)) 'nil) "$")
+	       fn)))
+	 (if m
+	     (apply #'(lambda (x y) (subseq fn (1+ x) (- y (length tail)))) m)
+	     (apply #'(lambda (x y) (subseq fn (1+ x) y))
+		    (cl-ppcre:all-matches (concatenate 'string "/[^/]*.$") fn)))))
+;; see also embedded file-namestring function:
+;; (file-namestring "/home/shalaev/tmp.txt") ==> "tmp.txt"
 
 (defun read-property (object field)
   (if (slot-value object field)
       (slot-value object field)
       (read-property (f-parent object) field)))
 
-(defun junkP (fName) "name-based check if a file or a directory must NOT be saved"
+(defun junkP (fName &key (erased 'nil)) "name-based check if a file or a directory must NOT be saved"
        (let ((pc (DBentry (dirname fName) :type 'catalog))); parent catalog
 	 (if pc
-	     (matchP fName (read-property pc 'junkFiles))
-	     (matchP fName *junkFiles*))))
+	     (matchP fName (read-property pc 'junkFiles) :erased erased)
+	     (matchP fName *junkFiles* :erased erased))))
+
 
 (defun importantP (fName &key (erased 'nil)) "name-based check if a file or a directory must be saved"
        (let ((pc (DBentry (dirname fName) :type 'catalog))); parent catalog
@@ -62,20 +74,70 @@
 	     (matchP fName (read-property pc 'goodFiles) :erased erased)
 	     (matchP fName *goodFiles* :erased erased))))
 
+;; new (2016-08-09) importantDBE function is intended to check if file/dir status
+;; has changed from junk to important or vice versa
+;; after it has been included in the DB.
+;; (E.g., I could `chgrp important junkFile`)
+(defun importantDBE (DBelement) "check if a database element deserves saving"
+       (and (not (junkDBE DBelement))
+       (let* ((fName (f-name DBelement))
+	      (fGroup (f-group DBelement))
+	      (pc (DBentry (dirname fName) :type 'catalog))); parent catalog
+	 (unless pc (setf pc DBelement)); for rootdirs which have 'nil parent
+	 (not (loop for IFpat in ; code here is similar to matchP
+		   (read-property pc 'goodFiles)
+		 never
+		   (etypecase IFpat
+		     (string (cl-ppcre:scan IFpat fName))
+		     (hash-table ; enumerate all possible hash-table entries
+		      (let ((namePat (nth-value 0 (gethash 'name IFpat)))
+			    (type (nth-value 0 (gethash 'type IFpat))); :directory or :regular-file
+			    (maxSize (nth-value 0 (gethash 'maxFileSize IFpat))); size in bytes
+			    (group (nth-value 0 (gethash 'group IFpat))))
+			(and
+			 (or (not (and group fGroup)) (string= group fGroup))
+			 (or (not type) (typep DBelement (ecase type
+							   (:regular-file 'file)
+							   (:directory 'catalog))))
+			 (cl-ppcre:scan namePat fName)
+			 (or (not (integerp maxSize)) (<= (fileSize fName) maxSize)))))))))))
+
+(defun junkDBE (DBelement) "check if a database element deserves removal"
+       (let* ((fName (f-name DBelement))
+	      (fGroup (f-group DBelement))
+	      (pc (DBentry (dirname fName) :type 'catalog))); parent catalog
+	 (unless pc (setf pc DBelement)); for rootdirs which have 'nil parent
+	 (not (loop for IFpat in ; code here is similar to matchP
+		   (read-property pc 'junkFiles)
+		 never
+		   (etypecase IFpat
+		     (string (cl-ppcre:scan IFpat fName))
+		     (hash-table ; enumerate all possible hash-table entries
+		      (let ((namePat (nth-value 0 (gethash 'name IFpat)))
+			    (type (nth-value 0 (gethash 'type IFpat))); :directory or :regular-file
+			    (maxSize (nth-value 0 (gethash 'maxFileSize IFpat))); size in bytes
+			    (group (nth-value 0 (gethash 'group IFpat))))
+			(or
+			 (and group fGroup) (string= group fGroup))
+			 (and type (typep DBelement (ecase type
+							   (:regular-file 'file)
+							   (:directory 'catalog))))
+			 (and namePat (cl-ppcre:scan namePat fName))
+			 (and (integerp maxSize) (> (fileSize fName) maxSize)))))))))
+
 (defvar *allFiles* 'nil); main database; список файловых объектов, за которыми происходит слежка
 (defvar newDirsToWatch 'nil)
 
 (defconstant monitoredEvents (logior inotify:in-attrib inotify:in-create inotify:in-delete inotify:in-delete-self inotify:in-ignored inotify:in-isdir
-inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir inotify:in-dont-follow))
+				     inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir inotify:in-dont-follow))
+
 (defconstant mkdir (logior inotify:in-isDIR inotify:in-create))
 (defconstant rmdir (logior inotify:in-isDIR inotify:in-delete))
 (defconstant mvDirFrom (logior inotify:in-isDIR inotify:in-MOVED-from))
 (defconstant mvDirTo (logior inotify:in-isDIR inotify:in-MOVED-to))
-
+(defconstant chmodDir (logior inotify:in-attrib inotify:in-isdir))
 (defstruct iEvent "inotify event" (dir 'nil) (file 'nil) (whatsup 'nil))
 
-;;(file-namestring "/home/shalaev/tmp.txt") ==> "tmp.txt"
-;; (enough-namestring "/home/shalaev/tmp/tmp.txt") ==> "tmp/tmp.txt"
 (defclass file ()
   ((%name :initarg :name :type string :accessor f-name)
    (%parent :type catalog :initarg :parent :accessor f-parent); will be auto-changed when name is changed
@@ -90,10 +152,13 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 
 (defun update-attrs (fileInDB) "update permissions and date for a file or a directory"
        (when fileInDB
-	 (setf
+	 (setf ; this is one case when file/dir status can be changed from junk to important or vice versa
 	  (f-group fileInDB) (fileGroup (f-name fileInDB))
 	  (f-date fileInDB)  (fileDate  (f-name fileInDB))
 	  (f-perms fileInDB) (fileMod   (f-name fileInDB)))))
+;; however, even if the file became unimportant (e.g., due to "chgrp tmp")
+;; we should not remove it from the DB
+;; because this may be later reversed so it may become important again
 
 ;; note that for typep function every catalog is also a file
 (defclass catalog (file)
@@ -116,7 +181,6 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 	 (if type
 	     (find fName (selectType *allFiles* type) :test #'ft)
 	     (find fName             *allFiles*       :test #'ft))))
-
 
 ;; ПРОБЛЕМА: каталог продолжает наблюдаться под старым именем; соответственно, события вроде "изменение/создание файла" в новом каталоге
 ;; будет сопровождаться событием со старым именем каталога!
@@ -147,7 +211,7 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 (defmethod mv ((obj1 (eql 'nil)) (newName string) &key (movedFromElseWhere 'nil) (type 'file))
   (let ((obj2 (watch type newName :doNotChmod t)))
     (tlog :debug "mv1: before the move (mv), the file/dir was not in the DB")
-    (when movedFromElseWhere  (setf (f-modified obj2) t)  (update-attrs obj2))))
+    (when movedFromElseWhere  (setf (f-modified obj2) t) (update-attrs obj2))))
 
 (defmethod mv ((obj file) (newName string) &key (movedFromElseWhere 'nil) (type 'file)); called also for catalogs
   (let* ((p (f-parent obj)) (nd (dirname newName)) (np (DBentry nd :type 'catalog)))
@@ -162,27 +226,34 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
       (pushnew obj (c-children np)) ; then marry the new one
       (tlog :debug "changing parent name to ~s" (dTildas (f-name np)))
       (setf (f-parent obj) np)
-      (correctName obj))))
+      (correctName obj))
+    (when (string= newName (f-prevName obj))
+      (tlog :debug "mv2: prevName=name=~s" newName)
+      (setf (f-prevName obj) 'nil))))
 
-
-(defun modAsteriscs (str) "transforms * into .*"
+(defun modAsteriscs (str) "transforms * into [^/]*"
   (concatenate 'string
 	       (flatten (loop for x across str collect
 			     (if (equal x #\*)
-				 (list #\. x)
+				 (list #\[ #\^  #\/ #\] x)
 				 x)))))
+;; test: (modAsteriscs "*.tex")
 (defun shellToRegEx (shellPattern) "transforms shell patterns into regex for the cl-ppcre package"
        (when shellPattern
-	 (let ((pat (if (typep shellPattern 'string) (list shellPattern) shellPattern)))
+	 (let ((pat (if (stringp shellPattern) (list shellPattern) shellPattern)))
 	 (modAsteriscs
 	  (escapeString
 	   (subseq
 	    (apply 'concatenate
 		   (cons 'string
-			 (mapcar #'(lambda (x) (concatenate  'string "|" x "$")) pat)))
+			 (mapcar #'(lambda (x) (concatenate  'string "|/" x "$")) pat)))
 	    1) :escapeSymbols '(#\.))))))
-;; test: (shellToRegEx '("*.tex"))
-
+;; tests:
+;; (shellToRegEx '("*.tex"))
+;; (shellToRegEx '(".*.tex")); => "/\\.[^/]*\\.tex$"
+;; (cl-ppcre:scan "\\.[^/]*\\.tex$" "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/#next-commit.tex")
+;; (cl-ppcre:scan "\\.[^/]*\\.tex$" "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#next-commit.tex")
+;; (cl-ppcre:scan "\\.[^/]*\\.tex$" "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.aa/#next-commit.tex")
 
 (defun matchNameOrPattern (fullName mh); mh is a hash containing name or pattern keys
   (let ((pat (if (nth-value 1 (gethash 'pattern mh))
@@ -194,9 +265,9 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 ;; note that it is possible that once upon a time a file existed, then it was erased,
 ;; and a then directory with the same name appeared
 ;; Warning: watch should not be applied to root dirs
-
 (defun watch (objType fullName &key (erased 'nil) (modified 'nil) (doNotChmod 'nil))
   "(if it deserves,) add a file or a directory to the *allFiles* database"
+  (when fullName ; sometimes it is called with fullName=nil
   (let ((inDB (DBentry fullName :type objType)) (emm (or erased modified doNotChmod)))
     (tlog :debug "watch function received ~s" (dTildas fullName))
     (tlog :debug  "rm=~a, mod=~a, !chmod=~a" erased modified doNotChmod)
@@ -204,10 +275,13 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 	(progn
 	  (tlog :debug "~s is already in the database" (dTildas fullName))
 	  (when erased   (setf (f-erased   inDB) t))
-	  (when modified (setf (f-modified inDB) t)))
+	  (when modified (setf (f-modified inDB) t))
+	  (when (string= fullName (f-prevName inDB))
+	    (tlog :debug "watch: prevName=name=~s" fullName)
+	    (setf (f-prevName inDB) 'nil)))
 	(when ; if this is a newbie: check if it deserves our royal attention
 	    (ecase objType
-	      (file (importantP fullName :erased erased))
+	      (file (and (importantP fullName :erased erased) (not (junkP fullName :erased erased))))
 	      (catalog (not (junkP fullName))))
 	  (tlog :debug "~s is not in the database" (dTildas fullName))
 	  (let* ((parent (DBentry (dirname fullName) :type 'catalog))
@@ -215,10 +289,9 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 					      :name fullName
 					      :parent parent
 					      :group (unless emm (fileGroup fullName))
-					      :date  (unless emm (fileDate fullName))
-					      :perms (unless emm (fileMod fullName))
+					      :date  (unless emm (fileDate  fullName))
+					      :perms (unless emm (fileMod   fullName))
 					      :modified modified)))
-	    ;; 2016-08-06 begin
 	    (when (equal objType 'catalog)
 	      ;; (tlog :debug "checking special properties for the directory ~s" (dTildas fullName))
  	      (dolist (hts specialDirectoryOptions) ; they are all hashes
@@ -228,18 +301,16 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 		  (setf (slot-value newDBelement 'goodFiles) (WCorHashToRegEx (nth-value 0 (gethash 'importantFiles  hts))))
 		  (setf (slot-value newDBelement 'junkFiles) (WCorHashToRegEx (nth-value 0 (gethash 'junkFiles       hts))))
 		  (setf (c-maxFilesPerDir newDBelement) (nth-value 0 (gethash 'maxFilesPerDir hts))))))
-	    ;; 2016-08-06 end
 	    (pushnew newDBelement *allFiles* :test 'filesEqual)
 	    (pushnew newDBelement (c-children parent) :test 'filesEqual)
-	    (tlog :info "added file or directory ~s to the database" (dTildas fullName))
-	    (find newDBelement *allFiles* :test 'filesEqual))))))
+	    (tlog :info "~s changed" (dTildas fullName)); "file changed" in log means that we added it to the DB
+	    (find newDBelement *allFiles* :test 'filesEqual)))))))
 ;; ситуации вызова watch:
 ;; 1. при инициации добавляем каталоги из inotify-списка
 ;; 2. при созадании нового каталога или файла
 ;; 3. при удалении каталога или файла
 ;; 4. при изменении разрешений или даты
 ;; (неясно) При переименовании или перемещении каталога или файла
-
 
 (defun stripAbsDir (x) (subseq x (length rootDir) (length x)))
 
@@ -255,7 +326,7 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
     ;; (tlog :debug "writing shell scripts in ~~/.esy")
     (format save "#!/bin/sh -e~%# generated ~a by esy on ~s~%echo \"`date '+%Y-%m-%d\ %H:%M:%S'` @ `hostname` = `hostname -I`\" > ~~/.esy/host-id.dat~%timeout 5 emacsclient -e \"(save-some-buffers t)\"~%fetchmail --quit~%cd ~s~%tar jcfv ~~/.esy/from-$(hostname).tbz ~~/.esy/host-id.dat ~s" (strDate) hostname rootDir (namestring remoteScript))
     (mapcar #'(lambda (x) (format save " ~s" (stripAbsDir (f-name x)))) ; these files will be saved into the tar archive
-	    (remove-if-not #'(lambda (y) (and (f-modified y) (not (f-erased y)))) (selectFiles *allFiles*)))
+	    (remove-if-not #'(lambda (y) (and (importantDBE y) (f-modified y) (not (f-erased y)))) (selectFiles *allFiles*)))
     (format save "~%rm ~~/.esy/host-id.dat~%# end~%")
     (format save "cd -~%"))
   (with-open-file (script remoteScript :direction :output :if-exists :supersede)
@@ -266,25 +337,41 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 	(format script "~%~s)~%rootDir=~s~%;;" (nth-value 0 (gethash 'hostname allowedHost))  (nth-value 0 (gethash 'root allowedHost)))))
     (format script "~%*)~%echo \"this host was not allowed in ~a:.esy/~a.conf, I refuse to change files here, stopping\"~%exit~%;;" hostname hostname)
     (format script "~%esac~%")
-    (format script "tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript)) hostname)
+    (format script "tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript) :tail ".sh"))
     (format script "# moving directories:~%")
     (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
-	    (remove-if-not #'(lambda (x) (f-prevName x)) (selectDirs *allFiles*)))
+	    (remove-if-not #'(lambda (x) (and (not (junkDBE x)) (f-prevName x))) (selectDirs *allFiles*)))
     (format script "# moving files:~%")
     (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
-	    (remove-if-not #'(lambda (x) (f-prevName x)) (selectFiles *allFiles*)))
-    (format script "# deleting files an directories:~%")
-    (mapcar #'(lambda (x) (format script "rm -ri ~s~%" (stripAbsDir (f-name x))))
-	    (remove-if-not #'(lambda (x) (f-erased x)) *allFiles*))
+	    (remove-if-not #'(lambda (x) (and (importantDBE x) (f-prevName x))) (selectFiles *allFiles*)))
+    (format script "# deleting files and directories:~%for i in ~~/.esy/local.sh")
+    (mapcar #'(lambda (x) (format script " ~s" (stripAbsDir (f-name x))))
+	    (remove-if-not #'(lambda (x) (or
+				     (and (f-erased x)
+					  (etypecase x
+						     (catalog (not (junkDBE x)))
+						     (file    (importantDBE x))))
+				     (and (f-perms  x) (not
+					  (etypecase x
+						     (catalog (not (junkDBE x)))
+						     (file    (importantDBE x)))))))
+			   *allFiles*))
+    (mapcar #'(lambda (x) (format script " ~s" (stripAbsDir (f-prevName x))))
+	    (remove-if-not #'(lambda (x) (and (f-prevName x) (not
+					  (etypecase x
+						     (catalog (not (junkDBE x)))
+						     (file    (importantDBE x))))))
+	    *allFiles*)) ; moved to unimportant file means "erased"
+    (format script "; do if [ -e \"$i\" ]; then rm -ri \"$i\" ; fi ; done ~%")
     (format script "# adjusting ownership (UIDs and GIDs might be different on different hosts):~%")
     (mapcar #'(lambda (x) (format script "chgrp ~a ~s~%" (f-group x) (stripAbsDir (f-name x))))
-	    (remove-if-not #'(lambda (x) (f-group x)) *allFiles*))
+	    (remove-if-not #'(lambda (x) (and (not (f-erased x)) (f-group x))) *allFiles*))
     (format script "# adjusting dates:~%")
     (mapcar #'(lambda (x) (format script "touch -d ~s ~s~%" (f-date x) (stripAbsDir (f-name x))))
-	    (remove-if-not #'(lambda (x) (f-date x)) *allFiles*))
+	    (remove-if-not #'(lambda (x) (and (not (f-erased x)) (f-date x))) *allFiles*))
     (format script "# adjusting permissions:~%")
     (mapcar #'(lambda (x) (format script "chmod ~a ~s~%" (f-perms x) (stripAbsDir (f-name x))))
-	    (remove-if-not #'(lambda (x) (f-perms x)) *allFiles*))
+	    (remove-if-not #'(lambda (x) (and (not (f-erased x)) (f-perms x))) *allFiles*))
     (format script "cd -~%")))
 
 (defun copy-hash-table (hash-table); http://stackoverflow.com/questions/26045442/copy-hash-table-in-lisp
@@ -352,6 +439,11 @@ inotify:in-modify inotify:in-moved-from inotify:in-moved-to inotify:in-onlydir i
 	    (mapAll #'(lambda (obj) (if (equal (car rule) obj) (second rule) obj)) structure))
 	object substRules)); tested 2016-07-08
 
+(defun recursive-parse-units (structure) "recursively applies parseNumberTimesUnit"
+	    (mapAll #'(lambda (obj) (if (and (stringp obj) (cl-ppcre:scan "^ *\\d+ *[a-zA-Z]+$" obj))
+				   (parseNumberTimesUnit obj)
+				   obj)) structure))
+			   
 (defun mps (str1 str2); arguments might be path names…
   (merge-pathnames (escapeString (namestring str1)) (escapeString (namestring str2))))
 

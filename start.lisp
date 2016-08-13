@@ -24,8 +24,8 @@
   (libconfig:conf-file-read-error () (errExit "could not read config file"))
   (libconfig:config-parse-error () (errExit "config file (libconfig-) syntax error")))
 
-(defparameter *goodFiles* (WCorHashToRegEx goodFiles0))
-(defparameter *junkFiles* (WCorHashToRegEx junkFiles0))
+(defparameter *goodFiles* (recursive-parse-units (WCorHashToRegEx goodFiles0)))
+(defparameter *junkFiles* (recursive-parse-units (WCorHashToRegEx junkFiles0)))
 (pushnew (dirname (namestring *log-file*)) *doNotWatchDirs*); log-file is always changed, so we avoid monitoring its directory
 
 (let ((thisHostEntry (find hostname hosts :test #'(lambda (x y) (string= x (gethash 'hostname y))))))

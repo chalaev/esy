@@ -1,4 +1,4 @@
-;; system.lisp Time-stamp: <2016-07-17 16:21 EDT by Oleg SHALAEV http://chalaev.com >
+;; system.lisp Time-stamp: <2016-08-13 15:15 EDT by Oleg SHALAEV http://chalaev.com >
 ;; Some system functions
 ;; todo: remove some of the (unused) functions defined here
 ;; (require 'sb-posix)
@@ -15,7 +15,7 @@
 (defun fileGroup (fullName)
   (handler-case (unprotected-fileGroup fullName)
     (sb-posix:syscall-error ()
-      (tlog :debug "failed to reveal (inexistent?) file (~s) group" (dTildas fullName)))))
+      (tlog :debug "failed to reveal (inexistent?) file (~s) group" (dTildas fullName)) 'nil)))
 (defun GroupID (name) (sb-posix:group-gid (sb-posix:getgrnam name)))
 
 (defun fileSize (fullName)

@@ -1,66 +1,18 @@
-2016-08-08 14:59:10.671 INFO started monitoring 3631 directories.
-2016-08-08 14:59:30.677 DEBUG received 1 events
-2016-08-08 14:59:30.677 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp"
-2016-08-08 14:59:32.781 DEBUG received 1 events
-2016-08-08 14:59:32.785 DEBUG event 10 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp"
-2016-08-08 14:59:32.845 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp"
-2016-08-08 14:59:32.845 DEBUG rm=NIL, mod=T, !chmod=NIL
-2016-08-08 14:59:32.846 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp" is not in the database
-2016-08-08 14:59:32.869 INFO added file or directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp" to the database
-2016-08-08 14:59:32.870 DEBUG received 1 events
-2016-08-08 14:59:32.870 DEBUG event 10 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp"
-2016-08-08 14:59:32.936 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp"
-2016-08-08 14:59:32.936 DEBUG rm=NIL, mod=T, !chmod=NIL
-2016-08-08 14:59:32.936 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp" is already in the database
-2016-08-08 14:59:32.937 DEBUG received 1 events
-2016-08-08 14:59:32.937 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp"
-2016-08-08 14:59:33.0 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp"
-2016-08-08 14:59:33.0 DEBUG rm=T, mod=NIL, !chmod=NIL
-2016-08-08 14:59:33.0 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp" is not in the database
-2016-08-08 14:59:33.1 INFO added file or directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp" to the database
-2016-08-08 15:09:38.911 DEBUG received 1 events
-2016-08-08 15:09:38.911 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/CONFIG.SYS/.#esy.conf"
-2016-08-08 15:10:03.744 DEBUG received 1 events
-2016-08-08 15:10:03.744 DEBUG event 10 occured with "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf"
-2016-08-08 15:10:03.813 DEBUG watch function received "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf"
-2016-08-08 15:10:03.813 DEBUG rm=NIL, mod=T, !chmod=NIL
-2016-08-08 15:10:03.814 DEBUG "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf" is not in the database
-2016-08-08 15:10:03.815 INFO added file or directory "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf" to the database
-2016-08-08 15:10:03.815 DEBUG received 1 events
-2016-08-08 15:10:03.815 DEBUG event 10 occured with "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf"
-2016-08-08 15:10:03.881 DEBUG watch function received "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf"
-2016-08-08 15:10:03.881 DEBUG rm=NIL, mod=T, !chmod=NIL
-2016-08-08 15:10:03.882 DEBUG "/home/shalaev/PA6OTA/CONFIG.SYS/esy.conf" is already in the database
-2016-08-08 15:10:03.882 DEBUG received 1 events
-2016-08-08 15:10:03.882 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/CONFIG.SYS/.#esy.conf"
-2016-08-08 15:10:03.945 DEBUG watch function received "/home/shalaev/PA6OTA/CONFIG.SYS/.#esy.conf"
-2016-08-08 15:10:03.945 DEBUG rm=T, mod=NIL, !chmod=NIL
-2016-08-08 15:10:03.946 DEBUG "/home/shalaev/PA6OTA/CONFIG.SYS/.#esy.conf" is not in the database
-2016-08-08 15:10:03.946 INFO added file or directory "/home/shalaev/PA6OTA/CONFIG.SYS/.#esy.conf" to the database
-2016-08-08 15:10:49.329 DEBUG received 1 events
-2016-08-08 15:10:49.330 DEBUG event 1000000000000000000000100000000 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/"
-2016-08-08 15:10:49.330 INFO created directory
-2016-08-08 15:10:49.330 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/"
-2016-08-08 15:10:49.330 DEBUG rm=NIL, mod=NIL, !chmod=NIL
-2016-08-08 15:10:49.331 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/" is not in the database
-2016-08-08 15:10:49.345 INFO added file or directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/" to the database
-2016-08-08 15:10:49.345 DEBUG start monitoring newly created directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/"
-2016-08-08 15:10:49.347 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/"
-2016-08-08 15:10:49.347 DEBUG rm=NIL, mod=NIL, !chmod=NIL
-2016-08-08 15:10:49.348 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/" is not in the database
-2016-08-08 15:10:49.348 INFO added file or directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/" to the database
-2016-08-08 15:10:49.349 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/toy/"
-2016-08-08 15:10:49.349 DEBUG rm=NIL, mod=NIL, !chmod=NIL
-2016-08-08 15:10:49.349 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/toy/" is not in the database
-2016-08-08 15:10:49.350 INFO added file or directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/toy/" to the database
-2016-08-08 15:11:25.265 DEBUG received 1 events
-2016-08-08 15:11:25.278 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf"
-2016-08-08 15:11:25.330 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf"
-2016-08-08 15:11:25.330 DEBUG rm=NIL, mod=NIL, !chmod=NIL
-2016-08-08 15:11:25.330 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf" is not in the database
-2016-08-08 15:11:25.332 INFO added file or directory "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf" to the database
-2016-08-08 15:11:25.332 DEBUG received 1 events
-2016-08-08 15:11:25.332 DEBUG event 10 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf"
-2016-08-08 15:11:25.395 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf"
-2016-08-08 15:11:25.395 DEBUG rm=NIL, mod=T, !chmod=NIL
-2016-08-08 15:11:25.395 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/theorie13.conf" is already in the database
+....
+2016-08-11 16:06:00.46 INFO started monitoring 3635 directories.
+2016-08-11 16:18:48.423 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.ipUQ" to the database
+2016-08-11 16:18:48.488 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.kpUQ" to the database
+2016-08-11 16:58:15.301 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/cazzate/new/msg.hpUQ" to the database
+2016-08-11 17:16:49.621 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_sGD.BtOrXB.theorie13" to the database
+2016-08-11 17:16:49.954 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_sGD,BtOrXB.theorie13" to the database
+2016-08-11 17:16:50.18 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.8rUQ" to the database
+2016-08-11 17:16:50.83 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_sGD+BtOrXB.theorie13" to the database
+2016-08-11 17:16:50.278 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" to the database
+2016-08-11 17:16:50.410 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_3GD.BtOrXB.theorie13" to the database
+2016-08-11 17:16:50.669 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_3GD,BtOrXB.theorie13" to the database
+2016-08-11 17:16:50.734 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.FwUQ" to the database
+2016-08-11 17:16:50.799 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_3GD+BtOrXB.theorie13" to the database
+2016-08-11 17:45:40.537 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/params.max" to the database
+2016-08-11 17:45:40.928 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/reproduce-figures.max" to the database
+2016-08-11 17:45:41.123 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/ranges.max" to the database
+2016-08-11 17:45:41.508 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" to the database
