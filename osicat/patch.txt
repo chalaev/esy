@@ -1,0 +1,10 @@
+I use osicat:walk-directory to recursively scan directories.
+However, in the current (2016-08-16) osicat release
+this function can fail even if there is a single
+non-readable file somewhere in the subdirectory free.
+(For example, a soft link to a non-existent file.)
+
+The patch-file in this directory fixes the problem.
+To apply:
+cd ~/quicklisp/dists/quicklisp/software/osicat-20160421-git/src/
+patch -p1 < /path-to/call-with-directory-iterator.diff

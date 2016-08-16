@@ -34,7 +34,7 @@ mkdir ~/esy-source ~/.esy
 cd ~/esy-source
 git clone https://github.com/chalaev/esy
 cd esy
-sed -e "s/myhostname/`hostname`/" -e "s,/home/user,$HOME," example.conf >  ~/.esy/`hostname`.conf
+sed -e "s/myhostname/`hostname`/" -e "s,/home/user,$HOME," examples/toy/theorie13.conf >  ~/.esy/`hostname`.conf
 mkdir -p ~/esy-test/{mail,2,3,4}
 mkdir -p ~/esy-test/2/a/b/c
 echo "aaa" > ~/esy-test/2/a/b/1.txt

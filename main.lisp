@@ -1,7 +1,4 @@
 ;; Time-stamp: <2016-08-04 21:34 EDT by Oleg SHALAEV http://chalaev.com >
-;; Next (major) release candidate with significant changes.
-;; M-x slime-pwd     Print the current directory of the Lisp process. 
-;; M-x slime-cd     Set the current directory of the Lisp process.
 (ql:quickload '(:sb-posix :cl-ppcre :osicat :libconfig :inotify :cl-log :local-time :bordeaux-threads))
 (defvar movedFrom 'nil) (defvar newDirsToWatch 'nil) (defvar movedFrom 'nil) (defvar thisMovedFrom 'nil)
 
@@ -26,7 +23,12 @@
 	     rootDir
 	     #'(lambda (x) (let ((fn (namestring (osicat:absolute-pathname x))))
 			;; (tlog :debug "encountered ~s during the walk" fn)
-			(when (and (isDir fn) (not (string= fn rootDir))) (push fn allSubDirs))))
+			(when (and
+			       ;; (isDir fn)
+			       (handler-case (isDir fn)
+				 (OSICAT-POSIX:EACCES ()
+				   (tlog :error "could not access file or dir: ~s" fn) 'nil))
+			       (not (string= fn rootDir))) (push fn allSubDirs))))
 	     :directories t ; this option ALLOWS recursive sub-directories scanning, otherwise will walk only through files
 	     :if-does-not-exist :ignore))
 	(mapcar 'f-name *allFiles*))

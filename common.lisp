@@ -35,12 +35,16 @@
 		 (and
 		  (or (not group) (string= group (fileGroup fName)))
 		  (or (not type) erased
-		      (handler-case (equal type (osicat:file-kind fName))
-			(TYPE-ERROR () 
-			  (tlog :error (format 'nil "the file ~s was (re)moved immediately after creation" fname))
-			  t)))
+		      (let ((ft (osicat:file-kind fName)))
+			(if (keywordp ft)
+			    (equal type (osicat:file-kind fName))
+			    (progn
+			      (tlog :warning (format 'nil "the file ~s was (re)moved immediately after creation" fname))
+			      t))))
 		  (or (not namePat) (cl-ppcre:scan namePat fName))
-		  (or (not (integerp maxSize)) (<= (fileSize fName) maxSize)))))))))
+		  (or (not (integerp maxSize)) erased
+		      (let ((fs (fileSize fName)))
+			(if (integerp fs) (<= fs maxSize) t))))))))))
 
 (defun dirname (fn) "extracts parent directory from the full name" ; see also embedded directory-namestring function
        (subseq fn 0 (1+ (car (cl-ppcre:all-matches "/[^/]*.$" fn)))))
@@ -66,7 +70,6 @@
 	 (if pc
 	     (matchP fName (read-property pc 'junkFiles) :erased erased)
 	     (matchP fName *junkFiles* :erased erased))))
-
 
 (defun importantP (fName &key (erased 'nil)) "name-based check if a file or a directory must be saved"
        (let ((pc (DBentry (dirname fName) :type 'catalog))); parent catalog
@@ -265,6 +268,9 @@
 ;; note that it is possible that once upon a time a file existed, then it was erased,
 ;; and a then directory with the same name appeared
 ;; Warning: watch should not be applied to root dirs
+
+
+;; problem → (WATCH 'FILE "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_fz.GaysXB.theorie13" :ERASED NIL :MODIFIED NIL :DONOTCHMOD NIL)
 (defun watch (objType fullName &key (erased 'nil) (modified 'nil) (doNotChmod 'nil))
   "(if it deserves,) add a file or a directory to the *allFiles* database"
   (when fullName ; sometimes it is called with fullName=nil
@@ -285,13 +291,18 @@
 	      (catalog (not (junkP fullName))))
 	  (tlog :debug "~s is not in the database" (dTildas fullName))
 	  (let* ((parent (DBentry (dirname fullName) :type 'catalog))
-		 (newDBelement (make-instance objType
+		 (newDBelement
+		  (handler-case (make-instance objType
 					      :name fullName
+					      :modified modified
 					      :parent parent
 					      :group (unless emm (fileGroup fullName))
 					      :date  (unless emm (fileDate  fullName))
-					      :perms (unless emm (fileMod   fullName))
-					      :modified modified)))
+					      :perms (unless emm  (fileMod fullName)))
+		    (osicat-posix:enoent ()
+		      (tlog :debug "file ~s was erased during its addition to DB" fullName)
+		      'nil))))
+	    (when newDBelement
 	    (when (equal objType 'catalog)
 	      ;; (tlog :debug "checking special properties for the directory ~s" (dTildas fullName))
  	      (dolist (hts specialDirectoryOptions) ; they are all hashes
@@ -303,8 +314,8 @@
 		  (setf (c-maxFilesPerDir newDBelement) (nth-value 0 (gethash 'maxFilesPerDir hts))))))
 	    (pushnew newDBelement *allFiles* :test 'filesEqual)
 	    (pushnew newDBelement (c-children parent) :test 'filesEqual)
-	    (tlog :info "~s changed" (dTildas fullName)); "file changed" in log means that we added it to the DB
-	    (find newDBelement *allFiles* :test 'filesEqual)))))))
+	    (tlog :info "~s added to DB" (dTildas fullName)); "file changed" in log means that we added it to the DB
+	    (find newDBelement *allFiles* :test 'filesEqual))))))))
 ;; ситуации вызова watch:
 ;; 1. при инициации добавляем каталоги из inotify-списка
 ;; 2. при созадании нового каталога или файла
@@ -337,13 +348,13 @@
 	(format script "~%~s)~%rootDir=~s~%;;" (nth-value 0 (gethash 'hostname allowedHost))  (nth-value 0 (gethash 'root allowedHost)))))
     (format script "~%*)~%echo \"this host was not allowed in ~a:.esy/~a.conf, I refuse to change files here, stopping\"~%exit~%;;" hostname hostname)
     (format script "~%esac~%")
-    (format script "tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript) :tail ".sh"))
     (format script "# moving directories:~%")
     (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (and (not (junkDBE x)) (f-prevName x))) (selectDirs *allFiles*)))
     (format script "# moving files:~%")
     (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (and (importantDBE x) (f-prevName x))) (selectFiles *allFiles*)))
+    (format script "# extracting saved files:~%tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript) :tail ".sh"))
     (format script "# deleting files and directories:~%for i in ~~/.esy/local.sh")
     (mapcar #'(lambda (x) (format script " ~s" (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (or
@@ -404,7 +415,7 @@
 	   hts))))))); I would like to rewrite this ugly function...
 
 (defun parseNumberTimesUnit (str &key
-	(modifiers '(("min" 60) ("hours?" 3600) ("days?" 86400) ("weeks?" 604800) ("months?" 18144000) ("years?" 6622560000) ("k" 1024) ("m" 1048576)))
+	(modifiers '(("min" 60) ("hours?" 3600) ("days?" 86400) ("weeks?" 604800) ("months?" 18144000) ("y" 6622560000)  ("years?" 6622560000) ("k" 1024) ("m" 1048576)))
         (whenerror 0)); default result when string can not be parsed
   "Parses integer parameters with modifiers k(kbyte=1024), m(mbyte=1024x1024), etc."
   (let ((mind 'nil) (fac 1))

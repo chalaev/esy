@@ -23,7 +23,10 @@
 	   (#.:regular-file (watch 'file    fullName))))
 	(#.inotify:in-modify (watch 'file fullName :modified t))
 	((#.inotify:in-moved-from #.mvDirFrom) (push (list fullName moveCookie (get-internal-real-time)) movedFrom))
-	(#.inotify:in-moved-to (mv (watch 'file (first thisMovedFrom) :doNotChmod t) fullName))
+	(#.inotify:in-moved-to
+	 (let ((inDB (DBentry (first thisMovedFrom))))
+	   (unless inDB (setf inDB (watch 'file (first thisMovedFrom) :doNotChmod t)))
+	   (mv inDB fullName)))
 	(#.mvDirTo
 	 (if (DBentry (dirName (first thisMovedFrom)) :type 'catalog) ; if moved from a monitored directory
 	     (mv (DBentry (first thisMovedFrom) :type 'catalog) fullName :type 'catalog :movedFromElseWhere 'nil)

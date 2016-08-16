@@ -1,0 +1,31 @@
+diff -Naur original/osicat.lisp new/osicat.lisp
+--- original/osicat.lisp	2016-08-16 09:36:42.000000000 -0400
++++ new/osicat.lisp	2016-08-16 10:01:35.000000000 -0400
+@@ -357,17 +357,23 @@
+                      `(funcall ,',one-iter)))
+           ,@body)))))
+ 
+-(defun call-with-directory-iterator (pathspec fun)
++(defun call-with-directory-iterator (pathspec fun &key (complain-on-eaccess 'nil))
+   (let ((dir (absolute-pathname (pathname pathspec)))
+         (old-dir (current-directory)))
+     (let ((dp (nix:opendir dir)))
+       (labels ((one-iter ()
+-                 (let ((name (nix:readdir dp)))
+-                   (unless (null name)
++                 (let* ((name (nix:readdir dp))
++                        (fc (if name
++                                (handler-case (get-file-kind name t)
++                                  (osicat-posix:eacces ()
++                                    (when complain-on-eaccess (complain-on-eaccess name))
++                                    'nil))
++                                'nil)))
++                   (unless (or (null name) (null fc))
+                      (cond
+                        ((member name '("." "..") :test #'string=)
+                         (one-iter))
+-                       ((eq :directory (get-file-kind name t))
++                       ((eq :directory fc)
+                         (make-pathname :directory `(:relative ,name)))
+                        (t
+                         (let ((dotpos (position #\. name :from-end t)))
