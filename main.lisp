@@ -12,6 +12,7 @@
 (defconstant remoteScript (merge-pathnames (concatenate 'string "from-" hostname ".sh") mainConfDir))
 (defparameter *logLevel* 0); 0 is the most informative log level
 (mapcar #'(lambda (x) (load x :verbose t)) '("log.lisp" "system.lisp" "common.lisp"  "start.lisp" "inotify.lisp"))
+
 (tlog :info "log started")
 (format t "~a Events/warnings/errors are logged into the file ~s~%" (strTime) (namestring *log-file*))
 
@@ -53,9 +54,9 @@
 		 (setf movedFrom (remove-if #'(lambda (x) (> ct (+ moveDelay (third x)))) movedFrom))))
 	     (when newDirsToWatch ; later this should also be treated in a separate thread
 	       (mapcar #'(lambda (newDir) (progn
-		       (tlog :debug "start monitoring newly created directory ~s" newDir)
+		       (tlog :debug "start monitoring newly created directory ~s" (dTildas newDir))
 		       (handler-case (inotify:add-watch myWatch (pathname newDir) monitoredEvents)
-			 (iolib.syscalls:enoent () (tlog :error "(ignored) failed to start watching inexistent directory ~s~%" newDir)))
+			 (iolib.syscalls:enoent () (tlog :error "(ignored) failed to start watching inexistent directory ~s~%" (dTildas newDir))))
 		       (osicat:walk-directory
 			newDir
 			#'(lambda (x) (let* ((pfn (osicat:absolute-pathname x))
@@ -64,7 +65,7 @@
 				     (push fn allSubDirs)
 				     (handler-case
 					 (inotify:add-watch myWatch pfn monitoredEvents)
-				       (iolib.syscalls:enoent () (tlog :error "(ignored) failed to start watching inexistent directory ~s~%" fn))))))
+				       (iolib.syscalls:enoent () (tlog :error "(ignored) failed to start watching inexistent directory ~s~%" (dTildas fn)))))))
 			:directories t :if-does-not-exist :ignore ; :test avoids deschending into junk sub-directories:
 			:test #'(lambda (y) (let ((fn (namestring (osicat:absolute-pathname y))))
 					 (or (isFile fn) (and (isDir fn) (not (junkP fn)))))))))

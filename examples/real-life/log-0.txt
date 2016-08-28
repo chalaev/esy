@@ -1,18 +1,1477 @@
-....
-2016-08-11 16:06:00.46 INFO started monitoring 3635 directories.
-2016-08-11 16:18:48.423 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.ipUQ" to the database
-2016-08-11 16:18:48.488 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.kpUQ" to the database
-2016-08-11 16:58:15.301 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/cazzate/new/msg.hpUQ" to the database
-2016-08-11 17:16:49.621 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_sGD.BtOrXB.theorie13" to the database
-2016-08-11 17:16:49.954 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_sGD,BtOrXB.theorie13" to the database
-2016-08-11 17:16:50.18 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.8rUQ" to the database
-2016-08-11 17:16:50.83 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_sGD+BtOrXB.theorie13" to the database
-2016-08-11 17:16:50.278 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" to the database
-2016-08-11 17:16:50.410 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_3GD.BtOrXB.theorie13" to the database
-2016-08-11 17:16:50.669 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_3GD,BtOrXB.theorie13" to the database
-2016-08-11 17:16:50.734 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.FwUQ" to the database
-2016-08-11 17:16:50.799 INFO added "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_3GD+BtOrXB.theorie13" to the database
-2016-08-11 17:45:40.537 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/params.max" to the database
-2016-08-11 17:45:40.928 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/reproduce-figures.max" to the database
-2016-08-11 17:45:41.123 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/ranges.max" to the database
-2016-08-11 17:45:41.508 INFO added "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" to the database
+This is an example of the (most informative) zero-level log.
+
+2016-08-20 07:55:57.479 DEBUG received 1 events
+2016-08-20 07:55:57.479 DEBUG event 10 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/#debug.lisp#"
+2016-08-20 07:55:57.544 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/#debug.lisp#"
+2016-08-20 07:55:57.544 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 08:27:53.922 DEBUG received 1 events
+2016-08-20 08:27:53.923 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#P-header.max"
+2016-08-20 08:29:28.484 DEBUG received 2 events
+2016-08-20 08:29:28.485 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.493 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max~"
+2016-08-20 08:29:28.561 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.561 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 08:29:28.562 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" is not in the database
+2016-08-20 08:29:28.585 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" added to DB
+2016-08-20 08:29:28.591 DEBUG mv2 "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max~"
+2016-08-20 08:29:28.591 DEBUG mv2: chmod= NIL
+2016-08-20 08:29:28.591 DEBUG setting previous name to "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.591 DEBUG received 2 events
+2016-08-20 08:29:28.591 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.656 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.656 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 08:29:28.658 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" is not in the database
+2016-08-20 08:29:28.659 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" added to DB
+2016-08-20 08:29:28.659 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.724 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.724 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 08:29:28.724 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" is already in the database
+2016-08-20 08:29:28.724 DEBUG received 5 events
+2016-08-20 08:29:28.724 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#P-header.max"
+2016-08-20 08:29:28.790 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#P-header.max"
+2016-08-20 08:29:28.790 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 08:29:28.797 DEBUG I do not care that this file/dir is erased
+2016-08-20 08:29:28.797 DEBUG event 100 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.797 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.862 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max"
+2016-08-20 08:29:28.862 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 08:29:28.862 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P-header.max" is already in the database
+2016-08-20 08:29:28.862 DEBUG event 10 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp"
+2016-08-20 08:29:28.927 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp"
+2016-08-20 08:29:28.927 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 08:29:28.929 DEBUG "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp" is not in the database
+2016-08-20 08:29:28.929 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/debug.lisp" added to DB
+2016-08-20 08:29:28.929 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp"
+2016-08-20 08:29:28.995 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/.#debug.lisp"
+2016-08-20 08:29:28.995 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 08:29:28.996 DEBUG I do not care that this file/dir is erased
+2016-08-20 08:29:28.996 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/#debug.lisp#"
+2016-08-20 08:29:29.061 DEBUG watch function received "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/#debug.lisp#"
+2016-08-20 08:29:29.061 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 08:29:29.062 DEBUG I do not care that this file/dir is erased
+2016-08-20 08:29:32.827 DEBUG received 1 events
+2016-08-20 08:29:32.827 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 08:29:32.895 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 08:29:32.895 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 08:29:32.897 DEBUG received 1 events
+2016-08-20 08:29:32.897 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 08:29:32.963 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 08:29:32.963 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:27.914 DEBUG received 1 events
+2016-08-20 09:29:27.914 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 09:29:27.985 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 09:29:27.987 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:27.989 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is not in the database
+2016-08-20 09:29:27.990 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" added to DB
+2016-08-20 09:29:30.025 DEBUG received 3 events
+2016-08-20 09:29:30.025 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 09:29:30.094 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 09:29:30.094 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:30.094 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 09:29:30.094 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:30.158 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:30.158 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:30.160 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is not in the database
+2016-08-20 09:29:30.161 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" added to DB
+2016-08-20 09:29:30.163 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 09:29:30.230 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 09:29:30.230 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:30.230 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 09:29:33.295 DEBUG received 1 events
+2016-08-20 09:29:33.296 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:33.364 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:33.364 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:33.364 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 09:29:33.364 DEBUG received 3 events
+2016-08-20 09:29:33.364 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:33.431 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:33.431 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:33.431 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 09:29:33.431 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:33.498 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:33.498 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:33.500 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is not in the database
+2016-08-20 09:29:33.501 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" added to DB
+2016-08-20 09:29:33.501 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:33.568 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 09:29:33.568 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:33.568 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 09:29:36.609 DEBUG received 2 events
+2016-08-20 09:29:36.609 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:36.675 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:36.675 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:36.675 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is already in the database
+2016-08-20 09:29:36.675 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:36.742 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:36.742 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:36.742 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is already in the database
+2016-08-20 09:29:36.742 DEBUG received 1 events
+2016-08-20 09:29:36.742 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:36.808 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 09:29:36.808 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 09:29:36.808 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is already in the database
+2016-08-20 09:36:53.455 DEBUG received 1 events
+2016-08-20 09:36:53.455 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/.#parole_chiave.txt"
+2016-08-20 09:37:50.217 DEBUG received 1 events
+2016-08-20 09:37:50.217 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 09:37:50.280 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 09:37:50.280 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 09:37:50.282 DEBUG received 1 events
+2016-08-20 09:37:50.282 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 09:37:50.348 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 09:37:50.349 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:02:44.185 DEBUG received 1 events
+2016-08-20 10:02:44.185 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P3.dat"
+2016-08-20 10:02:44.256 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P3.dat"
+2016-08-20 10:02:44.257 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:02:44.271 DEBUG received 1 events
+2016-08-20 10:02:44.271 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P3.dat"
+2016-08-20 10:02:44.346 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P3.dat"
+2016-08-20 10:02:44.346 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:02:44.348 DEBUG received 2 events
+2016-08-20 10:02:44.348 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P3.dat"
+2016-08-20 10:02:44.414 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P3.dat"
+2016-08-20 10:02:44.414 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:02:44.416 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 10:02:44.482 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 10:02:44.482 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:06:14.253 DEBUG received 1 events
+2016-08-20 10:06:14.253 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 10:06:14.319 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 10:06:14.319 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:12:20.121 DEBUG received 2 events
+2016-08-20 10:12:20.121 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.121 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt~"
+2016-08-20 10:12:20.187 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.187 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 10:12:20.189 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" is not in the database
+2016-08-20 10:12:20.190 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" added to DB
+2016-08-20 10:12:20.190 DEBUG mv2 "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt~"
+2016-08-20 10:12:20.190 DEBUG mv2: chmod= NIL
+2016-08-20 10:12:20.190 DEBUG setting previous name to "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.191 DEBUG received 2 events
+2016-08-20 10:12:20.191 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.273 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.274 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:12:20.276 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" is not in the database
+2016-08-20 10:12:20.277 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" added to DB
+2016-08-20 10:12:20.277 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.343 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.343 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:12:20.343 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" is already in the database
+2016-08-20 10:12:20.343 DEBUG received 3 events
+2016-08-20 10:12:20.344 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/.#parole_chiave.txt"
+2016-08-20 10:12:20.410 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/.#parole_chiave.txt"
+2016-08-20 10:12:20.410 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:12:20.412 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:12:20.412 DEBUG event 100 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.412 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.478 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt"
+2016-08-20 10:12:20.478 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:12:20.488 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/parole_chiave.txt" is already in the database
+2016-08-20 10:12:20.488 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 10:12:20.554 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/CEKPETbI/1/#parole_chiave.txt#"
+2016-08-20 10:12:20.554 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:12:20.556 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:45.325 DEBUG received 4 events
+2016-08-20 10:23:45.325 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13"
+2016-08-20 10:23:45.325 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13"
+2016-08-20 10:23:45.388 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13"
+2016-08-20 10:23:45.388 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:45.390 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:45.390 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13") group
+2016-08-20 10:23:45.390 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13") group
+2016-08-20 10:23:45.390 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13") group
+2016-08-20 10:23:45.390 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:45.390 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13") group
+2016-08-20 10:23:45.390 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:45.391 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13" added to DB
+2016-08-20 10:23:45.391 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:45.391 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13"
+2016-08-20 10:23:45.457 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13"
+2016-08-20 10:23:45.457 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:45.457 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_39G.yfGuXB.theorie13" is already in the database
+2016-08-20 10:23:45.457 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:45.457 DEBUG received 12 events
+2016-08-20 10:23:45.457 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:45.524 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:45.524 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:45.527 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:45.593 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:45.594 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:45.596 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:45.596 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:45.596 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:45.597 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:45.597 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13"
+2016-08-20 10:23:45.597 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13"
+2016-08-20 10:23:45.664 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13"
+2016-08-20 10:23:45.665 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:45.666 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:45.666 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13") group
+2016-08-20 10:23:45.666 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13") group
+2016-08-20 10:23:45.666 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13") group
+2016-08-20 10:23:45.667 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:45.667 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:45.667 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13") group
+2016-08-20 10:23:45.667 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:45.668 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13" added to DB
+2016-08-20 10:23:45.668 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:45.737 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:45.737 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:23:45.739 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock" was (re)moved immediately after creation
+2016-08-20 10:23:45.739 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:45.739 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:45.739 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:45.739 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock" was (re)moved immediately after creation
+2016-08-20 10:23:45.739 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock" was (re)moved immediately after creation
+2016-08-20 10:23:45.740 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13"
+2016-08-20 10:23:45.809 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13"
+2016-08-20 10:23:45.809 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:45.809 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_39G,yfGuXB.theorie13" is already in the database
+2016-08-20 10:23:45.809 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:45.809 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_39G+yfGuXB.theorie13"
+2016-08-20 10:23:45.809 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ"
+2016-08-20 10:23:45.876 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ"
+2016-08-20 10:23:45.877 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:23:45.878 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ" is not in the database
+2016-08-20 10:23:45.879 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ" added to DB
+2016-08-20 10:23:45.879 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_39G+yfGuXB.theorie13"
+2016-08-20 10:23:45.945 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_39G+yfGuXB.theorie13"
+2016-08-20 10:23:45.945 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:45.947 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_39G+yfGuXB.theorie13") group
+2016-08-20 10:23:45.947 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_39G+yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:45.947 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_39G+yfGuXB.theorie13" added to DB
+2016-08-20 10:23:45.948 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ"
+2016-08-20 10:23:46.014 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ"
+2016-08-20 10:23:46.014 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.014 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.DNYQ" is already in the database
+2016-08-20 10:23:46.014 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:46.080 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:46.080 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.081 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:46.081 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:46.081 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:46.082 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:46.082 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:46.148 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:46.148 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.152 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" is not in the database
+2016-08-20 10:23:46.152 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" added to DB
+2016-08-20 10:23:46.152 DEBUG received 32 events
+2016-08-20 10:23:46.152 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.152 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.218 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.218 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.220 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.220 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.220 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.220 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.220 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.220 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.221 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:46.221 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13" added to DB
+2016-08-20 10:23:46.221 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:46.221 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.288 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.288 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.288 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_C-G.yfGuXB.theorie13" is already in the database
+2016-08-20 10:23:46.288 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:46.288 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:46.354 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:46.355 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.358 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:46.425 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:46.425 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.427 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:46.427 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:46.427 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:46.427 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:46.427 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13"
+2016-08-20 10:23:46.428 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13"
+2016-08-20 10:23:46.494 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13"
+2016-08-20 10:23:46.494 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.496 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.496 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13") group
+2016-08-20 10:23:46.496 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13") group
+2016-08-20 10:23:46.496 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13") group
+2016-08-20 10:23:46.496 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.496 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.496 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13") group
+2016-08-20 10:23:46.497 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:46.497 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13" added to DB
+2016-08-20 10:23:46.497 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:46.497 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13"
+2016-08-20 10:23:46.564 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13"
+2016-08-20 10:23:46.564 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.564 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_C-G,yfGuXB.theorie13" is already in the database
+2016-08-20 10:23:46.564 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:46.564 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_C-G+yfGuXB.theorie13"
+2016-08-20 10:23:46.564 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ"
+2016-08-20 10:23:46.630 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ"
+2016-08-20 10:23:46.631 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.632 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ" is not in the database
+2016-08-20 10:23:46.633 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ" added to DB
+2016-08-20 10:23:46.633 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_C-G+yfGuXB.theorie13"
+2016-08-20 10:23:46.699 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_C-G+yfGuXB.theorie13"
+2016-08-20 10:23:46.699 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.700 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_C-G+yfGuXB.theorie13") group
+2016-08-20 10:23:46.700 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_C-G+yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:46.701 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_C-G+yfGuXB.theorie13" added to DB
+2016-08-20 10:23:46.701 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ"
+2016-08-20 10:23:46.767 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ"
+2016-08-20 10:23:46.767 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.767 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.QNYQ" is already in the database
+2016-08-20 10:23:46.767 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:46.833 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:46.833 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:46.834 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:46.834 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:46.834 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:46.835 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:46.835 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:46.901 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:46.901 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.901 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" is already in the database
+2016-08-20 10:23:46.901 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.902 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.968 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13"
+2016-08-20 10:23:46.968 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:46.970 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.970 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.970 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.970 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.970 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:46.970 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13") group
+2016-08-20 10:23:46.971 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:46.971 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13" added to DB
+2016-08-20 10:23:46.971 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:46.971 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13"
+2016-08-20 10:23:47.037 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13"
+2016-08-20 10:23:47.037 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.037 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_N-G.yfGuXB.theorie13" is already in the database
+2016-08-20 10:23:47.037 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:47.038 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:47.103 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:47.104 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.105 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:47.171 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:47.171 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.172 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:47.172 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:47.172 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:47.172 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:47.172 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13"
+2016-08-20 10:23:47.172 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13"
+2016-08-20 10:23:47.238 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13"
+2016-08-20 10:23:47.239 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.239 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.239 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13") group
+2016-08-20 10:23:47.239 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13") group
+2016-08-20 10:23:47.239 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13") group
+2016-08-20 10:23:47.240 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.240 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.240 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13") group
+2016-08-20 10:23:47.240 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:47.241 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13" added to DB
+2016-08-20 10:23:47.241 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:47.241 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13"
+2016-08-20 10:23:47.307 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13"
+2016-08-20 10:23:47.307 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.307 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_N-G,yfGuXB.theorie13" is already in the database
+2016-08-20 10:23:47.307 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:47.307 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_N-G+yfGuXB.theorie13"
+2016-08-20 10:23:47.307 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ"
+2016-08-20 10:23:47.373 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ"
+2016-08-20 10:23:47.373 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.373 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ" is not in the database
+2016-08-20 10:23:47.374 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ" added to DB
+2016-08-20 10:23:47.374 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_N-G+yfGuXB.theorie13"
+2016-08-20 10:23:47.440 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_N-G+yfGuXB.theorie13"
+2016-08-20 10:23:47.440 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.441 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_N-G+yfGuXB.theorie13") group
+2016-08-20 10:23:47.441 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_N-G+yfGuXB.theorie13" is not in the database
+2016-08-20 10:23:47.441 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_N-G+yfGuXB.theorie13" added to DB
+2016-08-20 10:23:47.441 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ"
+2016-08-20 10:23:47.508 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ"
+2016-08-20 10:23:47.508 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.508 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ" is already in the database
+2016-08-20 10:23:47.508 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:47.575 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:47.575 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.576 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:47.576 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:47.576 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:47.577 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:47.577 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:47.643 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:47.643 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.643 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" is already in the database
+2016-08-20 10:23:47.643 DEBUG received 16 events
+2016-08-20 10:23:47.643 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13"
+2016-08-20 10:23:47.644 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13"
+2016-08-20 10:23:47.710 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13"
+2016-08-20 10:23:47.710 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.711 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.711 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13") group
+2016-08-20 10:23:47.711 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13") group
+2016-08-20 10:23:47.711 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13") group
+2016-08-20 10:23:47.711 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.711 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13") group
+2016-08-20 10:23:47.711 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13" is not in the database
+2016-08-20 10:23:47.712 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13" added to DB
+2016-08-20 10:23:47.712 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:47.712 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13"
+2016-08-20 10:23:47.778 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13"
+2016-08-20 10:23:47.778 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.778 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_Z-G.zfGuXB.theorie13" is already in the database
+2016-08-20 10:23:47.779 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:47.779 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:47.845 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.tmp"
+2016-08-20 10:23:47.845 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.847 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:47.918 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock"
+2016-08-20 10:23:47.919 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:47.920 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:47.920 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:47.920 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/.msgid.lock") group
+2016-08-20 10:23:47.921 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:47.921 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13"
+2016-08-20 10:23:47.921 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13"
+2016-08-20 10:23:47.987 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13"
+2016-08-20 10:23:47.988 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:47.989 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.989 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13") group
+2016-08-20 10:23:47.989 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13") group
+2016-08-20 10:23:47.989 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13") group
+2016-08-20 10:23:47.990 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.990 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13" was (re)moved immediately after creation
+2016-08-20 10:23:47.990 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13") group
+2016-08-20 10:23:47.990 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13" is not in the database
+2016-08-20 10:23:47.991 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13" added to DB
+2016-08-20 10:23:47.991 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:47.991 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13"
+2016-08-20 10:23:48.057 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13"
+2016-08-20 10:23:48.057 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:48.057 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_Z-G,zfGuXB.theorie13" is already in the database
+2016-08-20 10:23:48.057 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:48.057 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_Z-G+zfGuXB.theorie13"
+2016-08-20 10:23:48.057 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ"
+2016-08-20 10:23:48.123 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ"
+2016-08-20 10:23:48.124 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 10:23:48.124 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ" is not in the database
+2016-08-20 10:23:48.125 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ" added to DB
+2016-08-20 10:23:48.125 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_Z-G+zfGuXB.theorie13"
+2016-08-20 10:23:48.191 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_Z-G+zfGuXB.theorie13"
+2016-08-20 10:23:48.191 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:48.192 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_Z-G+zfGuXB.theorie13") group
+2016-08-20 10:23:48.192 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_Z-G+zfGuXB.theorie13" is not in the database
+2016-08-20 10:23:48.192 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_Z-G+zfGuXB.theorie13" added to DB
+2016-08-20 10:23:48.192 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ"
+2016-08-20 10:23:48.258 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ"
+2016-08-20 10:23:48.259 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:48.259 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ" is already in the database
+2016-08-20 10:23:48.259 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:48.325 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock"
+2016-08-20 10:23:48.325 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 10:23:48.326 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:48.326 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:48.327 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new.lock") group
+2016-08-20 10:23:48.327 DEBUG I do not care that this file/dir is erased
+2016-08-20 10:23:48.327 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:48.394 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from"
+2016-08-20 10:23:48.394 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 10:23:48.394 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" is already in the database
+2016-08-20 11:11:43.294 DEBUG received 2 events
+2016-08-20 11:11:43.297 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ"
+2016-08-20 11:11:43.361 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ"
+2016-08-20 11:11:43.361 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 11:11:43.361 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.SNYQ" is already in the database
+2016-08-20 11:11:43.361 DEBUG I do not care that this file/dir is erased
+2016-08-20 11:11:43.361 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ"
+2016-08-20 11:11:43.428 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ"
+2016-08-20 11:11:43.428 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 11:11:43.428 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.LNYQ" is already in the database
+2016-08-20 11:11:43.428 DEBUG I do not care that this file/dir is erased
+2016-08-20 11:12:04.672 DEBUG received 1 events
+2016-08-20 11:12:04.672 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/.#header.max"
+2016-08-20 11:12:04.674 DEBUG received 2 events
+2016-08-20 11:12:04.688 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.689 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max~"
+2016-08-20 11:12:04.743 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.743 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 11:12:04.745 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" is not in the database
+2016-08-20 11:12:04.746 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" added to DB
+2016-08-20 11:12:04.746 DEBUG mv2 "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max~"
+2016-08-20 11:12:04.746 DEBUG mv2: chmod= NIL
+2016-08-20 11:12:04.746 DEBUG setting previous name to "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.746 DEBUG received 2 events
+2016-08-20 11:12:04.747 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.814 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.814 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 11:12:04.815 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" is not in the database
+2016-08-20 11:12:04.817 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" added to DB
+2016-08-20 11:12:04.817 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.883 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.884 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:12:04.884 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" is already in the database
+2016-08-20 11:12:04.884 DEBUG received 2 events
+2016-08-20 11:12:04.884 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/.#header.max"
+2016-08-20 11:12:04.950 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/.#header.max"
+2016-08-20 11:12:04.950 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 11:12:04.951 DEBUG I do not care that this file/dir is erased
+2016-08-20 11:12:04.951 DEBUG event 100 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:04.952 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:05.018 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 11:12:05.018 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 11:12:05.018 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" is already in the database
+2016-08-20 11:12:13.278 DEBUG received 1 events
+2016-08-20 11:12:13.279 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/.#header.max"
+2016-08-20 11:14:00.237 DEBUG received 1 events
+2016-08-20 11:14:00.237 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:14:00.309 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:14:00.309 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 11:14:00.314 DEBUG received 1 events
+2016-08-20 11:14:00.314 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:14:00.384 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:14:00.384 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:14:39.743 DEBUG received 1 events
+2016-08-20 11:14:39.744 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/.#cv.tex"
+2016-08-20 11:15:34.511 DEBUG received 1 events
+2016-08-20 11:15:34.512 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.dat"
+2016-08-20 11:15:34.578 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.dat"
+2016-08-20 11:15:34.578 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:15:34.580 DEBUG received 1 events
+2016-08-20 11:15:34.580 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.dat"
+2016-08-20 11:15:34.646 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.dat"
+2016-08-20 11:15:34.647 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:16:38.437 DEBUG received 2 events
+2016-08-20 11:16:38.437 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 11:16:38.502 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 11:16:38.502 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 11:16:38.504 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 11:16:38.570 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 11:16:38.570 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:19:09.017 DEBUG received 1 events
+2016-08-20 11:19:09.017 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:19:09.082 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:19:09.082 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:28:17.016 DEBUG received 1 events
+2016-08-20 11:28:17.016 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P1.dat"
+2016-08-20 11:28:17.084 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P1.dat"
+2016-08-20 11:28:17.084 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:28:17.086 DEBUG received 1 events
+2016-08-20 11:28:17.086 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P1.dat"
+2016-08-20 11:28:17.159 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P1.dat"
+2016-08-20 11:28:17.159 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:28:17.161 DEBUG received 1 events
+2016-08-20 11:28:17.161 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P1.dat"
+2016-08-20 11:28:17.229 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P1.dat"
+2016-08-20 11:28:17.229 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:28:17.231 DEBUG received 1 events
+2016-08-20 11:28:17.231 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:28:17.297 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:28:17.297 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:29:42.727 DEBUG received 1 events
+2016-08-20 11:29:42.727 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/.#task.txt"
+2016-08-20 11:32:39.873 DEBUG received 1 events
+2016-08-20 11:32:39.873 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P2.dat"
+2016-08-20 11:32:39.943 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P2.dat"
+2016-08-20 11:32:39.944 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:39.945 DEBUG received 1 events
+2016-08-20 11:32:39.945 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P2.dat"
+2016-08-20 11:32:40.014 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P2.dat"
+2016-08-20 11:32:40.014 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.016 DEBUG received 1 events
+2016-08-20 11:32:40.016 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P2.dat"
+2016-08-20 11:32:40.083 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P2.dat"
+2016-08-20 11:32:40.083 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.085 DEBUG received 1 events
+2016-08-20 11:32:40.085 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:32:40.151 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:32:40.152 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.476 DEBUG received 1 events
+2016-08-20 11:32:40.476 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.542 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.542 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.544 DEBUG received 1 events
+2016-08-20 11:32:40.544 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.615 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.615 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.616 DEBUG received 1 events
+2016-08-20 11:32:40.616 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.683 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.684 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.685 DEBUG received 1 events
+2016-08-20 11:32:40.686 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.752 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.753 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.754 DEBUG received 1 events
+2016-08-20 11:32:40.754 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.821 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.821 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.823 DEBUG received 1 events
+2016-08-20 11:32:40.823 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.891 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.892 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.893 DEBUG received 2 events
+2016-08-20 11:32:40.893 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.969 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/P.dat"
+2016-08-20 11:32:40.969 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:32:40.971 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:32:41.038 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:32:41.038 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:33:41.682 DEBUG received 1 events
+2016-08-20 11:33:41.683 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:33:41.752 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:33:41.752 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:33:41.753 DEBUG received 1 events
+2016-08-20 11:33:41.753 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:33:41.825 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 11:33:41.825 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:36:00.875 DEBUG received 1 events
+2016-08-20 11:36:00.881 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:36:00.944 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:36:00.944 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:36:03.513 DEBUG received 1 events
+2016-08-20 11:36:03.513 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:36:03.584 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:36:03.584 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:36:04.026 DEBUG received 1 events
+2016-08-20 11:36:04.026 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-2.dat"
+2016-08-20 11:36:04.098 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-2.dat"
+2016-08-20 11:36:04.098 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:36:28.433 DEBUG received 1 events
+2016-08-20 11:36:28.434 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:36:28.505 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:36:28.506 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:37:04.919 DEBUG received 1 events
+2016-08-20 11:37:04.919 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:37:04.995 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:37:04.996 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:37:35.768 DEBUG received 1 events
+2016-08-20 11:37:35.768 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:37:35.843 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-0.dat"
+2016-08-20 11:37:35.843 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:37:35.887 DEBUG received 1 events
+2016-08-20 11:37:35.887 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:37:35.955 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:37:35.955 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:37:35.957 DEBUG received 1 events
+2016-08-20 11:37:35.957 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:37:36.026 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:37:36.026 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:40:27.698 DEBUG received 1 events
+2016-08-20 11:40:27.699 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:40:27.775 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:40:27.775 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:41:43.827 DEBUG received 1 events
+2016-08-20 11:41:43.827 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:41:43.899 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:41:43.899 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:42:05.515 DEBUG received 1 events
+2016-08-20 11:42:05.515 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-2.dat"
+2016-08-20 11:42:05.599 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-2.dat"
+2016-08-20 11:42:05.599 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:42:05.601 DEBUG received 1 events
+2016-08-20 11:42:05.601 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:42:05.690 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:42:05.691 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:45:23.826 DEBUG received 1 events
+2016-08-20 11:45:23.833 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:45:23.932 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:45:23.932 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:47:17.653 DEBUG received 1 events
+2016-08-20 11:47:17.653 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:47:17.714 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:47:17.714 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:50:24.860 DEBUG received 1 events
+2016-08-20 11:50:24.860 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:50:24.937 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:50:24.937 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:52:31.861 DEBUG received 1 events
+2016-08-20 11:52:31.861 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:52:31.934 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:52:31.934 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:55:28.857 DEBUG received 1 events
+2016-08-20 11:55:28.857 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:55:28.930 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 11:55:28.930 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:57:41.437 DEBUG received 1 events
+2016-08-20 11:57:41.437 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:57:41.553 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:57:41.553 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:57:58.413 DEBUG received 1 events
+2016-08-20 11:57:58.413 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:57:58.476 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1.dat"
+2016-08-20 11:57:58.477 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 11:57:58.478 DEBUG received 1 events
+2016-08-20 11:57:58.479 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:57:58.547 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 11:57:58.547 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:00:01.159 DEBUG received 1 events
+2016-08-20 12:00:16.070 DEBUG received 1 events
+2016-08-20 12:00:16.071 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:00:16.142 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:00:16.143 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:00:49.089 DEBUG received 2 events
+2016-08-20 12:00:49.158 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:00:49.229 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:02:02.541 DEBUG received 1 events
+2016-08-20 12:02:02.613 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:04:49.969 DEBUG received 1 events
+2016-08-20 12:04:49.973 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:04:50.039 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:04:50.039 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:06:14.556 DEBUG received 1 events
+2016-08-20 12:06:14.622 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:06:14.624 DEBUG received 1 events
+2016-08-20 12:06:14.691 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:08:22.139 DEBUG received 1 events
+2016-08-20 12:08:38.139 DEBUG received 1 events
+2016-08-20 12:08:38.208 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:08:38.209 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:09:18.708 DEBUG received 1 events
+2016-08-20 12:09:18.713 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:09:18.782 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:09:18.782 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:10:01.664 DEBUG received 1 events
+2016-08-20 12:10:01.735 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:10:07.627 DEBUG received 1 events
+2016-08-20 12:10:07.627 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:10:07.694 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-3.dat"
+2016-08-20 12:10:07.694 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:10:07.696 DEBUG received 2 events
+2016-08-20 12:10:07.696 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 12:10:07.762 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/big.log"
+2016-08-20 12:10:07.762 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:10:07.764 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/hanan.dat"
+2016-08-20 12:10:07.830 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/hanan.dat"
+2016-08-20 12:10:07.830 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:14:53.246 DEBUG received 1 events
+2016-08-20 12:14:53.320 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:17:23.778 DEBUG received 1 events
+2016-08-20 12:17:23.844 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:17:23.846 DEBUG received 1 events
+2016-08-20 12:17:23.913 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:43.049 DEBUG received 1 events
+2016-08-20 12:36:43.049 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/www/current/.#cv.html"
+2016-08-20 12:36:48.633 DEBUG received 1 events
+2016-08-20 12:36:48.637 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.637 DEBUG received 1 events
+2016-08-20 12:36:48.637 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/www/current/cv.html~"
+2016-08-20 12:36:48.702 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.702 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 12:36:48.703 DEBUG "/home/shalaev/PA6OTA/www/current/cv.html" is not in the database
+2016-08-20 12:36:48.704 INFO "/home/shalaev/PA6OTA/www/current/cv.html" added to DB
+2016-08-20 12:36:48.704 DEBUG mv2 "/home/shalaev/PA6OTA/www/current/cv.html" "/home/shalaev/PA6OTA/www/current/cv.html~"
+2016-08-20 12:36:48.704 DEBUG mv2: chmod= NIL
+2016-08-20 12:36:48.704 DEBUG setting previous name to "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.704 DEBUG received 2 events
+2016-08-20 12:36:48.704 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.770 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.816 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:36:48.816 DEBUG "/home/shalaev/PA6OTA/www/current/cv.html" is not in the database
+2016-08-20 12:36:48.817 INFO "/home/shalaev/PA6OTA/www/current/cv.html" added to DB
+2016-08-20 12:36:48.818 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.884 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.884 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:48.884 DEBUG "/home/shalaev/PA6OTA/www/current/cv.html" is already in the database
+2016-08-20 12:36:48.884 DEBUG received 5 events
+2016-08-20 12:36:48.884 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/www/current/.#cv.html"
+2016-08-20 12:36:48.951 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/.#cv.html"
+2016-08-20 12:36:48.951 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:48.952 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:48.952 DEBUG event 100 occured with "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:48.952 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:49.018 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:36:49.018 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.018 DEBUG "/home/shalaev/PA6OTA/www/current/cv.html" is already in the database
+2016-08-20 12:36:49.018 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.tex~"
+2016-08-20 12:36:49.084 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.tex~"
+2016-08-20 12:36:49.084 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:49.086 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.tex~"
+2016-08-20 12:36:49.086 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.tex~"
+2016-08-20 12:36:49.152 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.tex~"
+2016-08-20 12:36:49.153 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.154 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.tex"
+2016-08-20 12:36:49.221 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.tex"
+2016-08-20 12:36:49.221 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:49.223 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.tex" is not in the database
+2016-08-20 12:36:49.224 INFO "/home/shalaev/PA6OTA/FUTURE/other/cv.tex" added to DB
+2016-08-20 12:36:49.224 DEBUG received 13 events
+2016-08-20 12:36:49.224 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/.#cv.tex"
+2016-08-20 12:36:49.291 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/.#cv.tex"
+2016-08-20 12:36:49.291 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.293 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:49.293 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:36:49.359 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:36:49.360 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.361 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:49.428 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.498 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:49.568 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.570 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:49.638 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.639 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:49.640 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 12:36:49.710 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max"
+2016-08-20 12:36:49.710 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:49.710 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/header.max" is already in the database
+2016-08-20 12:36:49.711 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/.#header.max"
+2016-08-20 12:36:49.778 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/max/.#header.max"
+2016-08-20 12:36:49.778 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.779 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:49.779 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 12:36:49.846 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#tmp.max#"
+2016-08-20 12:36:49.846 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.847 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:49.847 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:49.847 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt~"
+2016-08-20 12:36:49.914 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:49.914 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 12:36:49.915 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" is not in the database
+2016-08-20 12:36:49.916 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" added to DB
+2016-08-20 12:36:49.921 DEBUG mv2 "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt~"
+2016-08-20 12:36:49.921 DEBUG mv2: chmod= NIL
+2016-08-20 12:36:49.921 DEBUG setting previous name to "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:49.921 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:49.983 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:49.983 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:36:49.984 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" is not in the database
+2016-08-20 12:36:49.985 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" added to DB
+2016-08-20 12:36:49.985 DEBUG event 10 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:50.051 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:50.051 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:36:50.051 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" is already in the database
+2016-08-20 12:36:50.051 DEBUG received 2 events
+2016-08-20 12:36:50.052 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/.#task.txt"
+2016-08-20 12:36:50.118 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/.#task.txt"
+2016-08-20 12:36:50.118 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:36:50.119 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:36:50.119 DEBUG event 100 occured with "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:50.119 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:50.186 DEBUG watch function received "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt"
+2016-08-20 12:36:50.186 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:36:50.186 DEBUG "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" is already in the database
+2016-08-20 12:37:22.045 DEBUG received 1 events
+2016-08-20 12:37:22.049 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.115 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.115 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.117 DEBUG received 1 events
+2016-08-20 12:37:22.117 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.184 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.184 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.186 DEBUG received 1 events
+2016-08-20 12:37:22.186 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.253 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.253 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.374 DEBUG received 1 events
+2016-08-20 12:37:22.374 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.446 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.447 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.470 DEBUG received 1 events
+2016-08-20 12:37:22.470 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.543 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.543 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.545 DEBUG received 1 events
+2016-08-20 12:37:22.545 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:22.613 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:22.613 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.615 DEBUG received 3 events
+2016-08-20 12:37:22.615 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:37:22.682 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:37:22.682 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.684 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:22.751 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:22.751 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:22.755 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is not in the database
+2016-08-20 12:37:22.756 INFO "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" added to DB
+2016-08-20 12:37:22.756 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.823 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:22.823 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.825 DEBUG received 6 events
+2016-08-20 12:37:22.825 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:22.892 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:22.892 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.892 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:37:22.893 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:22.959 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:22.960 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:22.961 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.028 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.028 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.028 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:37:23.028 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:23.095 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:23.095 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.097 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.163 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.163 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.163 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:37:23.164 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:23.230 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:23.230 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.231 DEBUG received 1 events
+2016-08-20 12:37:23.232 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:23.298 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:23.298 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.314 DEBUG received 1 events
+2016-08-20 12:37:23.314 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:23.385 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:23.385 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.388 DEBUG received 1 events
+2016-08-20 12:37:23.388 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:23.454 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:23.455 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.487 DEBUG received 1 events
+2016-08-20 12:37:23.488 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:23.559 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:23.559 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.561 DEBUG received 3 events
+2016-08-20 12:37:23.561 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:23.628 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:23.628 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.629 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:37:23.696 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:37:23.697 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.698 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.765 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.765 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.765 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:37:23.765 DEBUG received 9 events
+2016-08-20 12:37:23.765 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.832 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.832 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:23.832 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:37:23.832 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.832 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.899 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:37:23.899 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:23.899 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:37:23.899 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:23.900 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:23.966 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:37:23.966 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:23.968 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:23.968 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:24.034 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:37:24.035 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:24.036 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:37:24.036 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:37:24.102 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:37:24.103 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:24.104 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:24.104 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:24.171 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:37:24.171 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:24.172 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:37:24.172 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:37:24.239 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:37:24.239 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:24.249 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:24.249 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:24.315 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:37:24.316 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:37:24.317 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/two_CVs.pdf"
+2016-08-20 12:37:24.384 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/two_CVs.pdf"
+2016-08-20 12:37:24.384 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:24.385 DEBUG received 2 events
+2016-08-20 12:37:24.385 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/two_CVs.pdf"
+2016-08-20 12:37:24.452 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/two_CVs.pdf"
+2016-08-20 12:37:24.452 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:24.453 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.odt"
+2016-08-20 12:37:24.520 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.odt"
+2016-08-20 12:37:24.520 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:37:24.522 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.odt" is not in the database
+2016-08-20 12:37:24.522 INFO "/home/shalaev/PA6OTA/FUTURE/other/cv.odt" added to DB
+2016-08-20 12:37:49.193 DEBUG received 1 events
+2016-08-20 12:37:49.193 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/.#cv.tex"
+2016-08-20 12:38:53.465 DEBUG received 1 events
+2016-08-20 12:38:53.465 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:38:53.529 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:38:53.530 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:38:53.531 DEBUG received 1 events
+2016-08-20 12:38:53.531 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:38:53.597 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:38:53.598 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:19.245 DEBUG received 1 events
+2016-08-20 12:43:19.249 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.tex"
+2016-08-20 12:43:19.315 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.tex"
+2016-08-20 12:43:19.315 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:19.315 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.tex" is already in the database
+2016-08-20 12:43:19.315 DEBUG received 1 events
+2016-08-20 12:43:19.315 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.tex"
+2016-08-20 12:43:19.382 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.tex"
+2016-08-20 12:43:19.382 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:19.382 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.tex" is already in the database
+2016-08-20 12:43:19.382 DEBUG received 2 events
+2016-08-20 12:43:19.382 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/.#cv.tex"
+2016-08-20 12:43:19.449 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/.#cv.tex"
+2016-08-20 12:43:19.449 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:43:19.450 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:43:19.450 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:43:19.517 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/#cv.tex#"
+2016-08-20 12:43:19.517 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:43:19.518 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:43:26.608 DEBUG received 1 events
+2016-08-20 12:43:26.608 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:26.675 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:26.675 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:26.677 DEBUG received 1 events
+2016-08-20 12:43:26.678 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:26.744 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:26.745 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:26.746 DEBUG received 1 events
+2016-08-20 12:43:26.746 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:26.813 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:26.813 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:26.815 DEBUG received 4 events
+2016-08-20 12:43:26.815 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:26.882 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:26.883 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:26.885 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:43:26.952 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:43:26.952 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:26.953 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.020 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.020 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.020 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.020 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:27.087 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:27.087 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.089 DEBUG received 7 events
+2016-08-20 12:43:27.089 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.155 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.155 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.156 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.156 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:27.222 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:27.222 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.224 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.291 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.291 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.291 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.291 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:27.358 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:27.358 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.359 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.426 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.426 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.426 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.426 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:27.493 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:27.494 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.495 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:27.562 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:27.562 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.564 DEBUG received 4 events
+2016-08-20 12:43:27.564 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:27.631 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:27.631 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.633 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:43:27.700 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:43:27.700 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.701 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:43:27.768 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:43:27.768 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.769 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.836 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.836 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.836 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.836 DEBUG received 10 events
+2016-08-20 12:43:27.836 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.903 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.903 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:27.903 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.903 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.903 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.969 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:43:27.970 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:27.970 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" is already in the database
+2016-08-20 12:43:27.970 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:27.970 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:28.036 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.aux"
+2016-08-20 12:43:28.036 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:28.038 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:28.038 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:28.104 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.log"
+2016-08-20 12:43:28.104 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:28.106 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:43:28.106 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:43:28.172 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.out"
+2016-08-20 12:43:28.172 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:28.173 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:43:28.173 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:43:28.240 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.txt"
+2016-08-20 12:43:28.240 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:28.241 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:43:28.241 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:43:28.307 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/metadata-cv.txt"
+2016-08-20 12:43:28.308 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:28.309 DEBUG event 100 occured with "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:28.309 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:28.375 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/tmp-cv.pdf"
+2016-08-20 12:43:28.375 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:43:28.377 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/two_CVs.pdf"
+2016-08-20 12:43:28.443 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/two_CVs.pdf"
+2016-08-20 12:43:28.443 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:28.445 DEBUG event 10 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.odt"
+2016-08-20 12:43:28.511 DEBUG watch function received "/home/shalaev/PA6OTA/FUTURE/other/cv.odt"
+2016-08-20 12:43:28.511 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:43:28.511 DEBUG "/home/shalaev/PA6OTA/FUTURE/other/cv.odt" is already in the database
+2016-08-20 12:44:22.494 DEBUG received 2 events
+2016-08-20 12:44:22.495 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:44:22.495 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/www/current/cv/shalaev.pdf"
+2016-08-20 12:44:22.495 DEBUG mv2 "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf" "/home/shalaev/PA6OTA/www/current/cv/shalaev.pdf"
+2016-08-20 12:44:22.495 DEBUG mv2: chmod= 660
+2016-08-20 12:44:22.495 DEBUG setting previous name to "/home/shalaev/PA6OTA/FUTURE/other/cv.pdf"
+2016-08-20 12:44:22.495 DEBUG parent name is "/home/shalaev/PA6OTA/www/current/cv/" and has a DB-name "/home/shalaev/PA6OTA/www/current/cv/"
+2016-08-20 12:44:22.495 DEBUG changing parent name to "/home/shalaev/PA6OTA/www/current/cv/"
+2016-08-20 12:44:39.916 DEBUG received 1 events
+2016-08-20 12:44:39.917 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/www/current/.#cv.html"
+2016-08-20 12:44:55.665 DEBUG received 2 events
+2016-08-20 12:44:55.665 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:44:55.730 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:44:55.730 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:44:55.730 DEBUG "/home/shalaev/PA6OTA/www/current/cv.html" is already in the database
+2016-08-20 12:44:55.730 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:44:55.797 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/cv.html"
+2016-08-20 12:44:55.797 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:44:55.797 DEBUG "/home/shalaev/PA6OTA/www/current/cv.html" is already in the database
+2016-08-20 12:44:55.797 DEBUG received 1 events
+2016-08-20 12:44:55.797 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/www/current/.#cv.html"
+2016-08-20 12:44:55.864 DEBUG watch function received "/home/shalaev/PA6OTA/www/current/.#cv.html"
+2016-08-20 12:44:55.864 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:44:55.865 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:46:44.608 DEBUG received 1 events
+2016-08-20 12:46:44.608 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:46:44.675 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:46:44.675 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:46:44.676 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is not in the database
+2016-08-20 12:46:44.677 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" added to DB
+2016-08-20 12:46:44.677 DEBUG received 1 events
+2016-08-20 12:46:44.677 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:46:44.744 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:46:44.744 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:46:44.744 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:47:03.357 DEBUG received 1 events
+2016-08-20 12:47:03.358 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:47:05.102 DEBUG received 1 events
+2016-08-20 12:47:05.105 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.105 DEBUG received 1 events
+2016-08-20 12:47:05.105 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp~"
+2016-08-20 12:47:05.105 DEBUG mv2 "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp~"
+2016-08-20 12:47:05.106 DEBUG mv2: chmod= NIL
+2016-08-20 12:47:05.106 DEBUG setting previous name to "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.106 DEBUG received 2 events
+2016-08-20 12:47:05.106 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.172 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.172 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:47:05.173 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is not in the database
+2016-08-20 12:47:05.174 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" added to DB
+2016-08-20 12:47:05.174 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.241 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.241 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:47:05.241 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:47:05.241 DEBUG received 2 events
+2016-08-20 12:47:05.241 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:47:05.308 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:47:05.308 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:47:05.309 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:47:05.309 DEBUG event 100 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.309 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.376 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:05.376 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:47:05.376 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:47:16.797 DEBUG received 1 events
+2016-08-20 12:47:16.798 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:47:25.774 DEBUG received 1 events
+2016-08-20 12:47:25.774 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:25.844 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:25.844 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:47:25.845 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:47:25.845 DEBUG received 1 events
+2016-08-20 12:47:25.845 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:25.911 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:47:25.911 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:47:25.912 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:47:25.912 DEBUG received 1 events
+2016-08-20 12:47:25.912 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:47:25.978 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:47:25.978 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:47:25.979 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:47:37.717 DEBUG received 1 events
+2016-08-20 12:47:37.717 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:47:37.783 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:47:37.783 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:47:37.783 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:47:39.357 DEBUG received 1 events
+2016-08-20 12:47:39.357 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:47:39.421 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:47:39.421 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:47:39.421 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:47:39.422 DEBUG received 1 events
+2016-08-20 12:47:39.422 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:47:39.489 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:47:39.489 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:47:39.489 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:48:02.830 DEBUG received 1 events
+2016-08-20 12:48:02.830 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:48:08.654 DEBUG received 1 events
+2016-08-20 12:48:08.654 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:08.727 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:08.727 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:48:08.727 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:48:08.727 DEBUG received 1 events
+2016-08-20 12:48:08.727 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:08.794 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:08.794 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:48:08.794 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:48:08.794 DEBUG received 1 events
+2016-08-20 12:48:08.794 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:48:08.861 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:48:08.861 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:48:08.862 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:48:24.558 DEBUG received 1 events
+2016-08-20 12:48:24.558 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:48:31.198 DEBUG received 1 events
+2016-08-20 12:48:31.199 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:31.269 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:31.269 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:48:31.269 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:48:31.269 DEBUG received 1 events
+2016-08-20 12:48:31.269 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:31.336 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:48:31.336 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:48:31.336 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:48:31.336 DEBUG received 1 events
+2016-08-20 12:48:31.336 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:48:31.403 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:48:31.403 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:48:31.404 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:48:37.516 DEBUG received 1 events
+2016-08-20 12:48:37.521 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:48:37.584 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:48:37.584 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:48:37.584 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:48:37.584 DEBUG received 1 events
+2016-08-20 12:48:37.584 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:48:37.651 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:48:37.651 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:48:37.651 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:48:56.321 DEBUG received 1 events
+2016-08-20 12:48:56.321 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:49:07.297 DEBUG received 1 events
+2016-08-20 12:49:07.297 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:07.365 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:07.365 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:07.366 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:49:07.366 DEBUG received 2 events
+2016-08-20 12:49:07.366 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:07.432 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:07.432 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:07.432 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:49:07.433 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:49:07.499 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:49:07.499 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:49:07.500 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:49:09.628 DEBUG received 1 events
+2016-08-20 12:49:09.630 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:09.699 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:09.699 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:09.699 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:49:09.699 DEBUG received 1 events
+2016-08-20 12:49:09.699 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:09.766 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:09.766 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:09.766 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:49:20.286 DEBUG received 1 events
+2016-08-20 12:49:20.286 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:49:21.247 DEBUG received 1 events
+2016-08-20 12:49:21.247 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:21.318 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:21.318 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:21.318 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:49:21.318 DEBUG received 1 events
+2016-08-20 12:49:21.318 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:21.385 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp"
+2016-08-20 12:49:21.385 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:21.385 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/tmp.gnp" is already in the database
+2016-08-20 12:49:21.385 DEBUG received 1 events
+2016-08-20 12:49:21.385 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:49:21.452 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#tmp.gnp"
+2016-08-20 12:49:21.452 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:49:21.453 DEBUG I do not care that this file/dir is erased
+2016-08-20 12:49:22.956 DEBUG received 1 events
+2016-08-20 12:49:22.957 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:23.026 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:23.026 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:23.026 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:49:23.027 DEBUG received 1 events
+2016-08-20 12:49:23.027 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:23.093 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 12:49:23.093 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:49:23.093 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 12:55:10.870 DEBUG received 1 events
+2016-08-20 12:55:10.870 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19.log"
+2016-08-20 12:55:10.941 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19.log"
+2016-08-20 12:55:10.941 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:55:10.942 DEBUG received 3 events
+2016-08-20 12:55:10.942 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19.log"
+2016-08-20 12:55:11.009 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19.log"
+2016-08-20 12:55:11.009 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:55:11.010 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.077 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.077 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 12:55:11.078 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.078 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.078 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.078 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.078 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.078 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.078 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.145 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.145 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:55:11.146 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.146 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.146 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.146 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.146 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.146 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.146 DEBUG received 3 events
+2016-08-20 12:55:11.146 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.213 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.213 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:55:11.214 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.214 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.214 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.214 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.214 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.214 WARNING the file "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log" was (re)moved immediately after creation
+2016-08-20 12:55:11.214 DEBUG event 10 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19.log"
+2016-08-20 12:55:11.281 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19.log"
+2016-08-20 12:55:11.281 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 12:55:11.282 DEBUG event 1000000000 occured with "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.348 DEBUG watch function received "/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log"
+2016-08-20 12:55:11.348 DEBUG rm=T, mod=NIL, !chmod=NIL
+2016-08-20 12:55:11.349 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.349 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.349 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/www/log/2016-08-19-geo.log") group
+2016-08-20 12:55:11.349 DEBUG I do not care that this file/dir is erased
+2016-08-20 13:44:02.441 DEBUG received 1 events
+2016-08-20 13:44:02.441 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/.#Makefile"
+2016-08-20 13:44:38.986 DEBUG received 1 events
+2016-08-20 13:44:38.989 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.056 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.056 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:44:39.057 WARNING the file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" was (re)moved immediately after creation
+2016-08-20 13:44:39.058 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d") group
+2016-08-20 13:44:39.058 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" is not in the database
+2016-08-20 13:44:39.058 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d") group
+2016-08-20 13:44:39.058 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d") date
+2016-08-20 13:44:39.058 DEBUG file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" was erased during its addition to DB
+2016-08-20 13:44:39.058 DEBUG received 9 events
+2016-08-20 13:44:39.059 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.125 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.125 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:44:39.126 WARNING the file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" was (re)moved immediately after creation
+2016-08-20 13:44:39.126 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d") group
+2016-08-20 13:44:39.126 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" is not in the database
+2016-08-20 13:44:39.127 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" added to DB
+2016-08-20 13:44:39.127 DEBUG event 100 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.127 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.194 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.194 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:44:39.194 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" is already in the database
+2016-08-20 13:44:39.194 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.194 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/other.dat"
+2016-08-20 13:44:39.194 DEBUG mv2 "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d" "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/other.dat"
+2016-08-20 13:44:39.194 DEBUG mv2: chmod= NIL
+2016-08-20 13:44:39.194 DEBUG setting previous name to "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/dat/sed8O6N5d"
+2016-08-20 13:44:39.194 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.194 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.261 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.261 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:44:39.262 WARNING the file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi" was (re)moved immediately after creation
+2016-08-20 13:44:39.262 DEBUG failed to reveal (inexistent?) file ("/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi") group
+2016-08-20 13:44:39.262 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi" is not in the database
+2016-08-20 13:44:39.263 INFO "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi" added to DB
+2016-08-20 13:44:39.263 DEBUG event 100 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.263 DEBUG chgrp or chmod file "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.329 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.329 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:44:39.329 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi" is already in the database
+2016-08-20 13:44:39.329 DEBUG event 1000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:44:39.330 DEBUG event 10000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/hanan.dat"
+2016-08-20 13:44:39.330 DEBUG mv2 "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi" "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/hanan.dat"
+2016-08-20 13:44:39.330 DEBUG mv2: chmod= NIL
+2016-08-20 13:44:39.330 DEBUG setting previous name to "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/sedj4KWJi"
+2016-08-20 13:45:11.469 DEBUG received 2 events
+2016-08-20 13:45:11.470 DEBUG event 100000000 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#Makefile#"
+2016-08-20 13:45:11.537 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#Makefile#"
+2016-08-20 13:45:11.538 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:45:11.539 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#Makefile#"
+2016-08-20 13:45:11.606 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/#Makefile#"
+2016-08-20 13:45:11.606 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:00.176 DEBUG received 1 events
+2016-08-20 13:54:00.176 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 13:54:00.243 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 13:54:00.243 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:00.243 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 13:54:01.870 DEBUG received 3 events
+2016-08-20 13:54:01.870 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 13:54:01.940 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 13:54:01.940 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:01.940 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 13:54:01.940 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:02.005 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:02.006 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:02.006 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 13:54:02.006 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 13:54:02.072 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps"
+2016-08-20 13:54:02.073 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:02.073 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/mu.eps" is already in the database
+2016-08-20 13:54:04.425 DEBUG received 1 events
+2016-08-20 13:54:04.425 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:04.489 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:04.489 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:04.489 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 13:54:04.489 DEBUG received 3 events
+2016-08-20 13:54:04.490 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:04.557 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:04.557 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:04.557 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 13:54:04.557 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 13:54:04.624 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 13:54:04.624 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:04.625 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is already in the database
+2016-08-20 13:54:04.625 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:04.692 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps"
+2016-08-20 13:54:04.693 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:04.693 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1a.eps" is already in the database
+2016-08-20 13:54:06.957 DEBUG received 1 events
+2016-08-20 13:54:06.957 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 13:54:07.028 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 13:54:07.028 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:07.028 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is already in the database
+2016-08-20 13:54:07.028 DEBUG received 1 events
+2016-08-20 13:54:07.028 DEBUG event 10 occured with "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 13:54:07.095 DEBUG watch function received "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps"
+2016-08-20 13:54:07.095 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:54:07.095 DEBUG "/home/shalaev/PA6OTA/TEKCT/impurities_in_Si/maxima/big/fig-1b.eps" is already in the database
+2016-08-20 13:55:59.574 DEBUG received 2 events
+2016-08-20 13:55:59.576 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:55:59.576 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:55:59.576 DEBUG received 2 events
+2016-08-20 13:55:59.576 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:55:59.576 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:55:59.581 DEBUG received 1 events
+2016-08-20 13:55:59.582 DEBUG received 9 events
+2016-08-20 13:55:59.651 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:55:59.730 DEBUG rm=NIL, mod=T, !chmod=NIL
+2016-08-20 13:55:59.798 DEBUG rm=NIL, mod=NIL, !chmod=NIL
+2016-08-20 13:55:59.866 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 13:55:59.941 DEBUG rm=NIL, mod=NIL, !chmod=T
+2016-08-20 13:55:59.951 DEBUG mv1: before the move (mv), the file/dir was not in the DB
+2016-08-20 13:56:00.018 DEBUG rm=NIL, mod=NIL, !chmod=NIL

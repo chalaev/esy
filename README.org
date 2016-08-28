@@ -8,10 +8,11 @@
 Note: this program requires [[https://github.com/chalaev/cl-libconfig][cl-libconfig]] (lisp interface to the standard libconfig library).
 
 * Motivation
-Though I use free cloud file storages ([[https://disk.yandex.com/][yandex-disk]] and [[https://cloud.mail.ru/][mail.ru-cloud]] have official linux
-clients), I do not trust them. I am afraid that files there are easily accessible to FSB (former
-KGB) or NSA officers, and may end up in hands of criminals. I do not want anyone to know even
-names of my files and directories. This is why my [[http://www.chalaev.com/pub/etc/backup2l.conf][cloud-stored (daily) backups]] are encrypted.
+Though I use free cloud file storages, I do not trust them.
+The minimal danger with clouds is that they would analyze my files and give information about my income/habits etc.
+to those annoying people who call me (sometimes several times a day!) trying to sell something.
+It is also possible that such sophisticated systems like Dropbox or Google Drive have digital or human vulnerabilities.
+Because of these fears all my [[http://www.chalaev.com/pub/etc/backup2l.conf][cloud-stored (daily) backups]] are encrypted.
 
 However, encryption is inconvenient if I want to share (with a daily syncronization) folders
 between different computers. For example, I use three computers: office workstation, laptop, and
@@ -20,15 +21,15 @@ my files are secure if syncronized among all three.
 (I use [[https://github.com/chalaev/wifi-switcher][wifi-switcher]] to move files between mobile devices and linux laptops.)
 
 Only important files are syncronized. The importance can be encoded in the
-(libconfig-compatible) configuration file (see examples/*/*.conf) according to name, group, age, and size of a
+(~libconfig~-compatible) configuration file (see ~examples/*/*.conf~) according to name, group, age, and size of a
 file. Group names are preserved so it is ok if they have different IDs on different
 hosts. Permissions are preserved as well. If a file (or a directory) is renamed/moved/erased/chmod-ed
 on one host, the same will hapen on the other ones.
 Note however that an independent backup is necessary
-(I use backup2l + gpg + [[https://disk.yandex.com/][yandex-disk]] to protect important data from accidental removal.)
+(I use ~backup2l~ + ~gpg~ + [[https://disk.yandex.com/][yandex-disk]] to protect important data from accidental removal.)
 
 * Quick start
-Copy all files from the [[https://github.com/chalaev/esy][github archive]] to some directory, say ~/esy-source/:
+Copy all files from the [[https://github.com/chalaev/esy][github archive]] to some directory, say ~~/esy-source/~:
 #+BEGIN_SRC sh
 mkdir ~/esy-source ~/.esy
 cd ~/esy-source
@@ -44,10 +45,10 @@ mkdir ~/esy-test/mail/a
 echo "uuu" > ~/esy-test/mail/a/u.txt
 ~/local/bin/sbcl --load main.lisp
 #+END_SRC
-where ~/local/bin/sbcl is the (common) lisp command.
-The default configuration file ~/.esy/`hostname`.conf tells esy to
-(recursively) monitor changes in the directories ~/esy-test/{mail,2,3,4,5}.
-The program will refuse to monitor inexisting ~/esy-test/5.
+where ~~/local/bin/sbcl~ is the (common) lisp command.
+The default configuration file ~~/.esy/`hostname`.conf~ tells ~esy~ to
+(recursively) monitor changes in the directories ~~/esy-test/{mail,2,3,4,5}~.
+The program will refuse to monitor inexisting ~~/esy-test/5~.
 It is instructive to monitor the log file:
 #+BEGIN_SRC sh
 tail -f ~/.esy/log.txt
@@ -62,16 +63,17 @@ echo "eee" >> ~/esy-test/3/e.txt
 mv ~/esy-test/3/e.txt ~/esy-test/4/
 rm -r ~/esy-test/mail/a
 #+END_SRC
-File-manipulation events are logged into ~/.esy/log.txt
-   For now the (most informative) logLevel=0 in example.conf is set, but if you think that
-   ~/.esy/log.txt is growing too fast, set logLevel=2 or even logLevel=4.
+File-manipulation events are logged into ~~/.esy/log.txt~
+   For now the  ~logLevel=1~ in ~example.conf~ is set, but if you think that
+   ~~/.esy/log.txt~ is growing too fast, set ~logLevel=2~ or even ~logLevel=4~.
 Now stop the program:
 #+BEGIN_SRC sh
 echo "quit" > ~/.esy/message.ctl
 mkdir ~/.esy/do-read.ctl
 #+END_SRC
+where the last (mkdir) command tells the program to read instruction(s) from ~~/.esy/message.ctl~
 * Resulting files
-Let us consider simple live example of playing in the ~/esy-test/ directory on host named "theorie13":
+Let us consider simple live example of playing in the ~~/esy-test/~ directory on host named ~theorie13~:
 #+BEGIN_SRC sh
 cd ~/esy-test/1
 echo aa >> nd/22.txt 
@@ -82,7 +84,7 @@ mv ff.txt ttt/
 echo "quit" > ~/.esy/message.ctl
 mkdir ~/.esy/do-read.ctl
 #+END_SRC
-The resulting ~/.esy/local.sh is
+The resulting ~~/.esy/local.sh~ is
 #+BEGIN_SRC sh
 #!/bin/sh -e
 # generated 2016-08-04 17:47:25 GMT-4 by esy on "theorie13"
@@ -95,7 +97,12 @@ rm ~/.esy/host-id.dat
 # end
 cd -
 #+END_SRC
-The resulting ~/.esy/from-theorie13.sh is
+In this las code block, there are two somewhat "personal" commands:
+timeout 5 emacsclient -e "(save-some-buffers t)" tells emacs to save all buffers, and
+~fetchmail --quit~ stops the ~fetchmail~ daemon.
+(In the future these commands will be sourced from a separate user-defined file, say ~~/.esy/on-sync.sh~)
+
+The resulting ~~/.esy/from-theorie13.sh~ is
 #+BEGIN_SRC sh
 #!/bin/sh -e
 # generated 2016-08-04 17:47:25 GMT-4 by esy on "theorie13"
@@ -126,18 +133,17 @@ cd -
 #+END_SRC
 * Saving local changes to perform them on another host
 The simplest way to use these files is off-line one.
-I work on theorie13 in my office with esy monitoring all files I change.
+I work on theorie13 in my office with ~esy~ monitoring all files I change.
 At the end of the day, I 
-run ~/.esy/local.sh and
-copy ~/.esy/from-theorie13.sh and ~/.esy/theorie13.tbz to a usb drive.
-At home I 
+run ~~/.esy/local.sh~ and copy ~~/.esy/from-theorie13.*~ to a usb drive.
+At home I
 #+BEGIN_SRC sh
-mv from-theorie13.sh theorie13.tbz ~/.esy
+mv from-theorie13.* ~/.esy
 cd ~/.esy
 chmod +x from-theorie13.sh
 ./from-theorie13.sh
 #+END_SRC
-and then launch esy in order to save any home file-edits on my work computer.
+and then launch ~esy~ in order to save any home file-edits on my work computer (that is, ~theorie13~).
 
 In reality I use email to copy files between hosts (I have special gmail accounts for that):
-the file ~/.procmailrc can be instructed to automatically save attachments from emails arriving from a certain address to ~/.esy/ …
+the file ~~/.procmailrc~ can be instructed to automatically save attachments from emails arriving from a certain address to ~/.esy/ …

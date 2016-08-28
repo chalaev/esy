@@ -34,7 +34,6 @@
 	;; (#.inotify:in-move-self (tlog :info "an observed directory is moved")) ; decided not to monitor this event
 	(#.inotify:in-delete (rm (watch 'file fullName :erased t)))
 	(#.mkdir (let ((fullName (fixDir fullName)))
-		   (tlog :info "created directory")
 		   (watch 'catalog fullName) (push fullName newDirsToWatch)))
 	(#.inotify:in-attrib ; chgrp or touch or chmod on file
 	 (tlog :debug "chgrp or chmod file ~s" printName)
@@ -42,5 +41,5 @@
 	(#.chmodDir ; chgrp or chmod on dir
 	 (tlog :debug "chgrp or chmod dir ~s" printName)
 	 (update-attrs (watch 'catalog fullName)))
-	(#.inotify:in-ignored (tlog :warning "(presumably due to it removal) stopped monitoring directory ~s" printName))
+	(#.inotify:in-ignored (tlog :info "(presumably due to its removal) stopped monitoring directory ~s" printName))
 	(otherwise (tlog :error "some strange unmatched event ~B occured!" whatsUp)))))))

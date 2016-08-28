@@ -1,5 +1,5 @@
 ;;  -*-coding: utf-8;-*-
-;; common.lisp Time-stamp: <2016-08-13 14:24 EDT by Oleg SHALAEV http://chalaev.com >
+;; common.lisp Time-stamp: <2016-08-21 12:08 EDT by Oleg SHALAEV http://chalaev.com >
 ;; used by main.lisp
 
 (defun flatten (lst &optional backtrack acc); ← https://gist.github.com/westerp/cbc1b0434cc2b52e9b10
@@ -39,7 +39,8 @@
 			(if (keywordp ft)
 			    (equal type (osicat:file-kind fName))
 			    (progn
-			      (tlog :warning (format 'nil "the file ~s was (re)moved immediately after creation" fname))
+			      (tlog :warning "the file ~s was (re)moved immediately after creation" (dTildas fname))
+;; ← otherwise fails with fname="/home/shalaev/PA6OTA/PROGRAMMISMO/learn/clojure/.1.clj~.Ef9uSB"
 			      t))))
 		  (or (not namePat) (cl-ppcre:scan namePat fName))
 		  (or (not (integerp maxSize)) erased
@@ -128,7 +129,8 @@
 			 (and namePat (cl-ppcre:scan namePat fName))
 			 (and (integerp maxSize) (> (fileSize fName) maxSize)))))))))
 
-(defvar *allFiles* 'nil); main database; список файловых объектов, за которыми происходит слежка
+;; I guess vectors will not be much faster than lists:
+(defvar *allFiles* 'nil); main database; list of monitored files/dirs
 (defvar newDirsToWatch 'nil)
 
 (defconstant monitoredEvents (logior inotify:in-attrib inotify:in-create inotify:in-delete inotify:in-delete-self inotify:in-ignored inotify:in-isdir
@@ -216,10 +218,12 @@
     (tlog :debug "mv1: before the move (mv), the file/dir was not in the DB")
     (when movedFromElseWhere  (setf (f-modified obj2) t) (update-attrs obj2))))
 
+;; Note that even if (junkP newName)=>t, mv is not equivalent to rm
+;; because the file or a direcory maight be moved back to a non-junk name:
 (defmethod mv ((obj file) (newName string) &key (movedFromElseWhere 'nil) (type 'file)); called also for catalogs
   (let* ((p (f-parent obj)) (nd (dirname newName)) (np (DBentry nd :type 'catalog)))
     (tlog :debug "mv2 ~s ~s" (dTildas (f-name obj)) (dTildas newName))
-    (tlog :debug "mv2: chmod= ~s" (f-perms obj))
+    ;; (tlog :debug "mv2: chmod= ~s" (f-perms obj))
     (unless (f-prevName obj)
       (tlog :debug "setting previous name to ~s" (dTildas (f-name obj)))
       (setf (f-prevName obj) (f-name obj))); if moved for the first time
@@ -230,8 +234,9 @@
       (tlog :debug "changing parent name to ~s" (dTildas (f-name np)))
       (setf (f-parent obj) np)
       (correctName obj))
+    (setf (f-name obj) newName)
     (when (string= newName (f-prevName obj))
-      (tlog :debug "mv2: prevName=name=~s" newName)
+      (tlog :debug "mv2: prevName=name=~s" (dTildas newName))
       (setf (f-prevName obj) 'nil))))
 
 (defun modAsteriscs (str) "transforms * into [^/]*"
@@ -283,7 +288,7 @@
 	  (when erased   (setf (f-erased   inDB) t))
 	  (when modified (setf (f-modified inDB) t))
 	  (when (string= fullName (f-prevName inDB))
-	    (tlog :debug "watch: prevName=name=~s" fullName)
+	    (tlog :debug "watch: prevName=name=~s" (dTildas fullName))
 	    (setf (f-prevName inDB) 'nil)))
 	(when ; if this is a newbie: check if it deserves our royal attention
 	    (ecase objType
@@ -300,7 +305,7 @@
 					      :date  (unless emm (fileDate  fullName))
 					      :perms (unless emm  (fileMod fullName)))
 		    (osicat-posix:enoent ()
-		      (tlog :debug "file ~s was erased during its addition to DB" fullName)
+		      (tlog :debug "file ~s was erased during its addition to DB" (dTildas fullName))
 		      'nil))))
 	    (when newDBelement
 	    (when (equal objType 'catalog)
@@ -316,12 +321,12 @@
 	    (pushnew newDBelement (c-children parent) :test 'filesEqual)
 	    (tlog :info "~s added to DB" (dTildas fullName)); "file changed" in log means that we added it to the DB
 	    (find newDBelement *allFiles* :test 'filesEqual))))))))
-;; ситуации вызова watch:
-;; 1. при инициации добавляем каталоги из inotify-списка
-;; 2. при созадании нового каталога или файла
-;; 3. при удалении каталога или файла
-;; 4. при изменении разрешений или даты
-;; (неясно) При переименовании или перемещении каталога или файла
+;; different situations when watch is called:
+;; 1. during initialization: recursively adding watched directories
+;; 2. when a new file or a directory is created
+;; 3. when a file or a directory is removed
+;; 4. when chmod or touch
+;; (unclear) when rename or move
 
 (defun stripAbsDir (x) (subseq x (length rootDir) (length x)))
 
@@ -354,7 +359,6 @@
     (format script "# moving files:~%")
     (mapcar #'(lambda (x) (format script "mv -i ~s ~s~%" (stripAbsDir (f-prevName x)) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (and (importantDBE x) (f-prevName x))) (selectFiles *allFiles*)))
-    (format script "# extracting saved files:~%tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript) :tail ".sh"))
     (format script "# deleting files and directories:~%for i in ~~/.esy/local.sh")
     (mapcar #'(lambda (x) (format script " ~s" (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (or
@@ -373,7 +377,9 @@
 						     (catalog (not (junkDBE x)))
 						     (file    (importantDBE x))))))
 	    *allFiles*)) ; moved to unimportant file means "erased"
-    (format script "; do if [ -e \"$i\" ]; then rm -ri \"$i\" ; fi ; done ~%")
+    (format script "; do if [ -e \"$i\" ]; then rm -r \"$i\" ; fi ; done ~%")
+    ;; it is important that all destructive operations (file removal) are done BEFORE new files are extracted:
+    (format script "# extracting saved files:~%tar xjfv ~~/.esy/~a.tbz -C $rootDir~%cd \"$rootDir\"~%" (basename (namestring remoteScript) :tail ".sh"))
     (format script "# adjusting ownership (UIDs and GIDs might be different on different hosts):~%")
     (mapcar #'(lambda (x) (format script "chgrp ~a ~s~%" (f-group x) (stripAbsDir (f-name x))))
 	    (remove-if-not #'(lambda (x) (and (not (f-erased x)) (f-group x))) *allFiles*))
@@ -438,6 +444,8 @@
     (cons (mapcar #'(lambda (x) (mapAll f x)) y))
     (hash-table (progn (maphash #'(lambda (key val) (setf (gethash key y) (mapAll f val))) y) y))
     (otherwise (funcall f y)))); semi-tested 2016-07-08
+
+;; I guess I should use reduce instead of Fold:
 (defun Fold (f x yList) "A Mathematica (R) Fold function"
        (let ((result x))
 	 (loop for y in yList do
@@ -445,7 +453,7 @@
 	 result)); semi-tested 2016-07-08
 
 (defun recursive-subst (substRules object) "transforms object according to substRules"
-       (Fold
+       (Fold ; I guess I should use reduce instead of Fold here
 	#'(lambda (structure rule)
 	    (mapAll #'(lambda (obj) (if (equal (car rule) obj) (second rule) obj)) structure))
 	object substRules)); tested 2016-07-08

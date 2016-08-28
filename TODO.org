@@ -1,10 +1,12 @@
-1. Add support for the  (unsupported for now) "maxAge" configuration setting.
-2. Add support for the  (unsupported for now) "maxDirRecursion" configuration setting.
-3. configuration settings: specify logical operation inside hashes, e.g. {logOp="and", name="*.pdf", group="literature"}
-4. test if the program can handle dangling links (removed BTW with symlinks -rdv ~)
-5. link creation which is not monitored for now.
-6. Provide mechanism to stop monitoring directory where too many changes are made.
-7. May be I could avoid monitoring all of my 3636 directories; some of them remain unchanged for years...
-8. suppose the file has been moved (or chmoded) several times and then received its original name (group) back; then it should be excluded from the list of
-   monitored files
-9. Perhaps "memory save" mode should be introduced where file change (tracable by rsync and find) is not monitored.
+1. test: mv file.txt file.txt~ ; sleep 1; mv file.txt~ file.txt
+2. test: mv file.txt file.txt~ ; mv file.txt~ file.txt
+3. Add support for the  (unsupported for now) "maxAge" configuration setting.
+4. Add support for the  (unsupported for now) "maxDirRecursion" configuration setting.
+5. configuration settings: specify logical operation inside hashes, e.g. {logOp="and", name="*.pdf", group="literature"}
+6. test if the program can handle dangling links (removed BTW with symlinks -rdv ~)
+7. link creation which is not monitored for now.
+8. Provide mechanism to stop monitoring directory where too many changes are made.
+9. May be I could avoid monitoring all of my 3636 directories; some of them remain unchanged for years...
+10. suppose the file has been moved (or chmoded) several times and then received its original name (group) back; then it should be excluded from the list of
+    monitored files
+11. Perhaps "memory save" mode should be introduced where file change (tracable by rsync and find) is not monitored.
