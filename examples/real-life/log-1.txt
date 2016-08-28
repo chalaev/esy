@@ -1,0 +1,442 @@
+As of 2016-08-28 I believe that most significant code problems are already resolved so I can switch to (less informative) 1-log level:
+
+2016-08-28 08:32:37.599 INFO Preparing to watch 10 directories together with their descendants
+2016-08-28 08:32:37.612 INFO log started
+2016-08-28 08:32:40.770 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/" added to DB
+2016-08-28 08:32:40.770 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/experiment/" added to DB
+2016-08-28 08:32:40.771 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/experiment/Ge:As/" added to DB
+2016-08-28 08:32:40.771 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/experiment/Ge:As/PhysStatSolidi-v38p865/" added to DB
+2016-08-28 08:32:40.771 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/experiment/Ge:As/PhysStatSolidi/" added to DB
+2016-08-28 08:32:40.772 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/experiment/Ge:As/unreliable/" added to DB
+2016-08-28 08:32:40.772 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/experiment/Ge:Sb/" added to DB
+2016-08-28 08:32:40.772 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/literature/" added to DB
+2016-08-28 08:32:40.773 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/literature/PRL/" added to DB
+2016-08-28 08:32:40.773 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/" added to DB
+2016-08-28 08:32:40.773 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/fig/" added to DB
+2016-08-28 08:32:40.773 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/images/" added to DB
+2016-08-28 08:32:40.774 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/images/articles/" added to DB
+2016-08-28 08:32:40.774 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/images/old/" added to DB
+2016-08-28 08:32:40.774 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/old/" added to DB
+2016-08-28 08:32:40.775 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/povray_and_sketch/" added to DB
+2016-08-28 08:32:40.775 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/povray_and_sketch/old/" added to DB
+2016-08-28 08:32:40.775 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/single_pages/" added to DB
+2016-08-28 08:32:40.776 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/tetrahedron/" added to DB
+2016-08-28 08:32:40.776 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/tetrahedron/common/" added to DB
+2016-08-28 08:32:40.776 INFO "/home/shalaev/PA6OTA/conferences/2015-March_meeting/presentation/tetrahedron/source/" added to DB
+...
+numerous similar enries here
+...
+2016-08-28 08:32:43.255 INFO "/home/shalaev/PA6OTA/www/old/linux/" added to DB
+2016-08-28 08:32:43.256 INFO "/home/shalaev/PA6OTA/www/pictures/" added to DB
+...
+2016-08-28 08:32:43.361 INFO started monitoring 3702 directories.
+...
+2016-08-28 09:23:51.545 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_P4D.nXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:51.561 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_P4D.nXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:51.562 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_P4D.nXuwXB.theorie13" added to DB
+2016-08-28 09:23:51.832 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_P4D,nXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:51.832 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_P4D,nXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:51.832 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_P4D,nXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:51.833 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_P4D,nXuwXB.theorie13" added to DB
+2016-08-28 09:23:52.034 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.D1OQ" added to DB
+2016-08-28 09:23:52.101 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_P4D+nXuwXB.theorie13" added to DB
+2016-08-28 09:23:52.302 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/from" added to DB
+2016-08-28 09:23:52.370 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_a4D.oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:52.370 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_a4D.oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:52.371 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_a4D.oXuwXB.theorie13" added to DB
+2016-08-28 09:23:52.647 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_a4D,oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:52.647 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_a4D,oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:52.647 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_a4D,oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:52.648 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_a4D,oXuwXB.theorie13" added to DB
+2016-08-28 09:23:52.782 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.F1OQ" added to DB
+2016-08-28 09:23:52.850 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_a4D+oXuwXB.theorie13" added to DB
+2016-08-28 09:23:53.117 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_l4D.oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.117 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_l4D.oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.118 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_l4D.oXuwXB.theorie13" added to DB
+2016-08-28 09:23:53.386 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_l4D,oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.386 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_l4D,oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.387 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_l4D,oXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.388 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_l4D,oXuwXB.theorie13" added to DB
+2016-08-28 09:23:53.522 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.G1OQ" added to DB
+2016-08-28 09:23:53.589 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_l4D+oXuwXB.theorie13" added to DB
+2016-08-28 09:23:53.956 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_w4D.qXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.957 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_w4D.qXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:53.958 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/_w4D.qXuwXB.theorie13" added to DB
+2016-08-28 09:23:54.226 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_w4D,qXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:54.226 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_w4D,qXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:54.226 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_w4D,qXuwXB.theorie13" was (re)moved immediately after creation
+2016-08-28 09:23:54.227 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/_w4D,qXuwXB.theorie13" added to DB
+2016-08-28 09:23:54.361 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/msg.N1OQ" added to DB
+2016-08-28 09:23:54.428 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/inbox/new/_w4D+qXuwXB.theorie13" added to DB
+2016-08-28 09:31:36.309 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/read-mail/tmp/cur.1472391096.28958_34.theorie13:2,S" added to DB
+2016-08-28 09:31:36.446 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/read-mail/cur/1472391096.28958_35.theorie13:2,S" added to DB
+2016-08-28 09:32:27.426 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.HNRQ" added to DB
+2016-08-28 09:32:27.494 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.HrTQ" added to DB
+2016-08-28 09:32:27.562 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.hrVQ" added to DB
+2016-08-28 09:32:27.629 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.rrVQ" added to DB
+2016-08-28 09:32:27.696 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.FMYQ" added to DB
+2016-08-28 09:32:27.764 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.IMYQ" added to DB
+2016-08-28 09:32:27.831 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.USZQ" added to DB
+2016-08-28 09:32:27.899 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.ohZQ" added to DB
+2016-08-28 09:32:27.967 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.FOaQ" added to DB
+2016-08-28 09:32:28.034 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.hmMQ" was (re)moved immediately after creation
+2016-08-28 09:32:28.035 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.hmMQ" added to DB
+2016-08-28 09:32:28.103 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.FjTQ" added to DB
+2016-08-28 09:32:28.171 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.GfVQ" added to DB
+2016-08-28 09:32:28.238 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.72UQ" added to DB
+2016-08-28 09:32:28.306 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.pwVQ" added to DB
+2016-08-28 09:32:28.374 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.wqRQ" added to DB
+2016-08-28 09:32:28.442 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.guRQ" added to DB
+2016-08-28 09:32:28.509 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.6CUQ" added to DB
+2016-08-28 09:32:28.577 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.uPUQ" added to DB
+2016-08-28 09:32:28.645 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.yZYQ" added to DB
+2016-08-28 09:32:28.713 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.dhYQ" added to DB
+2016-08-28 09:32:28.781 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.owQQ" added to DB
+2016-08-28 09:32:28.849 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.6wQQ" added to DB
+2016-08-28 09:32:28.918 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.GEUQ" added to DB
+2016-08-28 09:32:28.987 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.LEUQ" added to DB
+2016-08-28 09:32:29.056 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.EaaQ" added to DB
+2016-08-28 09:32:29.123 WARNING the file "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.U4RQ" was (re)moved immediately after creation
+2016-08-28 09:32:29.124 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.U4RQ" added to DB
+2016-08-28 09:32:29.193 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.DfZQ" added to DB
+2016-08-28 09:32:29.280 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.FfZQ" added to DB
+2016-08-28 09:32:29.348 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.LfZQ" added to DB
+2016-08-28 09:32:29.416 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/mail/theorie13/new/msg.eaaQ" added to DB
+2016-08-28 09:58:23.460 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/README" added to DB
+2016-08-28 10:02:18.564 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/HOTSPOT" added to DB
+2016-08-28 10:02:18.634 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/HOTSPOT" added to DB
+2016-08-28 10:25:02.259 INFO "/home/shalaev/PA6OTA/www/current/projects/" added to DB
+2016-08-28 10:25:17.440 INFO "/home/shalaev/PA6OTA/www/current/projects/index.html" added to DB
+2016-08-28 10:25:50.263 WARNING the file "/home/shalaev/PA6OTA/www/current/projects/sedtijsml" was (re)moved immediately after creation
+2016-08-28 10:25:50.332 WARNING the file "/home/shalaev/PA6OTA/www/current/projects/sedtijsml" was (re)moved immediately after creation
+2016-08-28 10:25:50.333 INFO "/home/shalaev/PA6OTA/www/current/projects/sedtijsml" added to DB
+2016-08-28 10:29:11.086 INFO "/home/shalaev/PA6OTA/www/current/other.html" added to DB
+2016-08-28 10:29:11.156 INFO "/home/shalaev/PA6OTA/www/current/other.html" added to DB
+2016-08-28 11:35:02.301 INFO "/home/shalaev/PA6OTA/www/current/other.html" added to DB
+2016-08-28 11:36:59.931 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.iQQxpB" was (re)moved immediately after creation
+2016-08-28 11:37:00.000 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.iQQxpB" was (re)moved immediately after creation
+2016-08-28 11:37:00.068 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.iQQxpB" was (re)moved immediately after creation
+2016-08-28 11:37:00.140 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.iQQxpB" was (re)moved immediately after creation
+2016-08-28 11:37:00.277 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.org.n0c3rZ" was (re)moved immediately after creation
+2016-08-28 11:37:00.346 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.org.n0c3rZ" was (re)moved immediately after creation
+2016-08-28 11:37:00.414 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.org.n0c3rZ" was (re)moved immediately after creation
+2016-08-28 11:37:00.484 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.HOTSPOT.org.n0c3rZ" was (re)moved immediately after creation
+2016-08-28 11:37:00.554 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/HOTSPOT.org" added to DB
+2016-08-28 11:37:00.623 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.ireTzn" was (re)moved immediately after creation
+2016-08-28 11:37:00.691 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.ireTzn" was (re)moved immediately after creation
+2016-08-28 11:37:00.760 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.ireTzn" was (re)moved immediately after creation
+2016-08-28 11:37:00.828 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.ireTzn" was (re)moved immediately after creation
+2016-08-28 11:37:00.964 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.org.lGdLHL" was (re)moved immediately after creation
+2016-08-28 11:37:01.032 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.org.lGdLHL" was (re)moved immediately after creation
+2016-08-28 11:37:01.100 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.org.lGdLHL" was (re)moved immediately after creation
+2016-08-28 11:37:01.168 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.README.org.lGdLHL" was (re)moved immediately after creation
+2016-08-28 11:37:01.237 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/README.org" added to DB
+2016-08-28 11:37:01.305 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.current_version.txt.2x2ER9" was (re)moved immediately after creation
+2016-08-28 11:37:01.373 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.current_version.txt.2x2ER9" was (re)moved immediately after creation
+2016-08-28 11:37:01.441 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.current_version.txt.2x2ER9" was (re)moved immediately after creation
+2016-08-28 11:37:01.509 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.current_version.txt.2x2ER9" was (re)moved immediately after creation
+2016-08-28 11:37:01.578 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/current_version.txt" added to DB
+2016-08-28 11:37:01.646 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.pack.sh.hHjA1x" was (re)moved immediately after creation
+2016-08-28 11:37:01.714 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.pack.sh.hHjA1x" was (re)moved immediately after creation
+2016-08-28 11:37:01.782 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.pack.sh.hHjA1x" was (re)moved immediately after creation
+2016-08-28 11:37:01.851 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.pack.sh.hHjA1x" was (re)moved immediately after creation
+2016-08-28 11:37:01.920 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/pack.sh" added to DB
+2016-08-28 11:37:01.987 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.wifi-switcher.org.4J4wbW" was (re)moved immediately after creation
+2016-08-28 11:37:02.056 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.wifi-switcher.org.4J4wbW" was (re)moved immediately after creation
+2016-08-28 11:37:02.124 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.wifi-switcher.org.4J4wbW" was (re)moved immediately after creation
+2016-08-28 11:37:02.192 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.wifi-switcher.org.4J4wbW" was (re)moved immediately after creation
+2016-08-28 11:37:02.261 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/wifi-switcher.org" added to DB
+2016-08-28 11:37:02.627 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.628 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.628 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.697 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.697 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.697 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.766 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.766 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.766 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.835 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.835 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.835 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG.paR3Hk" was (re)moved immediately after creation
+2016-08-28 11:37:02.973 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:02.974 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:02.974 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.043 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.043 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.043 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.111 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.112 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.112 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.181 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.181 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.181 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.COMMIT_EDITMSG~.kHHBeJ" was (re)moved immediately after creation
+2016-08-28 11:37:03.319 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.FETCH_HEAD.XaPaL7" was (re)moved immediately after creation
+2016-08-28 11:37:03.319 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.FETCH_HEAD.XaPaL7" was (re)moved immediately after creation
+2016-08-28 11:37:03.319 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.FETCH_HEAD.XaPaL7" was (re)moved immediately after creation
+2016-08-28 11:37:03.390 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.FETCH_HEAD.XaPaL7" was (re)moved immediately after creation
+2016-08-28 11:37:03.390 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.FETCH_HEAD.XaPaL7" was (re)moved immediately after creation
+2016-08-28 11:37:03.390 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.FETCH_HEAD.XaPaL7" was (re)moved immediately after creation
+2016-08-28 11:37:03.528 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.528 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.528 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.597 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.597 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.597 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.667 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.667 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.667 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.737 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.737 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.737 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.HEAD.SvjKhw" was (re)moved immediately after creation
+2016-08-28 11:37:03.876 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:03.876 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:03.876 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:03.945 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:03.945 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:03.945 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.014 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.014 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.014 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.083 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.083 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.083 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.config.ZUMkOU" was (re)moved immediately after creation
+2016-08-28 11:37:04.221 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.222 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.222 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.290 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.291 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.291 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.359 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.359 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.360 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.429 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.429 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.429 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.description.KUaWkj" was (re)moved immediately after creation
+2016-08-28 11:37:04.567 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.567 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.567 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.636 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.636 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.636 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.705 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.705 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.705 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.774 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.774 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.774 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.index.tjqyRH" was (re)moved immediately after creation
+2016-08-28 11:37:04.916 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:04.916 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:04.916 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:04.986 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:04.986 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:04.986 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.055 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.055 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.055 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.124 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.124 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.124 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/.git/.packed-refs.CDObo6" was (re)moved immediately after creation
+2016-08-28 11:37:05.558 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.debhelper-build-stamp.DIY6lm" was (re)moved immediately after creation
+2016-08-28 11:37:05.629 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.debhelper-build-stamp.DIY6lm" was (re)moved immediately after creation
+2016-08-28 11:37:05.697 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.debhelper-build-stamp.DIY6lm" was (re)moved immediately after creation
+2016-08-28 11:37:05.766 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.debhelper-build-stamp.DIY6lm" was (re)moved immediately after creation
+2016-08-28 11:37:05.835 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/debhelper-build-stamp" added to DB
+2016-08-28 11:37:05.903 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.files.CXgnZN" was (re)moved immediately after creation
+2016-08-28 11:37:05.971 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.files.CXgnZN" was (re)moved immediately after creation
+2016-08-28 11:37:06.040 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.files.CXgnZN" was (re)moved immediately after creation
+2016-08-28 11:37:06.108 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.files.CXgnZN" was (re)moved immediately after creation
+2016-08-28 11:37:06.177 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/files" added to DB
+2016-08-28 11:37:06.245 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postinst.HPHECf" was (re)moved immediately after creation
+2016-08-28 11:37:06.313 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postinst.HPHECf" was (re)moved immediately after creation
+2016-08-28 11:37:06.382 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postinst.HPHECf" was (re)moved immediately after creation
+2016-08-28 11:37:06.450 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postinst.HPHECf" was (re)moved immediately after creation
+2016-08-28 11:37:06.519 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/postinst" added to DB
+2016-08-28 11:37:06.588 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postrm.gpFXfH" was (re)moved immediately after creation
+2016-08-28 11:37:06.656 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postrm.gpFXfH" was (re)moved immediately after creation
+2016-08-28 11:37:06.724 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postrm.gpFXfH" was (re)moved immediately after creation
+2016-08-28 11:37:06.793 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.postrm.gpFXfH" was (re)moved immediately after creation
+2016-08-28 11:37:06.862 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/postrm" added to DB
+2016-08-28 11:37:06.930 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.prerm.7LThT8" was (re)moved immediately after creation
+2016-08-28 11:37:06.998 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.prerm.7LThT8" was (re)moved immediately after creation
+2016-08-28 11:37:07.067 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.prerm.7LThT8" was (re)moved immediately after creation
+2016-08-28 11:37:07.135 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.prerm.7LThT8" was (re)moved immediately after creation
+2016-08-28 11:37:07.204 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/prerm" added to DB
+2016-08-28 11:37:07.273 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.debhelper.log.YIoDwA" was (re)moved immediately after creation
+2016-08-28 11:37:07.341 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.debhelper.log.YIoDwA" was (re)moved immediately after creation
+2016-08-28 11:37:07.409 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.debhelper.log.YIoDwA" was (re)moved immediately after creation
+2016-08-28 11:37:07.478 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.debhelper.log.YIoDwA" was (re)moved immediately after creation
+2016-08-28 11:37:07.547 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher.debhelper.log" added to DB
+2016-08-28 11:37:07.615 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postinst.debhelper.1t4Z91" was (re)moved immediately after creation
+2016-08-28 11:37:07.684 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postinst.debhelper.1t4Z91" was (re)moved immediately after creation
+2016-08-28 11:37:07.752 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postinst.debhelper.1t4Z91" was (re)moved immediately after creation
+2016-08-28 11:37:07.821 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postinst.debhelper.1t4Z91" was (re)moved immediately after creation
+2016-08-28 11:37:07.890 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher.postinst.debhelper" added to DB
+2016-08-28 11:37:07.958 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postrm.debhelper.El2nNt" was (re)moved immediately after creation
+2016-08-28 11:37:08.027 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postrm.debhelper.El2nNt" was (re)moved immediately after creation
+2016-08-28 11:37:08.095 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postrm.debhelper.El2nNt" was (re)moved immediately after creation
+2016-08-28 11:37:08.164 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.postrm.debhelper.El2nNt" was (re)moved immediately after creation
+2016-08-28 11:37:08.233 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher.postrm.debhelper" added to DB
+2016-08-28 11:37:08.302 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.prerm.debhelper.9c6MqV" was (re)moved immediately after creation
+2016-08-28 11:37:08.370 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.prerm.debhelper.9c6MqV" was (re)moved immediately after creation
+2016-08-28 11:37:08.439 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.prerm.debhelper.9c6MqV" was (re)moved immediately after creation
+2016-08-28 11:37:08.507 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.prerm.debhelper.9c6MqV" was (re)moved immediately after creation
+2016-08-28 11:37:08.577 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher.prerm.debhelper" added to DB
+2016-08-28 11:37:08.645 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.substvars.keAd4m" was (re)moved immediately after creation
+2016-08-28 11:37:08.714 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.substvars.keAd4m" was (re)moved immediately after creation
+2016-08-28 11:37:08.782 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.substvars.keAd4m" was (re)moved immediately after creation
+2016-08-28 11:37:08.851 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/.wifi-switcher.substvars.keAd4m" was (re)moved immediately after creation
+2016-08-28 11:37:08.920 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher.substvars" added to DB
+2016-08-28 11:37:08.989 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.conffiles.5vZEHO" was (re)moved immediately after creation
+2016-08-28 11:37:09.057 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.conffiles.5vZEHO" was (re)moved immediately after creation
+2016-08-28 11:37:09.126 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.conffiles.5vZEHO" was (re)moved immediately after creation
+2016-08-28 11:37:09.195 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.conffiles.5vZEHO" was (re)moved immediately after creation
+2016-08-28 11:37:09.264 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/conffiles" added to DB
+2016-08-28 11:37:09.333 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.control.qkqWog" was (re)moved immediately after creation
+2016-08-28 11:37:09.402 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.control.qkqWog" was (re)moved immediately after creation
+2016-08-28 11:37:09.471 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.control.qkqWog" was (re)moved immediately after creation
+2016-08-28 11:37:09.540 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.control.qkqWog" was (re)moved immediately after creation
+2016-08-28 11:37:09.609 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/control" added to DB
+2016-08-28 11:37:09.677 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.md5sums.jcef6H" was (re)moved immediately after creation
+2016-08-28 11:37:09.746 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.md5sums.jcef6H" was (re)moved immediately after creation
+2016-08-28 11:37:09.815 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.md5sums.jcef6H" was (re)moved immediately after creation
+2016-08-28 11:37:09.884 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.md5sums.jcef6H" was (re)moved immediately after creation
+2016-08-28 11:37:09.953 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/md5sums" added to DB
+2016-08-28 11:37:10.021 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postinst.OJpzN9" was (re)moved immediately after creation
+2016-08-28 11:37:10.090 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postinst.OJpzN9" was (re)moved immediately after creation
+2016-08-28 11:37:10.159 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postinst.OJpzN9" was (re)moved immediately after creation
+2016-08-28 11:37:10.228 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postinst.OJpzN9" was (re)moved immediately after creation
+2016-08-28 11:37:10.297 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/postinst" added to DB
+2016-08-28 11:37:10.366 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postrm.xcjVuB" was (re)moved immediately after creation
+2016-08-28 11:37:10.434 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postrm.xcjVuB" was (re)moved immediately after creation
+2016-08-28 11:37:10.503 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postrm.xcjVuB" was (re)moved immediately after creation
+2016-08-28 11:37:10.572 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.postrm.xcjVuB" was (re)moved immediately after creation
+2016-08-28 11:37:10.642 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/postrm" added to DB
+2016-08-28 11:37:10.710 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.prerm.aQNic3" was (re)moved immediately after creation
+2016-08-28 11:37:10.779 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.prerm.aQNic3" was (re)moved immediately after creation
+2016-08-28 11:37:10.848 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.prerm.aQNic3" was (re)moved immediately after creation
+2016-08-28 11:37:10.917 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.prerm.aQNic3" was (re)moved immediately after creation
+2016-08-28 11:37:10.986 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/prerm" added to DB
+2016-08-28 11:37:11.055 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.templates.31rHTu" was (re)moved immediately after creation
+2016-08-28 11:37:11.123 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.templates.31rHTu" was (re)moved immediately after creation
+2016-08-28 11:37:11.192 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.templates.31rHTu" was (re)moved immediately after creation
+2016-08-28 11:37:11.261 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/.templates.31rHTu" was (re)moved immediately after creation
+2016-08-28 11:37:11.331 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/DEBIAN/templates" added to DB
+2016-08-28 11:37:11.399 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/.vsftpd.conf.wifi.Aam7AW" was (re)moved immediately after creation
+2016-08-28 11:37:11.468 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/.vsftpd.conf.wifi.Aam7AW" was (re)moved immediately after creation
+2016-08-28 11:37:11.537 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/.vsftpd.conf.wifi.Aam7AW" was (re)moved immediately after creation
+2016-08-28 11:37:11.606 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/.vsftpd.conf.wifi.Aam7AW" was (re)moved immediately after creation
+2016-08-28 11:37:11.676 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/vsftpd.conf.wifi" added to DB
+2016-08-28 11:37:11.744 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/default/.hostapd.wifi.VeHyio" was (re)moved immediately after creation
+2016-08-28 11:37:11.813 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/default/.hostapd.wifi.VeHyio" was (re)moved immediately after creation
+2016-08-28 11:37:11.882 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/default/.hostapd.wifi.VeHyio" was (re)moved immediately after creation
+2016-08-28 11:37:11.951 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/default/.hostapd.wifi.VeHyio" was (re)moved immediately after creation
+2016-08-28 11:37:12.030 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/default/hostapd.wifi" added to DB
+2016-08-28 11:37:12.100 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/init.d/.wifi-switcher.mQh1ZP" was (re)moved immediately after creation
+2016-08-28 11:37:12.169 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/init.d/.wifi-switcher.mQh1ZP" was (re)moved immediately after creation
+2016-08-28 11:37:12.238 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/init.d/.wifi-switcher.mQh1ZP" was (re)moved immediately after creation
+2016-08-28 11:37:12.307 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/init.d/.wifi-switcher.mQh1ZP" was (re)moved immediately after creation
+2016-08-28 11:37:12.378 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/init.d/wifi-switcher" added to DB
+2016-08-28 11:37:12.447 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/logrotate.d/.wifi-switcher.jGdvHh" was (re)moved immediately after creation
+2016-08-28 11:37:12.516 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/logrotate.d/.wifi-switcher.jGdvHh" was (re)moved immediately after creation
+2016-08-28 11:37:12.585 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/logrotate.d/.wifi-switcher.jGdvHh" was (re)moved immediately after creation
+2016-08-28 11:37:12.654 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/logrotate.d/.wifi-switcher.jGdvHh" was (re)moved immediately after creation
+2016-08-28 11:37:12.723 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/logrotate.d/wifi-switcher" added to DB
+2016-08-28 11:37:12.792 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/pam.d/.vsftpd.wifi.CNg0oJ" was (re)moved immediately after creation
+2016-08-28 11:37:12.861 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/pam.d/.vsftpd.wifi.CNg0oJ" was (re)moved immediately after creation
+2016-08-28 11:37:12.930 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/pam.d/.vsftpd.wifi.CNg0oJ" was (re)moved immediately after creation
+2016-08-28 11:37:12.999 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/pam.d/.vsftpd.wifi.CNg0oJ" was (re)moved immediately after creation
+2016-08-28 11:37:13.069 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/pam.d/vsftpd.wifi" added to DB
+2016-08-28 11:37:13.138 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.wifi-switcher.conf.zvsw6a" was (re)moved immediately after creation
+2016-08-28 11:37:13.207 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.wifi-switcher.conf.zvsw6a" was (re)moved immediately after creation
+2016-08-28 11:37:13.276 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.wifi-switcher.conf.zvsw6a" was (re)moved immediately after creation
+2016-08-28 11:37:13.345 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.wifi-switcher.conf.zvsw6a" was (re)moved immediately after creation
+2016-08-28 11:37:13.415 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/wifi-switcher.conf" added to DB
+2016-08-28 11:37:13.484 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.ws-action.sh.42J3NC" was (re)moved immediately after creation
+2016-08-28 11:37:13.554 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.ws-action.sh.42J3NC" was (re)moved immediately after creation
+2016-08-28 11:37:13.623 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.ws-action.sh.42J3NC" was (re)moved immediately after creation
+2016-08-28 11:37:13.692 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/.ws-action.sh.42J3NC" was (re)moved immediately after creation
+2016-08-28 11:37:13.762 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/etc/wpa_supplicant/ws-action.sh" added to DB
+2016-08-28 11:37:13.831 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/bin/.wifi-switcher.rC2Bv4" was (re)moved immediately after creation
+2016-08-28 11:37:13.900 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/bin/.wifi-switcher.rC2Bv4" was (re)moved immediately after creation
+2016-08-28 11:37:13.969 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/bin/.wifi-switcher.rC2Bv4" was (re)moved immediately after creation
+2016-08-28 11:37:14.039 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/bin/.wifi-switcher.rC2Bv4" was (re)moved immediately after creation
+2016-08-28 11:37:14.109 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/bin/wifi-switcher" added to DB
+2016-08-28 11:37:14.177 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/bug/.wifi-switcher.Ktdcdw" was (re)moved immediately after creation
+2016-08-28 11:37:14.247 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/bug/.wifi-switcher.Ktdcdw" was (re)moved immediately after creation
+2016-08-28 11:37:14.316 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/bug/.wifi-switcher.Ktdcdw" was (re)moved immediately after creation
+2016-08-28 11:37:14.385 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/bug/.wifi-switcher.Ktdcdw" was (re)moved immediately after creation
+2016-08-28 11:37:14.455 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/bug/wifi-switcher" added to DB
+2016-08-28 11:37:14.525 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.BUGS.XVwNUX" was (re)moved immediately after creation
+2016-08-28 11:37:14.595 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.BUGS.XVwNUX" was (re)moved immediately after creation
+2016-08-28 11:37:14.665 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.BUGS.XVwNUX" was (re)moved immediately after creation
+2016-08-28 11:37:14.734 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.BUGS.XVwNUX" was (re)moved immediately after creation
+2016-08-28 11:37:14.804 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/BUGS" added to DB
+2016-08-28 11:37:14.873 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.HOTSPOT.GGbqCp" was (re)moved immediately after creation
+2016-08-28 11:37:14.943 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.HOTSPOT.GGbqCp" was (re)moved immediately after creation
+2016-08-28 11:37:15.012 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.HOTSPOT.GGbqCp" was (re)moved immediately after creation
+2016-08-28 11:37:15.081 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.HOTSPOT.GGbqCp" was (re)moved immediately after creation
+2016-08-28 11:37:15.151 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/HOTSPOT" added to DB
+2016-08-28 11:37:15.220 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.README.5Wj4jR" was (re)moved immediately after creation
+2016-08-28 11:37:15.290 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.README.5Wj4jR" was (re)moved immediately after creation
+2016-08-28 11:37:15.359 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.README.5Wj4jR" was (re)moved immediately after creation
+2016-08-28 11:37:15.429 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.README.5Wj4jR" was (re)moved immediately after creation
+2016-08-28 11:37:15.499 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/README" added to DB
+2016-08-28 11:37:15.568 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.TODO.MiKJ1i" was (re)moved immediately after creation
+2016-08-28 11:37:15.637 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.TODO.MiKJ1i" was (re)moved immediately after creation
+2016-08-28 11:37:15.710 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.TODO.MiKJ1i" was (re)moved immediately after creation
+2016-08-28 11:37:15.780 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.TODO.MiKJ1i" was (re)moved immediately after creation
+2016-08-28 11:37:15.850 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/TODO" added to DB
+2016-08-28 11:37:15.919 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.changelog.Debian.gz.XvKqJK" was (re)moved immediately after creation
+2016-08-28 11:37:15.988 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.changelog.Debian.gz.XvKqJK" was (re)moved immediately after creation
+2016-08-28 11:37:16.058 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.changelog.Debian.gz.XvKqJK" was (re)moved immediately after creation
+2016-08-28 11:37:16.127 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.changelog.Debian.gz.XvKqJK" was (re)moved immediately after creation
+2016-08-28 11:37:16.197 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/changelog.Debian.gz" added to DB
+2016-08-28 11:37:16.266 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.copyright.yoP8qc" was (re)moved immediately after creation
+2016-08-28 11:37:16.336 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.copyright.yoP8qc" was (re)moved immediately after creation
+2016-08-28 11:37:16.405 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.copyright.yoP8qc" was (re)moved immediately after creation
+2016-08-28 11:37:16.475 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/.copyright.yoP8qc" was (re)moved immediately after creation
+2016-08-28 11:37:16.545 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/doc/wifi-switcher/copyright" added to DB
+2016-08-28 11:37:16.614 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher-ru.1.gz.rKmS8D" was (re)moved immediately after creation
+2016-08-28 11:37:16.683 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher-ru.1.gz.rKmS8D" was (re)moved immediately after creation
+2016-08-28 11:37:16.753 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher-ru.1.gz.rKmS8D" was (re)moved immediately after creation
+2016-08-28 11:37:16.822 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher-ru.1.gz.rKmS8D" was (re)moved immediately after creation
+2016-08-28 11:37:16.893 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/wifi-switcher-ru.1.gz" added to DB
+2016-08-28 11:37:16.962 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher.1.gz.E8tDQ5" was (re)moved immediately after creation
+2016-08-28 11:37:17.032 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher.1.gz.E8tDQ5" was (re)moved immediately after creation
+2016-08-28 11:37:17.101 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher.1.gz.E8tDQ5" was (re)moved immediately after creation
+2016-08-28 11:37:17.171 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/.wifi-switcher.1.gz.E8tDQ5" was (re)moved immediately after creation
+2016-08-28 11:37:17.241 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/man/man1/wifi-switcher.1.gz" added to DB
+2016-08-28 11:37:17.310 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/menu/.wifi-switcher.H5Tpyx" was (re)moved immediately after creation
+2016-08-28 11:37:17.380 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/menu/.wifi-switcher.H5Tpyx" was (re)moved immediately after creation
+2016-08-28 11:37:17.449 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/menu/.wifi-switcher.H5Tpyx" was (re)moved immediately after creation
+2016-08-28 11:37:17.519 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/menu/.wifi-switcher.H5Tpyx" was (re)moved immediately after creation
+2016-08-28 11:37:17.589 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/menu/wifi-switcher" added to DB
+2016-08-28 11:37:17.658 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.connected.png.qezdgZ" was (re)moved immediately after creation
+2016-08-28 11:37:17.728 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.connected.png.qezdgZ" was (re)moved immediately after creation
+2016-08-28 11:37:17.797 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.connected.png.qezdgZ" was (re)moved immediately after creation
+2016-08-28 11:37:17.867 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.connected.png.qezdgZ" was (re)moved immediately after creation
+2016-08-28 11:37:17.937 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/connected.png" added to DB
+2016-08-28 11:37:18.007 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.hotspot.sh.pTy2Xq" was (re)moved immediately after creation
+2016-08-28 11:37:18.077 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.hotspot.sh.pTy2Xq" was (re)moved immediately after creation
+2016-08-28 11:37:18.147 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.hotspot.sh.pTy2Xq" was (re)moved immediately after creation
+2016-08-28 11:37:18.217 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.hotspot.sh.pTy2Xq" was (re)moved immediately after creation
+2016-08-28 11:37:18.287 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/hotspot.sh" added to DB
+2016-08-28 11:37:18.356 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.locked.png.6wUSFS" was (re)moved immediately after creation
+2016-08-28 11:37:18.426 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.locked.png.6wUSFS" was (re)moved immediately after creation
+2016-08-28 11:37:18.495 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.locked.png.6wUSFS" was (re)moved immediately after creation
+2016-08-28 11:37:18.565 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/.locked.png.6wUSFS" was (re)moved immediately after creation
+2016-08-28 11:37:18.636 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/debian/wifi-switcher/usr/share/wifi-switcher/locked.png" added to DB
+2016-08-28 11:37:18.705 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher-ru.man.VqEKnk" was (re)moved immediately after creation
+2016-08-28 11:37:18.775 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher-ru.man.VqEKnk" was (re)moved immediately after creation
+2016-08-28 11:37:18.844 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher-ru.man.VqEKnk" was (re)moved immediately after creation
+2016-08-28 11:37:18.914 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher-ru.man.VqEKnk" was (re)moved immediately after creation
+2016-08-28 11:37:18.984 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/wifi-switcher-ru.man" added to DB
+2016-08-28 11:37:19.054 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher.man.gd2D5L" was (re)moved immediately after creation
+2016-08-28 11:37:19.124 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher.man.gd2D5L" was (re)moved immediately after creation
+2016-08-28 11:37:19.193 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher.man.gd2D5L" was (re)moved immediately after creation
+2016-08-28 11:37:19.263 WARNING the file "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/.wifi-switcher.man.gd2D5L" was (re)moved immediately after creation
+2016-08-28 11:37:19.334 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/projects/wifi-switcher/man/wifi-switcher.man" added to DB
+2016-08-28 11:49:29.940 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" added to DB
+2016-08-28 11:49:30.111 INFO "/home/shalaev/PA6OTA/DOKYMEHTbI/task.txt" added to DB
+2016-08-28 11:58:46.694 INFO "/home/shalaev/PA6OTA/PROGRAMMISMO/esy/lisp/examples/real-life/log-1.txt" added to DB
+2016-08-28 11:59:20.702 INFO log stopped
